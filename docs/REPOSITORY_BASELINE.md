@@ -1,4 +1,4 @@
-# Repository baseline
+# Repository baseline - example change
 
 This file records the verified state immediately before the project was placed
 under a single benchmark repository on 2026-09-11. It is intended to distinguish
