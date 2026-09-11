@@ -1,0 +1,13 @@
+Mask pairing report
+Dataset: Tampere-WaterSeg
+Prediction directory: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/TestingPart2/SAM3/output_mlx/binary_water/tampere_waterseg/sam3_water_only_v1/predicted_masks
+Expected predictions: 600
+Matched predictions: 600
+
+Predicted masks with no corresponding ground truth (0):
+  None
+
+Ground truths with no corresponding prediction (0):
+  None
+
+Only matched and validated pairs contribute to metrics.

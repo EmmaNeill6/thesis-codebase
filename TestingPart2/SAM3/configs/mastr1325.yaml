@@ -1,0 +1,13 @@
+dataset: mastr1325
+backend: mlx
+output_root: ../output_mlx
+run_name: sam3_water_only_v1
+
+model:
+  model_id: facebook/sam3
+  confidence_threshold: 0.5
+
+prompts:
+  - key: water
+    text: water
+    role: include

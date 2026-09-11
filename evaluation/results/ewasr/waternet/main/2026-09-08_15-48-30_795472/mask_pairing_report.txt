@@ -1,0 +1,13 @@
+Mask pairing report
+Dataset: WaterNet
+Prediction directory: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/TestingPart1/output_eWaSR/binary_water/waternet/predicted_masks
+Expected predictions: 2390
+Matched predictions: 2390
+
+Predicted masks with no corresponding ground truth (0):
+  None
+
+Ground truths with no corresponding prediction (0):
+  None
+
+Only matched and validated pairs contribute to metrics.

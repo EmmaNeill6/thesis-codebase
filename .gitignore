@@ -1,0 +1,49 @@
+# macOS and editor files
+.DS_Store
+**/.DS_Store
+*~
+
+# Python caches, environments, and local configuration
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv*/
+**/.venv*/
+.env
+.env.*
+!.env.example
+
+# Migration recovery material (kept locally, never pushed)
+/.migration-safety/
+
+# Datasets and downloaded model artifacts
+/data/
+/weights/
+/TestingPart1/eWaSR/Pretrained/
+/TestingPart2/YOLOWorld/weights/
+
+# Generated and raw experiment outputs
+/TestingPart1/output_eWaSR/
+/TestingPart2/SAM3/output_mlx/
+/TestingPart2/SAM3/output_testing_single_images/
+/TestingPart2/YOLOWorld/output_mps/
+/ground_truths/output/
+
+# The written thesis is maintained as a separate repository.
+/Thesis/
+/Final_Report/
+/Archives*/
+
+# LaTeX build products if encountered outside the separate thesis repository
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc

@@ -1,0 +1,32 @@
+Water mask evaluation summary
+Dataset: Tampere-WaterSeg
+Model: sam3
+Run: sam3_water_only_v1
+Evaluated: 600
+Predictions without ground truth: 0
+
+Macro metrics:
+  water_iou: 0.9624
+  dice: 0.9805
+  precision: 0.9951
+  recall: 0.9669
+  specificity: 0.9975
+  balanced_accuracy: 0.9822
+  pixel_accuracy: 0.9844
+  area_error_percent: -2.8196
+  mean_symmetric_boundary_distance_px: 26.2068
+  normalized_boundary_error_percent: 1.1896
+
+Global metrics:
+  true_positive: 524669126.0000
+  false_positive: 1977037.0000
+  false_negative: 17385377.0000
+  true_negative: 700128460.0000
+  water_iou: 0.9644
+  dice: 0.9819
+  precision: 0.9962
+  recall: 0.9679
+  specificity: 0.9972
+  balanced_accuracy: 0.9826
+  pixel_accuracy: 0.9844
+  area_error_percent: -2.8426

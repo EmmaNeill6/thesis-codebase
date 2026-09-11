@@ -1,0 +1,32 @@
+Water mask evaluation summary
+Dataset: WaterNet
+Model: ewasr
+Run: main
+Evaluated: 2390
+Predictions without ground truth: 0
+
+Macro metrics:
+  water_iou: 0.4357
+  dice: 0.5341
+  precision: 0.5386
+  recall: 0.6276
+  specificity: 0.8331
+  balanced_accuracy: 0.7307
+  pixel_accuracy: 0.8049
+  area_error_percent: 554.4630
+  mean_symmetric_boundary_distance_px: 64.5816
+  normalized_boundary_error_percent: 7.7755
+
+Global metrics:
+  true_positive: 224796657.0000
+  false_positive: 158423619.0000
+  false_negative: 92751262.0000
+  true_negative: 692485690.0000
+  water_iou: 0.4723
+  dice: 0.6416
+  precision: 0.5866
+  recall: 0.7079
+  specificity: 0.8138
+  balanced_accuracy: 0.7609
+  pixel_accuracy: 0.7850
+  area_error_percent: 20.6811

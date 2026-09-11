@@ -1,0 +1,16 @@
+# One frozen SAM 3 experiment. Dataset paths and output naming come from
+# the project-root dataset_specs.py rather than being repeated here.
+dataset: tampere
+backend: mlx
+output_root: ../output_mlx
+run_name: sam3_water_only_v1
+
+model:
+  model_id: facebook/sam3
+  confidence_threshold: 0.5
+
+# The accepted water instances are combined into the final binary water mask.
+prompts:
+  - key: water
+    text: water
+    role: include

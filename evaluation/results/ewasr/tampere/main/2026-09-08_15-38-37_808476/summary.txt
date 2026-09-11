@@ -1,0 +1,32 @@
+Water mask evaluation summary
+Dataset: Tampere-WaterSeg
+Model: ewasr
+Run: main
+Evaluated: 600
+Predictions without ground truth: 0
+
+Macro metrics:
+  water_iou: 0.7677
+  dice: 0.8662
+  precision: 0.8516
+  recall: 0.8910
+  specificity: 0.8836
+  balanced_accuracy: 0.8873
+  pixel_accuracy: 0.8840
+  area_error_percent: 6.4315
+  mean_symmetric_boundary_distance_px: 91.0370
+  normalized_boundary_error_percent: 4.1326
+
+Global metrics:
+  true_positive: 481883266.0000
+  false_positive: 84163480.0000
+  false_negative: 60171237.0000
+  true_negative: 617942017.0000
+  water_iou: 0.7695
+  dice: 0.8697
+  precision: 0.8513
+  recall: 0.8890
+  specificity: 0.8801
+  balanced_accuracy: 0.8846
+  pixel_accuracy: 0.8840
+  area_error_percent: 4.4262

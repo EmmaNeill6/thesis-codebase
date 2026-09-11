@@ -1,0 +1,32 @@
+Water mask evaluation summary
+Dataset: WaterNet
+Model: sam3
+Run: sam3_water_only_v1
+Evaluated: 2390
+Predictions without ground truth: 0
+
+Macro metrics:
+  water_iou: 0.7748
+  dice: 0.8352
+  precision: 0.9322
+  recall: 0.8150
+  specificity: 0.9849
+  balanced_accuracy: 0.9001
+  pixel_accuracy: 0.9582
+  area_error_percent: 60.2881
+  mean_symmetric_boundary_distance_px: 57.3074
+  normalized_boundary_error_percent: 7.2676
+
+Global metrics:
+  true_positive: 284206247.0000
+  false_positive: 10059385.0000
+  false_negative: 33341672.0000
+  true_negative: 840849924.0000
+  water_iou: 0.8675
+  dice: 0.9291
+  precision: 0.9658
+  recall: 0.8950
+  specificity: 0.9882
+  balanced_accuracy: 0.9416
+  pixel_accuracy: 0.9629
+  area_error_percent: -7.3319

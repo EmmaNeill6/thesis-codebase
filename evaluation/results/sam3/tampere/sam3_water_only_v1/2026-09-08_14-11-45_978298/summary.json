@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-09-08T14:13:33+02:00",
+  "number_of_images": 600,
+  "configuration": {
+    "dataset": "tampere",
+    "model_name": "sam3",
+    "run_name": "sam3_water_only_v1",
+    "prediction_dir": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/TestingPart2/SAM3/output_mlx/binary_water/tampere_waterseg/sam3_water_only_v1/predicted_masks",
+    "selection_file": null,
+    "prediction_water_rule": "pixel >= 128",
+    "ground_truth_ignore_value": null,
+    "boundary_metric": "full symmetric water-boundary distance divided by image diagonal"
+  },
+  "pairing": {
+    "expected": 600,
+    "evaluated": 600,
+    "predictions_without_ground_truth": 0,
+    "missing_predictions": 0
+  },
+  "macro_metrics": {
+    "water_iou": 0.962383555898827,
+    "dice": 0.9804888148717805,
+    "precision": 0.995102066074095,
+    "recall": 0.9668933499677018,
+    "specificity": 0.9974935026644987,
+    "balanced_accuracy": 0.9821934263160991,
+    "pixel_accuracy": 0.9844373601466052,
+    "area_error_percent": -2.8195889119116235,
+    "mean_symmetric_boundary_distance_px": 26.20681349555034,
+    "normalized_boundary_error_percent": 1.1896467473284993
+  },
+  "global_metrics": {
+    "true_positive": 524669126,
+    "false_positive": 1977037,
+    "false_negative": 17385377,
+    "true_negative": 700128460,
+    "water_iou": 0.9644093906761362,
+    "dice": 0.981882285081312,
+    "precision": 0.9962459861309195,
+    "recall": 0.9679268839133691,
+    "specificity": 0.9971841311477441,
+    "balanced_accuracy": 0.9825555075305565,
+    "pixel_accuracy": 0.984437360146605,
+    "area_error_percent": -2.84258131142211
+  }
+}

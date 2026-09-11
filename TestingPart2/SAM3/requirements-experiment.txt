@@ -1,0 +1,7 @@
+# Install PyTorch and torchvision first using the versions appropriate for the
+# CUDA machine. Install the official Meta SAM 3 repository separately and pin
+# its git revision for the final experiment.
+numpy>=1.26,<2
+Pillow>=10,<12
+PyYAML>=6,<7
+tqdm>=4.66,<5

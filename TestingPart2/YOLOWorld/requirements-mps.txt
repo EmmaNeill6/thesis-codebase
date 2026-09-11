@@ -1,0 +1,8 @@
+# Versions used by the verified Apple Silicon smoke test on 2026-09-08.
+torch==2.14.0
+torchvision==0.29.0
+ultralytics==8.4.143
+
+# YOLO-World uses this CLIP fork to encode custom class prompts. Listing the
+# exact revision prevents Ultralytics from installing it implicitly at runtime.
+clip @ git+https://github.com/ultralytics/CLIP.git@a13192f8cb767260d7dfd98c843b0716593169e7

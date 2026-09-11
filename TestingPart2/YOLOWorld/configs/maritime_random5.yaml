@@ -1,0 +1,34 @@
+# Reproducible qualitative YOLO-World test across the three evaluated datasets.
+run_name: maritime_random5_v1
+output_root: ../output_mps
+datasets:
+  - tampere
+  - waternet
+  - mastr1325
+sample_count_per_dataset: 5
+selection_seed: 4022
+
+model:
+  checkpoint: ../weights/yolov8s-worldv2.pt
+  device: mps
+  image_size: 1280
+  confidence_threshold: 0.15
+  nms_iou_threshold: 0.7
+  agnostic_nms: true
+
+# One fixed vocabulary is used jointly for every image. These are object
+# categories, not natural-language questions.
+prompts:
+  - person
+  - boat
+  - ship
+  - vessel
+  - buoy
+  - crane
+  - dock
+  - pier
+  - bridge
+  - building
+  - car
+  - tree
+  - water
