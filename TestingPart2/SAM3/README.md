@@ -84,6 +84,9 @@ output path. One run contains:
   run_attempts.jsonl
   predictions.jsonl
   inference_times.txt
+  comparable_timings.csv
+  comparable_timing_summary.json
+  memory_usage.jsonl
   original_inputs/<dataset-relative image>
   prompt_masks/<prompt>/<dataset-relative mask>.png
   predicted_masks/<dataset-relative mask>.png
@@ -95,10 +98,28 @@ The quantitative masks are single-channel PNG files with `0 = non-water` and
 `255 = water`. The overlay uses the same blue-water/yellow-non-water colours as
 the eWaSR prediction script.
 
-`inference_times.txt` has the same tab-separated structure as the eWaSR timing
-file and records model inference only. Each image JSON additionally records
-end-to-end processing time, prompt roles, instance scores, boxes, areas,
-success or failure, and every output location.
+The versioned `comparable_timings.csv` and `comparable_timing_summary.json`
+use the same timing definitions as the eWaSR runner. Inference time starts
+after model-specific image preprocessing and ends after returned model outputs
+have been materialized as NumPy arrays. Final-mask latency starts when the
+source image is opened and ends when the final 0/255 water mask is ready in
+memory. Both exclude output-file writing and one unrecorded warm-up inference.
+The summary reports mean, median, p95 and p99 for each timing, plus FPS derived
+from mean inference time; this is not whole-run throughput.
+
+`inference_times.txt` remains for compatibility. When resuming an older run,
+only newly processed records with timing protocol version 2 enter the
+comparable report; older records remain in the legacy inference file and are
+not silently mixed into the new timing summary. Each image JSON also records
+the broader `end_to_end_processing` time, prompt roles, instance scores,
+boxes, areas, success or failure, and every output location.
+
+Each predictor invocation appends one `memory_usage.jsonl` record with its
+peak process resident memory (MiB) and counts for images attempted and
+successfully processed in that invocation. The peak includes model loading,
+warm-up, inference and output writing since process launch. It is not a
+separate GPU-memory figure. For resumed runs, compare individual invocation
+records rather than treating the last peak as a whole-experiment aggregate.
 
 ## Restart safety
 

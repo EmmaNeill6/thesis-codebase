@@ -61,6 +61,12 @@ if str(DATASET_SPECS_DIR) not in sys.path:
     sys.path.insert(0, str(DATASET_SPECS_DIR))
 
 from dataset_specs import load_dataset  # noqa: E402
+from timing_comparison import (  # noqa: E402
+    TIMING_DEFINITIONS,
+    TIMING_PROTOCOL_VERSION,
+    append_memory_usage,
+    write_timing_comparison,
+)
 
 
 @dataclass(frozen=True)
@@ -358,24 +364,35 @@ def predict_prompts(
     prompts: tuple[PromptSpec, ...],
     confidence_threshold: float,
 ) -> tuple[dict[str, PromptPrediction], float]:
-    """Run all prompts with one shared image encoding and return model-only time."""
+    """Time model execution through NumPy materialization of its outputs."""
 
     from mlx_vlm.models.sam3.generate import predict_multi
 
     height, width = image.height, image.width
-    started_ns = perf_counter_ns()
-    result = predict_multi(
-        predictor,
-        image,
-        prompts=[prompt.text for prompt in prompts],
-        score_threshold=confidence_threshold,
-    )
-    inference_ms = (perf_counter_ns() - started_ns) / 1_000_000
 
-    labels = list(result.labels or [])
-    masks = np.asarray(result.masks)
-    scores = np.asarray(result.scores, dtype=float).reshape(-1)
-    boxes = np.asarray(result.boxes, dtype=float).reshape(-1, 4)
+    # Match eWaSR's timing boundary: resize and normalize the image before the
+    # timer, but keep NumPy-to-MLX conversion, synchronized model execution and
+    # model-result postprocessing inside it. predict_multi normally calls this
+    # preprocessing method itself, so temporarily serve the prepared result.
+    prepared_image = predictor.processor.preprocess_image(image)
+    original_preprocess_image = predictor.processor.preprocess_image
+    predictor.processor.preprocess_image = lambda _: prepared_image
+    try:
+        started_ns = perf_counter_ns()
+        result = predict_multi(
+            predictor,
+            image,
+            prompts=[prompt.text for prompt in prompts],
+            score_threshold=confidence_threshold,
+        )
+        labels = list(result.labels or [])
+        masks = np.asarray(result.masks)
+        scores = np.asarray(result.scores, dtype=float).reshape(-1)
+        boxes = np.asarray(result.boxes, dtype=float).reshape(-1, 4)
+        inference_ms = (perf_counter_ns() - started_ns) / 1_000_000
+    finally:
+        predictor.processor.preprocess_image = original_preprocess_image
+
     if labels and (
         masks.ndim != 3
         or masks.shape[1:] != (height, width)
@@ -405,10 +422,13 @@ def predict_prompts(
 
 
 def save_binary_mask(mask: np.ndarray, path: Path) -> None:
-    """Save a boolean mask using the shared evaluator convention."""
+    """Save a boolean or 0/255 uint8 mask using the evaluator convention."""
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    Image.fromarray(np.where(mask, 255, 0).astype(np.uint8), mode="L").save(path)
+    pixels = (
+        mask if mask.dtype == np.uint8 else np.where(mask, 255, 0).astype(np.uint8)
+    )
+    Image.fromarray(pixels, mode="L").save(path)
 
 
 def save_ewasr_style_overlay(image: np.ndarray, mask: np.ndarray, path: Path) -> None:
@@ -479,10 +499,12 @@ def process_one_image(
     staging_root.mkdir(parents=True, exist_ok=True)
     staging_dir = Path(tempfile.mkdtemp(prefix="image-", dir=staging_root))
     inference_ms: float | None = None
+    final_mask_latency_ms: float | None = None
     try:
         original_target = staging_dir / outputs["original_input"]
         original_target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(request.image_path, original_target)
+        latency_started_ns = perf_counter_ns()
         with Image.open(request.image_path) as source_image:
             image = source_image.convert("RGB")
         image_array = np.asarray(image, dtype=np.uint8)
@@ -497,7 +519,7 @@ def process_one_image(
 
         include_union = np.zeros((height, width), dtype=bool)
         exclude_union = np.zeros((height, width), dtype=bool)
-        summaries = []
+        union_masks = {}
         for prompt in config.prompts:
             prediction = predictions[prompt.key]
             union_mask = (
@@ -505,20 +527,29 @@ def process_one_image(
                 if len(prediction.masks)
                 else np.zeros((height, width), dtype=bool)
             )
-            save_binary_mask(
-                union_mask,
-                staging_dir / outputs["prompt_masks"][prompt.key],
-            )
+            union_masks[prompt.key] = union_mask
             if prompt.role == "include":
                 include_union |= union_mask
             elif prompt.role == "exclude":
                 exclude_union |= union_mask
+
+        final_water = include_union & ~exclude_union
+        final_water_mask = np.where(final_water, 255, 0).astype(np.uint8)
+        final_mask_latency_ms = (perf_counter_ns() - latency_started_ns) / 1_000_000
+
+        summaries = []
+        for prompt in config.prompts:
+            union_mask = union_masks[prompt.key]
+            save_binary_mask(
+                union_mask,
+                staging_dir / outputs["prompt_masks"][prompt.key],
+            )
+            prediction = predictions[prompt.key]
             summary = prompt_summary(prompt, prediction)
             summary["union_area_pixels"] = int(union_mask.sum())
             summaries.append(summary)
 
-        final_water = include_union & ~exclude_union
-        save_binary_mask(final_water, staging_dir / outputs["final_binary_mask"])
+        save_binary_mask(final_water_mask, staging_dir / outputs["final_binary_mask"])
         save_ewasr_style_overlay(
             image_array,
             final_water,
@@ -540,8 +571,10 @@ def process_one_image(
             "prompts": summaries,
             "combination_rule": "union(include) AND NOT union(exclude)",
             "candidate_water_area_pixels": int(final_water.sum()),
+            "timing_protocol_version": TIMING_PROTOCOL_VERSION,
             "timing_ms": {
                 "inference": inference_ms,
+                "final_mask_latency": final_mask_latency_ms,
                 "end_to_end_processing": processing_ms,
             },
             "outputs": outputs,
@@ -559,8 +592,10 @@ def process_one_image(
             "input_path": str(request.image_path.resolve()),
             "output_path": output_path.as_posix(),
             "prompts": [asdict(prompt) for prompt in config.prompts],
+            "timing_protocol_version": TIMING_PROTOCOL_VERSION,
             "timing_ms": {
                 "inference": inference_ms,
+                "final_mask_latency": final_mask_latency_ms,
                 "end_to_end_processing": processing_ms,
             },
             "outputs": outputs,
@@ -612,6 +647,18 @@ def rewrite_summary_files(run_dir: Path, records: list[dict[str, Any]]) -> None:
             ]
         )
     atomic_write_text(run_dir / "inference_times.txt", "\n".join(timing_lines) + "\n")
+    write_timing_comparison(
+        run_dir,
+        [
+            {
+                "evaluation_key": record["output_path"],
+                "inference_ms": record["timing_ms"]["inference"],
+                "final_mask_latency_ms": record["timing_ms"]["final_mask_latency"],
+            }
+            for record in records
+            if record.get("timing_protocol_version") == TIMING_PROTOCOL_VERSION
+        ],
+    )
 
 
 def prepare_run(
@@ -667,6 +714,9 @@ def prepare_run(
                 "image_records": "image_records/<dataset-relative record>.json",
                 "attempt_log": "run_attempts.jsonl",
                 "inference_times": "inference_times.txt",
+                "comparable_timings": "comparable_timings.csv",
+                "comparable_timing_summary": "comparable_timing_summary.json",
+                "memory_usage": "memory_usage.jsonl",
             },
         }
         atomic_write_json(manifest_path, manifest)
@@ -780,9 +830,26 @@ def main() -> None:
         "pillow": package_version("Pillow"),
         "pyyaml": package_version("PyYAML"),
     }
+    manifest["timing_strategy"] = {
+        "warmup_images": 1,
+        "protocol_version": TIMING_PROTOCOL_VERSION,
+        "definitions": TIMING_DEFINITIONS,
+    }
+    manifest.setdefault("outputs", {})["memory_usage"] = "memory_usage.jsonl"
     atomic_write_json(manifest_path, manifest)
 
+    print("Warming up MLX graph...")
+    with Image.open(selected[0].image_path) as warmup_source:
+        warmup_image = warmup_source.convert("RGB")
+    predict_prompts(
+        predictor=predictor,
+        image=warmup_image,
+        prompts=config.prompts,
+        confidence_threshold=config.confidence_threshold,
+    )
+
     failures = 0
+    successes_this_invocation = 0
     attempts_path = run_dir / "run_attempts.jsonl"
     for index, request in enumerate(selected, start=1):
         print(f"[{index}/{len(selected)}] {request.image_path.name}")
@@ -795,6 +862,7 @@ def main() -> None:
         )
         append_json_line(attempts_path, record)
         if record["status"] == "success":
+            successes_this_invocation += 1
             inference_ms = float(record["timing_ms"]["inference"])
             print(f"  success ({inference_ms:.3f} ms inference)")
         else:
@@ -823,11 +891,21 @@ def main() -> None:
         "failures_this_invocation": failures,
     }
     atomic_write_json(manifest_path, manifest)
+    memory = append_memory_usage(
+        run_dir,
+        model="SAM 3",
+        dataset=config.dataset_key,
+        attempted_images=len(selected),
+        successful_images=successes_this_invocation,
+    )
 
     print(f"Completed records: {len(records)}/{len(requests)}")
     print(f"Run directory: {run_dir}")
     print(f"Evaluation masks: {run_dir / 'predicted_masks'}")
     print(f"Inference times: {run_dir / 'inference_times.txt'}")
+    print(f"Comparable timing report: {run_dir / 'comparable_timing_summary.json'}")
+    print(f"Peak process RSS: {memory['peak_process_rss_mib']:.1f} MiB")
+    print(f"Memory report: {run_dir / 'memory_usage.jsonl'}")
     if failures:
         raise SystemExit(1)
 

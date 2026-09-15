@@ -1,7 +1,7 @@
 dataset: pohang
 backend: mlx
 output_root: ../output_mlx
-run_name: sam3_water_only_v1
+run_name: sam3_water_only_v2
 
 model:
   model_id: facebook/sam3

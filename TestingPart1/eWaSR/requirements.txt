@@ -1,13 +1,4 @@
-torch>=1.13.0
-torchvision>=0.9.0
-pytorch-lightning>=1.0.6
+mlx==0.32.2
 Pillow
 numpy
 tqdm
-timm==0.6.5
-albumentations
-tensorboard
-blobconverter
-onnx
-onnxruntime
-onnxsim
