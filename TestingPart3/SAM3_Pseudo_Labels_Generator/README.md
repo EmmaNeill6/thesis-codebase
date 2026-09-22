@@ -1,7 +1,7 @@
-# SAM 3 three-class segmentation with MLX
+# SAM 3 pseudo-label generator with MLX
 
-`predict_sam3_mlx.py` is a small inference-only runner. It loads SAM 3 through
-MLX-VLM, reads an image or directory, and writes:
+`predict_sam3_mlx.py` is an inference-only pseudo-label generator. It loads
+SAM 3 through MLX-VLM, reads an image or directory, and writes:
 
 - a single-channel PNG mask containing the raw class IDs `0 = obstacle`,
   `1 = water`, and `2 = sky`;
@@ -38,7 +38,7 @@ The existing TestingPart2 MLX environment can be reused:
 
 ```bash
 source .venv-sam3-mlx/bin/activate
-python -m pip install -r TestingPart3/SAM3/requirements-mlx.txt
+python -m pip install -r TestingPart3/SAM3_Pseudo_Labels_Generator/requirements-mlx.txt
 ```
 
 SAM 3 weights are gated. Authenticate once before the first download:
@@ -52,7 +52,7 @@ hf auth login
 From the `thesis-codebase` directory, run one image first:
 
 ```bash
-.venv-sam3-mlx/bin/python TestingPart3/SAM3/predict_sam3_mlx.py \
+.venv-sam3-mlx/bin/python TestingPart3/SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py \
   --input data/Tampere-WaterSeg \
   --subset open \
   --max-images 1 \
@@ -62,7 +62,7 @@ From the `thesis-codebase` directory, run one image first:
 Then process all 200 open-subset images by omitting `--max-images`:
 
 ```bash
-.venv-sam3-mlx/bin/python TestingPart3/SAM3/predict_sam3_mlx.py \
+.venv-sam3-mlx/bin/python TestingPart3/SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py \
   --input data/Tampere-WaterSeg \
   --subset open
 ```
@@ -70,10 +70,11 @@ Then process all 200 open-subset images by omitting `--max-images`:
 The defaults already point to this dataset and subset, so this also works:
 
 ```bash
-.venv-sam3-mlx/bin/python TestingPart3/SAM3/predict_sam3_mlx.py --max-images 1
+.venv-sam3-mlx/bin/python TestingPart3/SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py --max-images 1
 ```
 
-Outputs are written beneath `TestingPart3/SAM3/output/Tampere-WaterSeg/open`:
+Outputs are written beneath
+`TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-WaterSeg/open`:
 
 ```text
 masks/<input-name>.png

@@ -28,7 +28,8 @@ __pycache__/
 /TestingPart2/SAM3/output_mlx/
 /TestingPart2/SAM3/output_testing_single_images/
 /TestingPart2/YOLOWorld/output_mps/
-/TestingPart3/SAM3/output/
+/TestingPart3/SAM3_Pseudo_Labels_Generator/output/
+/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/
 /ground_truths/output/
 
 # The written thesis is maintained as a separate repository.
