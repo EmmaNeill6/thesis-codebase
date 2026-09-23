@@ -1,0 +1,102 @@
+PORT-DOMAIN HEAD-ONLY EWASR FINE-TUNING — IMPORTANT NOTES
+==========================================================
+
+Purpose
+-------
+This is a separate first-iteration port-domain experiment for camera imagery
+where the ASV is not visible in the frame. It adapts the predefined non-IMU
+eWaSR MLX checkpoint to three-class port imagery.
+
+Label convention
+----------------
+0 = obstacle
+1 = water
+2 = sky
+
+The SAM3 masks are the target labels for training and the configured labels
+for validation/test selection in this pseudo-label study. They should be
+described as SAM3-derived pseudo-labels in the report. A final performance
+claim still needs comparison with independent, manually annotated ground truth
+masks, because agreement with SAM3 alone measures teacher agreement.
+
+Data split (fixed by source recording/dataset)
+----------------------------------------------
+Train: 98 MODS kope104 image/mask pairs
+  Images: data/mods/sequences/kope104-00065550-00066030/frames
+  Masks:  TestingPart3/SAM3_Pseudo_Labels_Generator/output/MODS_Port_5ppt/masks
+
+Validation: 35 LaRS Port image/mask pairs
+  9  pairs from data/lars_v1-2/val/images/Port
+  23 pairs from data/lars_v1-2/test/images/Port
+  3  pairs from data/lars_v1-2/train/images/Port
+  Masks for all three: TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks
+
+Test: 20 Pohang Port image/mask pairs
+  Images: data/pohang00/pohang00_port/left_images
+  Masks:  TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Port_5ppt/masks
+
+The Pohang image folder holds 300 images but only 20 matching SAM3 masks. The
+test split therefore contains every available labelled pair, not every raw
+image. There is no random split of frames, and the roles use distinct source
+recordings/datasets.
+
+Method
+------
+Checkpoint: predefined non-IMU eWaSR ResNet-18 MLX weights
+Trainable parameters: decoder.seg_head only
+Frozen: ResNet-18 encoder, MetaFormer refinement modules, SIM fusion modules,
+all other decoder modules, and BatchNorm affine/statistical state outside the
+segmentation head.
+
+Input: 512 x 384 RGB, bilinear resized and ImageNet normalised
+Mask target: 128 x 96, nearest-neighbour resized
+Loss: standard three-class cross-entropy
+Optimizer: AdamW, weight decay 1e-4
+Batch size: 2
+Epochs per trial: 10
+Learning-rate trials: 3e-4, 1e-3, and 3e-3
+Selection: choose the trial/epoch with highest validation three-class mean IoU
+Test: evaluate the selected model once on the held-out Pohang split
+
+Run commands
+------------
+From TestingPart3/eWaSR_Head_Fine_Tuning:
+
+  ../../TestingPart1/eWaSR/.venv/bin/python run_experiment.py \
+    --config ../DataSource/head_only_port_v1.yaml --check-data
+
+  ../../TestingPart1/eWaSR/.venv/bin/python run_experiment.py \
+    --config ../DataSource/head_only_port_v1.yaml
+
+Outputs are written below:
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/port_head_only_v1
+
+Important study rule
+--------------------
+Do not choose a learning rate, number of epochs, or other hyperparameter using
+the Pohang test result. Use LaRS validation for that choice, then preserve the
+Pohang result for the single held-out pseudo-label evaluation. Afterwards,
+compare the pretrained and selected fine-tuned model against independent human
+ground truth for the final claim of performance improvement.
+
+Observed first-run result (22 September 2026)
+--------------------------------------------
+All three configured learning-rate trials completed. The validation selection
+was learning rate 1e-3 at epoch 8, with validation three-class mean IoU
+0.844913 (pretrained baseline: 0.833089).
+
+On the untouched 20-pair Pohang pseudo-label test split:
+  Pretrained three-class mean IoU: 0.935191
+  Adapted three-class mean IoU:    0.955051
+  Change:                         +0.019860
+  Pretrained pixel accuracy:       0.979801
+  Adapted pixel accuracy:          0.985807
+  Change:                         +0.006006
+
+Water IoU changed from 0.992730 to 0.990471 (-0.002259), while obstacle and
+sky IoU increased. These figures document agreement with the configured SAM3
+labels only; they are not the final independently-ground-truth result.
+
+Machine-readable results, the exact resolved file lists, training histories,
+and the selected checkpoint are in:
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/port_head_only_v1

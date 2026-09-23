@@ -39,7 +39,12 @@ class Sample:
     mask_path: Path
 
 
-def find_samples(images_dir: Path, masks_dir: Path) -> list[Sample]:
+def find_samples(
+    images_dir: Path,
+    masks_dir: Path,
+    *,
+    ignore_masks_without_images: bool = False,
+) -> list[Sample]:
     """Pair each available PNG mask with an image of the same relative stem.
 
     Masks are authoritative so a pseudo-labelled subset can be trained without
@@ -73,7 +78,7 @@ def find_samples(images_dir: Path, masks_dir: Path) -> list[Sample]:
         else:
             ambiguous.append(relative_stem)
 
-    if missing:
+    if missing and not ignore_masks_without_images:
         preview = ", ".join(str(path) for path in missing[:5])
         remainder = "" if len(missing) <= 5 else f" (+{len(missing) - 5} more)"
         raise FileNotFoundError(
@@ -176,6 +181,18 @@ def confusion_metrics(confusion: np.ndarray) -> dict[str, object]:
     )
     total = int(confusion.sum())
     pixel_accuracy = float(intersection.sum() / total) if total else float("nan")
+    water_intersection = int(confusion[1, 1])
+    water_union = int(true_pixels[1] + predicted_pixels[1] - water_intersection)
+    non_water_intersection = int(confusion[np.ix_([0, 2], [0, 2])].sum())
+    non_water_true = int(true_pixels[[0, 2]].sum())
+    non_water_predicted = int(predicted_pixels[[0, 2]].sum())
+    non_water_union = non_water_true + non_water_predicted - non_water_intersection
+    water_iou = water_intersection / water_union if water_union else float("nan")
+    non_water_iou = (
+        non_water_intersection / non_water_union
+        if non_water_union
+        else float("nan")
+    )
     return {
         "pixel_accuracy": pixel_accuracy,
         "mean_iou": float(np.nanmean(iou)),
@@ -183,6 +200,9 @@ def confusion_metrics(confusion: np.ndarray) -> dict[str, object]:
             name: None if np.isnan(value) else float(value)
             for name, value in zip(CLASS_NAMES, iou)
         },
+        "binary_water_iou": float(water_iou),
+        "binary_non_water_iou": float(non_water_iou),
+        "binary_mean_iou": float(np.nanmean([water_iou, non_water_iou])),
     }
 
 
@@ -237,7 +257,7 @@ def evaluate(model, samples, args) -> dict[str, object]:
     return result
 
 
-def train(args: argparse.Namespace, train_samples, validation_samples) -> None:
+def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[str, object]:
     import mlx.core as mx
     import mlx.nn as nn
     import mlx.optimizers as optim
@@ -251,7 +271,11 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> None:
     trainable_names, trainable_count = flat_parameter_summary(
         model.trainable_parameters()
     )
-    unexpected = [name for name in trainable_names if not name.startswith("decoder.seg_head")]
+    unexpected = [
+        name
+        for name in trainable_names
+        if not name.startswith("decoder.seg_head")
+    ]
     if unexpected:
         raise RuntimeError(f"Non-head parameters are trainable: {unexpected}")
     trainable_running_stats = [
@@ -315,6 +339,8 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> None:
         print(f"  {name}")
 
     best_score = -np.inf
+    best_epoch = None
+    best_record = None
     with history_path.open("w", encoding="utf-8") as history_file:
         for epoch in range(1, args.epochs + 1):
             model.set_head_training_mode(True)
@@ -344,6 +370,8 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> None:
             model.save_weights(str(latest_path))
             if score > best_score:
                 best_score = score
+                best_epoch = epoch
+                best_record = record
                 model.save_weights(str(best_path))
 
             history_file.write(json.dumps(record) + "\n")
@@ -353,6 +381,16 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> None:
     print(f"Latest checkpoint: {latest_path}")
     print(f"Best checkpoint: {best_path}")
     print(f"Training history: {history_path}")
+    return {
+        "best_checkpoint": best_path,
+        "latest_checkpoint": latest_path,
+        "history": history_path,
+        "best_epoch": best_epoch,
+        "best_score": float(best_score),
+        "best_record": best_record,
+        "trainable_parameter_names": trainable_names,
+        "trainable_parameter_count": trainable_count,
+    }
 
 
 def parse_args() -> argparse.Namespace:

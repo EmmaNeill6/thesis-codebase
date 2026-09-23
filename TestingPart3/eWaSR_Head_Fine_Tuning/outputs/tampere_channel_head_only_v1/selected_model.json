@@ -1,0 +1,32 @@
+{
+  "learning_rate": 0.001,
+  "best_epoch": 10,
+  "checkpoint": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_channel_head_only_v1/lr_1e-03/best_head_only.npz",
+  "selection_metric": "validation_mean_iou",
+  "validation_metrics": {
+    "pixel_accuracy": 0.9869059244791667,
+    "mean_iou": 0.9601781068026322,
+    "class_iou": {
+      "obstacle": 0.9735982293423272,
+      "water": 0.982551158479738,
+      "sky": 0.9243849325858314
+    },
+    "binary_water_iou": 0.982551158479738,
+    "binary_non_water_iou": 0.9859990045030229,
+    "binary_mean_iou": 0.9842750814913804,
+    "loss": 0.0344020127505064
+  },
+  "test_metrics_against_sam3_pseudo_labels": {
+    "pixel_accuracy": 0.9214778645833334,
+    "mean_iou": 0.8049516063137103,
+    "class_iou": {
+      "obstacle": 0.8610373930608023,
+      "water": 0.8927348066298343,
+      "sky": 0.6610826192504944
+    },
+    "binary_water_iou": 0.8927348066298343,
+    "binary_non_water_iou": 0.9299785409383767,
+    "binary_mean_iou": 0.9113566737841055,
+    "loss": 0.23665316581726073
+  }
+}

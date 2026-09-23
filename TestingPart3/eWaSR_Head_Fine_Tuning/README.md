@@ -59,6 +59,33 @@ also be used:
 ../../TestingPart1/eWaSR/.venv/bin/python train_head.py --help
 ```
 
+## YAML-defined first experiment
+
+The reproducible first-attempt configuration is stored at:
+
+```text
+TestingPart3/DataSource/head_only_finetuning_v1.yaml
+```
+
+It defines the chronological 150/50 Tampere train/validation blocks, the 50
+every-30th CataRob test frames, all model and preprocessing settings, and the
+three learning-rate trials. Validate it from this folder with:
+
+```bash
+../../TestingPart1/eWaSR/.venv/bin/python run_experiment.py \
+  --config ../DataSource/head_only_finetuning_v1.yaml \
+  --check-data
+```
+
+Run the complete comparison by removing `--check-data`. The runner evaluates
+the pretrained baseline, selects the learning rate using validation mean IoU,
+and evaluates only that selected checkpoint on the test split.
+
+The supplied open-subset masks were not paired with channel images. Matching
+`channel_image_*` pseudo-labels were found in `Tampere_Channel_5ppt/masks` and
+are used by the YAML. The reason is recorded in both the YAML and
+`TestingPart3/DataSource/IMPORTANT_TRAINING_NOTES.txt`.
+
 ## Validate a pseudo-labelled subset
 
 This performs pairing, dimensions and class-ID checks without loading MLX:
@@ -107,3 +134,71 @@ When validation data are supplied, `training_history.jsonl` records pixel
 accuracy, mean IoU and obstacle/water/sky IoU for every epoch. The final thesis
 comparison should still use the fixed, held-out ground-truth test set rather
 than SAM 3 masks.
+
+The first completed run is summarised in:
+
+```text
+outputs/tampere_channel_head_only_v1/experiment_summary.txt
+```
+
+It selected learning rate `1e-3` at epoch 10. Validation agreement with SAM3
+improved strongly, but performance against the separate CataRob SAM3 masks was
+worse than the pretrained baseline. This is evidence of negative transfer or
+over-specialisation to the Tampere sequence, not evidence that head-only
+fine-tuning improved the target deployment domain.
+
+## Completed port-domain experiment
+
+The separate port-camera configuration is:
+
+```text
+TestingPart3/DataSource/head_only_port_v1.yaml
+```
+
+It uses 98 MODS pairs for training, 35 LaRS Port pairs for validation (from
+the requested `val`, `test`, and `train` source folders), and the 20 labelled
+Pohang Port pairs for the fixed test set. These are source-based roles, not a
+random split of neighbouring video frames. LaRS masks are stored in one shared
+directory, so the runner explicitly intersects that directory with each
+requested LaRS image source.
+
+```bash
+../../TestingPart1/eWaSR/.venv/bin/python run_experiment.py \
+  --config ../DataSource/head_only_port_v1.yaml --check-data
+
+../../TestingPart1/eWaSR/.venv/bin/python run_experiment.py \
+  --config ../DataSource/head_only_port_v1.yaml
+```
+
+The completed run selected `1e-3` at epoch 8 using LaRS validation mean IoU.
+Its held-out Pohang agreement against SAM3 masks increased from 0.935191 to
+0.955051 three-class mIoU. Detailed metrics, exact resolved paths, histories,
+and the selected checkpoint are in:
+
+```text
+outputs/port_head_only_v1/
+```
+
+See `TestingPart3/DataSource/IMPORTANT_PORT_TRAINING_NOTES.txt` for the full
+method and report-ready interpretation. The SAM3 result is a pseudo-label
+evaluation; compare both models with independently annotated masks before
+claiming real-world performance improvement.
+
+## Visualise the selected model on the test split
+
+Generate raw class-ID masks, full-resolution prediction overlays, four-panel
+comparisons, and a representative contact sheet for all 50 held-out CataRob
+frames. Each comparison shows the original image, original pretrained eWaSR,
+the selected fine-tuned eWaSR, and the SAM3 pseudo-label reference:
+
+```bash
+../../TestingPart1/eWaSR/.venv/bin/python visualize_test_predictions.py \
+  --config ../DataSource/head_only_finetuning_v1.yaml
+```
+
+The command automatically reads the chosen checkpoint from
+`outputs/tampere_channel_head_only_v1/selected_model.json`. Visualisations are
+written beneath `outputs/tampere_channel_head_only_v1/test_visualizations/`.
+The `pretrained_masks/` and `pretrained_overlays/` directories preserve the
+original model's outputs separately. The comparison's SAM3 panel is a
+pseudo-label reference and must not be described as independent ground truth.

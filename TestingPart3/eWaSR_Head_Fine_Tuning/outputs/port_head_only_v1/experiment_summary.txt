@@ -1,0 +1,97 @@
+HEAD-ONLY EWASR FINE-TUNING — EXPERIMENT SUMMARY
+=================================================
+
+Configuration: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/DataSource/head_only_port_v1.yaml
+Training pairs: 98
+Validation pairs: 35
+Test pairs: 20
+
+Important interpretation:
+Validation and test masks are SAM3 pseudo-labels. These metrics measure
+agreement with SAM3 and are not a substitute for final human-ground-truth
+evaluation.
+
+Pretrained baseline on validation:
+  loss: 0.253600
+  pixel accuracy: 0.915323
+  three-class mean IoU: 0.833089
+  obstacle IoU: 0.840641
+  water IoU: 0.859151
+  sky IoU: 0.799475
+  binary water IoU: 0.859151
+  binary non-water IoU: 0.867649
+  binary mean IoU: 0.863400
+
+Learning-rate trials (best validation epoch):
+
+  learning rate: 0.0003
+  best epoch: 8
+    loss: 0.332586
+    pixel accuracy: 0.917641
+    three-class mean IoU: 0.840707
+    obstacle IoU: 0.847341
+    water IoU: 0.856378
+    sky IoU: 0.818402
+    binary water IoU: 0.856378
+    binary non-water IoU: 0.867235
+    binary mean IoU: 0.861806
+
+  learning rate: 0.001
+  best epoch: 8
+    loss: 0.348168
+    pixel accuracy: 0.919401
+    three-class mean IoU: 0.844913
+    obstacle IoU: 0.846130
+    water IoU: 0.861006
+    sky IoU: 0.827604
+    binary water IoU: 0.861006
+    binary non-water IoU: 0.870893
+    binary mean IoU: 0.865950
+
+  learning rate: 0.003
+  best epoch: 5
+    loss: 0.405959
+    pixel accuracy: 0.917439
+    three-class mean IoU: 0.843083
+    obstacle IoU: 0.843318
+    water IoU: 0.855745
+    sky IoU: 0.830188
+    binary water IoU: 0.855745
+    binary non-water IoU: 0.868510
+    binary mean IoU: 0.862127
+
+Selected learning rate: 0.001
+Selected best epoch: 8
+Selected checkpoint: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/port_head_only_v1/lr_1e-03/best_head_only.npz
+Selection criterion: validation three-class mean IoU
+
+Pretrained baseline on held-out test:
+  loss: 0.055293
+  pixel accuracy: 0.979801
+  three-class mean IoU: 0.935191
+  obstacle IoU: 0.848962
+  water IoU: 0.992730
+  sky IoU: 0.963881
+  binary water IoU: 0.992730
+  binary non-water IoU: 0.994979
+  binary mean IoU: 0.993855
+
+Selected adapted model on held-out test:
+  loss: 0.041643
+  pixel accuracy: 0.985807
+  three-class mean IoU: 0.955051
+  obstacle IoU: 0.896746
+  water IoU: 0.990471
+  sky IoU: 0.977937
+  binary water IoU: 0.990471
+  binary non-water IoU: 0.993424
+  binary mean IoU: 0.991947
+
+Test deltas (adapted minus pretrained):
+  three-class mean IoU: +0.019860
+  binary water IoU: -0.002259
+  pixel accuracy: +0.006006
+
+Do not use these held-out test results to revise hyperparameters. Run the
+chosen model once more against independent human ground truth for the
+final performance claim.

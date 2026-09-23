@@ -1,0 +1,1008 @@
+{
+  "train": [
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_001.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_001.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_002.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_002.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_003.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_003.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_004.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_004.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_005.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_005.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_006.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_006.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_007.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_007.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_008.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_008.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_009.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_009.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_010.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_010.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_011.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_011.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_012.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_012.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_013.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_013.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_014.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_014.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_015.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_015.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_016.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_016.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_017.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_017.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_018.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_018.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_019.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_019.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_020.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_020.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_021.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_021.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_022.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_022.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_023.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_023.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_024.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_024.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_025.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_025.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_026.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_026.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_027.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_027.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_028.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_028.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_029.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_029.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_030.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_030.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_031.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_031.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_032.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_032.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_033.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_033.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_034.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_034.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_035.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_035.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_036.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_036.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_037.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_037.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_038.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_038.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_039.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_039.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_040.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_040.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_041.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_041.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_042.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_042.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_043.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_043.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_044.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_044.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_045.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_045.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_046.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_046.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_047.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_047.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_048.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_048.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_049.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_049.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_050.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_050.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_051.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_051.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_052.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_052.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_053.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_053.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_054.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_054.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_055.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_055.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_056.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_056.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_057.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_057.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_058.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_058.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_059.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_059.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_060.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_060.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_061.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_061.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_062.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_062.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_063.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_063.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_064.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_064.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_065.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_065.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_066.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_066.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_067.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_067.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_068.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_068.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_069.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_069.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_070.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_070.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_071.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_071.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_072.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_072.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_073.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_073.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_074.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_074.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_075.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_075.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_076.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_076.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_077.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_077.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_078.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_078.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_079.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_079.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_080.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_080.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_081.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_081.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_082.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_082.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_083.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_083.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_084.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_084.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_085.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_085.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_086.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_086.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_087.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_087.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_088.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_088.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_089.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_089.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_090.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_090.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_091.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_091.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_092.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_092.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_093.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_093.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_094.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_094.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_095.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_095.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_096.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_096.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_097.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_097.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_098.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_098.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_099.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_099.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_100.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_100.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_101.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_101.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_102.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_102.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_103.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_103.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_104.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_104.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_105.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_105.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_106.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_106.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_107.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_107.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_108.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_108.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_109.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_109.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_110.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_110.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_111.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_111.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_112.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_112.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_113.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_113.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_114.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_114.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_115.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_115.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_116.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_116.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_117.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_117.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_118.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_118.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_119.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_119.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_120.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_120.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_121.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_121.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_122.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_122.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_123.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_123.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_124.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_124.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_125.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_125.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_126.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_126.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_127.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_127.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_128.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_128.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_129.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_129.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_130.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_130.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_131.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_131.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_132.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_132.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_133.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_133.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_134.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_134.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_135.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_135.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_136.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_136.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_137.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_137.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_138.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_138.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_139.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_139.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_140.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_140.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_141.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_141.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_142.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_142.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_143.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_143.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_144.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_144.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_145.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_145.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_146.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_146.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_147.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_147.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_148.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_148.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_149.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_149.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_150.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_150.png"
+    }
+  ],
+  "validation": [
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_151.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_151.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_152.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_152.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_153.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_153.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_154.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_154.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_155.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_155.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_156.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_156.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_157.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_157.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_158.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_158.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_159.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_159.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_160.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_160.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_161.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_161.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_162.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_162.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_163.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_163.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_164.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_164.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_165.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_165.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_166.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_166.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_167.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_167.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_168.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_168.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_169.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_169.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_170.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_170.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_171.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_171.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_172.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_172.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_173.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_173.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_174.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_174.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_175.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_175.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_176.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_176.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_177.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_177.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_178.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_178.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_179.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_179.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_180.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_180.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_181.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_181.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_182.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_182.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_183.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_183.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_184.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_184.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_185.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_185.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_186.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_186.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_187.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_187.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_188.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_188.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_189.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_189.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_190.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_190.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_191.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_191.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_192.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_192.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_193.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_193.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_194.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_194.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_195.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_195.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_196.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_196.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_197.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_197.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_198.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_198.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_199.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_199.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel/channel_image_200.jpg",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks/channel_image_200.png"
+    }
+  ],
+  "test": [
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0000.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0000.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0030.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0030.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0060.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0060.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0090.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0090.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0120.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0120.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0150.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0150.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0180.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0180.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0210.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0210.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0240.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0240.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0270.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0270.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0300.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0300.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0330.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0330.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0360.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0360.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0390.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0390.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0420.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0420.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0450.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0450.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0480.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0480.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0510.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0510.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0540.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0540.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0570.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0570.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0600.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0600.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0630.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0630.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0660.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0660.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0690.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0690.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0720.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0720.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0750.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0750.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0780.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0780.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0810.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0810.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0840.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0840.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0870.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0870.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0900.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0900.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0930.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0930.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0960.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0960.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_0990.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_0990.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1020.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1020.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1050.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1050.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1080.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1080.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1110.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1110.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1140.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1140.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1170.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1170.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1200.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1200.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1230.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1230.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1260.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1260.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1290.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1290.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1320.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1320.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1350.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1350.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1380.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1380.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1410.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1410.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1440.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1440.png"
+    },
+    {
+      "image": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames/left_frame_1470.png",
+      "mask": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks/left_frame_1470.png"
+    }
+  ]
+}

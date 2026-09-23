@@ -30,6 +30,7 @@ __pycache__/
 /TestingPart2/YOLOWorld/output_mps/
 /TestingPart3/SAM3_Pseudo_Labels_Generator/output/
 /TestingPart3/eWaSR_Head_Fine_Tuning/outputs/
+/TestingPart3/Pretrained_eWaSR_output/LaSR_eWaSR/
 /ground_truths/output/
 
 # The written thesis is maintained as a separate repository.
