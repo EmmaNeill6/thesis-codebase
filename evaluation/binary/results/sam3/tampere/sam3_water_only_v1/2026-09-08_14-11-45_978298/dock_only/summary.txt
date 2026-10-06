@@ -1,0 +1,37 @@
+Binary water-mask evaluation — dock images only
+Dataset: Tampere-WaterSeg
+Model: sam3
+Run: sam3_water_only_v1
+Source CSV: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/evaluation/binary/results/sam3/tampere/sam3_water_only_v1/2026-09-08_14-11-45_978298/per_image.csv
+Selection: image_id starts with 'dock_image_'
+Evaluated: 200 of 600 source images
+Image range: dock_image_001 to dock_image_200
+
+Macro metrics (equal-weight per-image averages):
+  water_iou: 0.94739539
+  dice: 0.97234818
+  precision: 0.98914178
+  recall: 0.95736306
+  specificity: 0.99539224
+  balanced_accuracy: 0.97637765
+  pixel_accuracy: 0.98062262
+  area_error_percent: -3.16213984
+  mean_symmetric_boundary_distance_px: 29.77644198
+  normalized_boundary_error_percent: 1.35168846
+
+Global metrics (summed pixel confusion counts):
+  true_positive: 155855198
+  false_positive: 1301124
+  false_negative: 6735065
+  true_negative: 250828613
+  water_iou: 0.95096637
+  dice: 0.97486701
+  precision: 0.99172083
+  recall: 0.95857646
+  specificity: 0.99483947
+  balanced_accuracy: 0.97670796
+  pixel_accuracy: 0.98062262
+  area_error_percent: -3.34210727
+
+Area error is signed: positive values indicate overprediction of water area.
+Boundary metrics are averaged per image; no global boundary metric is inferred.

@@ -2,7 +2,8 @@
 
 The script reads the test split from the experiment YAML, the original
 pretrained checkpoint from the YAML, and the chosen fine-tuned checkpoint from
-``selected_model.json``. It writes class-index masks, full-resolution overlays,
+``selected_model.json`` or a completed staged run's ``stage_state.json``.
+It writes class-index masks, full-resolution overlays,
 side-by-side comparisons with the SAM3 pseudo-labels, and a small contact sheet.
 It intentionally does not benchmark inference time.
 """
@@ -18,6 +19,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from ewasr_mlx.model import create_head_finetuning_model
 from run_experiment import DEFAULT_CONFIG, load_config, load_split, validate_configuration
+from run_staged_experiment import normalize_paths
 from train_head import NORMALIZE_MEAN, NORMALIZE_STD, Sample
 
 
@@ -46,7 +48,7 @@ def parse_args() -> argparse.Namespace:
         "--selection",
         type=Path,
         default=None,
-        help="Selected-model JSON (default: <experiment output>/selected_model.json)",
+        help="Selected-model or staged-state JSON (default: record in experiment output)",
     )
     parser.add_argument(
         "--output-dir",
@@ -69,6 +71,15 @@ def load_selected_checkpoint(selection_path: Path) -> tuple[Path, dict[str, obje
         raise FileNotFoundError(f"Selected-model record not found: {selection_path}")
     with selection_path.open("r", encoding="utf-8") as source:
         selection = json.load(source)
+    if "stages" in selection:
+        final_stage = selection["stages"].get("6", {})
+        if final_stage.get("status") != "complete" or not final_stage.get("selected"):
+            raise ValueError(f"Stage 6 has no completed selection in: {selection_path}")
+        selection = final_stage["selected"]
+        selection = {
+            **selection,
+            "learning_rate": selection.get("parameters", {}).get("learning_rate"),
+        }
     checkpoint_value = selection.get("checkpoint")
     if not isinstance(checkpoint_value, str):
         raise ValueError(f"No checkpoint path in: {selection_path}")
@@ -207,15 +218,16 @@ def main() -> None:
     if not 0.0 <= args.opacity <= 1.0:
         raise ValueError("--opacity must be between 0 and 1")
 
-    config = load_config(args.config)
+    config = normalize_paths(load_config(args.config))
     validate_configuration(config)
     samples = load_split(config, "test")
     experiment_output = Path(config["experiment"]["output_dir"]).expanduser().resolve()
-    selection_path = (
-        args.selection.expanduser().resolve()
-        if args.selection is not None
-        else experiment_output / "selected_model.json"
-    )
+    if args.selection is not None:
+        selection_path = args.selection.expanduser().resolve()
+    else:
+        selection_path = experiment_output / "selected_model.json"
+        if not selection_path.is_file() and (experiment_output / "stage_state.json").is_file():
+            selection_path = experiment_output / "stage_state.json"
     output_dir = (
         args.output_dir.expanduser().resolve()
         if args.output_dir is not None

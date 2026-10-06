@@ -1,0 +1,80 @@
+Three-class evaluation summary
+Dataset: LaSR Channel val; SAM3 5% pseudo-label reference
+Model: eWaSR_pretrained
+Run: LaSR_Channel_val_fresh_vs_SAM3_5ppt
+Evaluated: 15
+Valid pixels: 41135040
+Predictions without ground truth: 0
+
+Classes: obstacle=0, water=1, sky=2
+Undefined metrics exclude absent denominators; missing class IoU is not zero.
+
+Macro metrics (mean across images):
+  pixel_accuracy: 0.776697
+  mean_iou: 0.627032
+  mean_dice: 0.759091
+  mean_precision: 0.756539
+  mean_recall: 0.823808
+  obstacle_iou: 0.671149
+  obstacle_dice: 0.799829
+  obstacle_precision: 0.809865
+  obstacle_recall: 0.796192
+  water_iou: 0.632728
+  water_dice: 0.770903
+  water_precision: 0.880492
+  water_recall: 0.689179
+  sky_iou: 0.577219
+  sky_dice: 0.706541
+  sky_precision: 0.579261
+  sky_recall: 0.986053
+
+Global metrics (all valid pixels):
+  true_obstacle_pred_obstacle: 12360505
+  true_obstacle_pred_water: 1754562
+  true_obstacle_pred_sky: 1499911
+  true_water_pred_obstacle: 2904266
+  true_water_pred_water: 13086126
+  true_water_pred_sky: 2988934
+  true_sky_pred_obstacle: 9298
+  true_sky_pred_water: 28601
+  true_sky_pred_sky: 6502837
+  pixel_accuracy: 0.776697
+  obstacle_true_positive: 12360505
+  obstacle_false_positive: 2913564
+  obstacle_false_negative: 3254473
+  obstacle_true_negative: 22606498
+  obstacle_support: 15614978
+  obstacle_predicted_pixels: 15274069
+  obstacle_iou: 0.667106
+  obstacle_dice: 0.800316
+  obstacle_precision: 0.809248
+  obstacle_recall: 0.791580
+  water_true_positive: 13086126
+  water_false_positive: 1783163
+  water_false_negative: 5893200
+  water_true_negative: 20372551
+  water_support: 18979326
+  water_predicted_pixels: 14869289
+  water_iou: 0.630277
+  water_dice: 0.773215
+  water_precision: 0.880077
+  water_recall: 0.689494
+  sky_true_positive: 6502837
+  sky_false_positive: 4488845
+  sky_false_negative: 37899
+  sky_true_negative: 30105459
+  sky_support: 6540736
+  sky_predicted_pixels: 10991682
+  sky_iou: 0.589582
+  sky_dice: 0.741807
+  sky_precision: 0.591614
+  sky_recall: 0.994206
+  mean_iou: 0.628988
+  mean_dice: 0.771779
+  mean_precision: 0.760313
+  mean_recall: 0.825093
+
+Confusion matrix (GT rows, prediction columns; obstacle/water/sky):
+  12360505 1754562 1499911
+  2904266 13086126 2988934
+  9298 28601 6502837

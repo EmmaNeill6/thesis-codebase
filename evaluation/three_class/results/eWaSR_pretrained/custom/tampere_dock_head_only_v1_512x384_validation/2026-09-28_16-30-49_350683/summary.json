@@ -1,0 +1,124 @@
+{
+  "created_at": "2026-09-28T16:30:51+02:00",
+  "evaluation_type": "three_class",
+  "number_of_images": 40,
+  "configuration": {
+    "dataset": "custom",
+    "dataset_name": "Tampere Dock validation \u2014 full-resolution SAM3 5% pseudo-labels",
+    "model_name": "eWaSR_pretrained",
+    "run_name": "tampere_dock_head_only_v1_512x384_validation",
+    "prediction_dir": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1/512x384_resolution_validation/2026-09-28_16-30-35_360169/pretrained/masks",
+    "ground_truth_dir": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks",
+    "selection_file": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1/512x384_resolution_validation/2026-09-28_16-30-35_360169/validation_selection.txt",
+    "prediction_class_ids": {
+      "obstacle": 0,
+      "water": 1,
+      "sky": 2
+    },
+    "ground_truth_class_values": {
+      "obstacle": 0,
+      "water": 1,
+      "sky": 2
+    },
+    "ground_truth_ignore_value": null,
+    "resolution_policy": "native resolution; mismatched masks rejected"
+  },
+  "definitions": {
+    "confusion_matrix": "Rows: ground truth; columns: prediction; order: obstacle, water, sky",
+    "macro_metrics": "Equal-weight average across images; undefined values excluded per metric",
+    "global_metrics": "Computed from the summed pixel confusion matrix",
+    "mean_iou": "Equal-weight average of class IoUs with nonzero union",
+    "undefined_metrics": "NaN in CSV; null in JSON; never replaced with zero",
+    "dice": "Per-class Dice equals per-class F1"
+  },
+  "pairing": {
+    "expected": 40,
+    "evaluated": 40,
+    "predictions_without_ground_truth": 0,
+    "missing_predictions": 0
+  },
+  "valid_pixel_count": 82944000,
+  "ignored_pixel_count": 0,
+  "confusion_matrix": [
+    [
+      44508746,
+      3315995,
+      501641
+    ],
+    [
+      2083045,
+      28439749,
+      141727
+    ],
+    [
+      38544,
+      0,
+      3914553
+    ]
+  ],
+  "macro_metrics": {
+    "pixel_accuracy": 0.9266860532407408,
+    "mean_iou": 0.7929417927820046,
+    "mean_dice": 0.8593928540926304,
+    "mean_precision": 0.8431943958534767,
+    "mean_recall": 0.9362920926012999,
+    "obstacle_iou": 0.8813066654191137,
+    "obstacle_dice": 0.935993812976526,
+    "obstacle_precision": 0.9532313222909636,
+    "obstacle_recall": 0.9237206812666736,
+    "water_iou": 0.8290132294808676,
+    "water_dice": 0.9026623308766419,
+    "water_precision": 0.8922691836959302,
+    "water_recall": 0.9293498327048708,
+    "sky_iou": 0.6685054834460328,
+    "sky_dice": 0.7395224184247244,
+    "sky_precision": 0.6840826815735364,
+    "sky_recall": 0.9591377290537139
+  },
+  "global_metrics": {
+    "true_obstacle_pred_obstacle": 44508746,
+    "true_obstacle_pred_water": 3315995,
+    "true_obstacle_pred_sky": 501641,
+    "true_water_pred_obstacle": 2083045,
+    "true_water_pred_water": 28439749,
+    "true_water_pred_sky": 141727,
+    "true_sky_pred_obstacle": 38544,
+    "true_sky_pred_water": 0,
+    "true_sky_pred_sky": 3914553,
+    "pixel_accuracy": 0.9266860532407407,
+    "obstacle_true_positive": 44508746,
+    "obstacle_false_positive": 2121589,
+    "obstacle_false_negative": 3817636,
+    "obstacle_true_negative": 32496029,
+    "obstacle_support": 48326382,
+    "obstacle_predicted_pixels": 46630335,
+    "obstacle_iou": 0.8822702899190931,
+    "obstacle_dice": 0.9374533451909464,
+    "obstacle_precision": 0.9545019567198049,
+    "obstacle_recall": 0.9210030661927061,
+    "water_true_positive": 28439749,
+    "water_false_positive": 3315995,
+    "water_false_negative": 2224772,
+    "water_true_negative": 48963484,
+    "water_support": 30664521,
+    "water_predicted_pixels": 31755744,
+    "water_iou": 0.8369428233520645,
+    "water_dice": 0.9112344845059533,
+    "water_precision": 0.8955781039171999,
+    "water_recall": 0.9274480106830953,
+    "sky_true_positive": 3914553,
+    "sky_false_positive": 643368,
+    "sky_false_negative": 38544,
+    "sky_true_negative": 78347535,
+    "sky_support": 3953097,
+    "sky_predicted_pixels": 4557921,
+    "sky_iou": 0.8516442527028923,
+    "sky_dice": 0.919878914602225,
+    "sky_precision": 0.8588461713136318,
+    "sky_recall": 0.9902496700688094,
+    "mean_iou": 0.8569524553246833,
+    "mean_dice": 0.9228555814330415,
+    "mean_precision": 0.9029754106502123,
+    "mean_recall": 0.9462335823148703
+  }
+}

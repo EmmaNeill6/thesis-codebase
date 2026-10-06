@@ -2,7 +2,9 @@ import importlib.util
 import sys
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 from PIL import Image
@@ -66,6 +68,36 @@ class TrainingDataTests(unittest.TestCase):
         metrics = train_head.confusion_metrics(np.diag([10, 20, 30]))
         self.assertEqual(metrics["pixel_accuracy"], 1.0)
         self.assertEqual(metrics["mean_iou"], 1.0)
+
+    def test_yaml_range_selection_uses_frame_numbers(self):
+        samples = [train_head.Sample(self.images / f"left_frame_{number:04d}.png",
+                                     self.masks / f"left_frame_{number:04d}.png")
+                   for number in (75, 80, 81, 85, 90)]
+        chosen = train_head.select_configured_samples(samples, {
+            "kind": "every_nth", "index_pattern": r"^left_frame_(\d+)$",
+            "start": 75, "end": 85, "step": 5,
+        }, "train")
+        self.assertEqual([sample.image_path.stem for sample in chosen],
+                         ["left_frame_0075", "left_frame_0080", "left_frame_0085"])
+
+    def test_evaluation_report_records_timing_and_reserved_split(self):
+        metrics = train_head.confusion_metrics(np.diag([10, 20, 30]))
+        metrics["loss"] = 0.1
+        checkpoint = self.root / "best_head_only.npz"
+        result = {"best_epoch": 3, "best_checkpoint": checkpoint,
+                  "best_record": {"validation": metrics},
+                  "training_elapsed_seconds": 12.5}
+        args = SimpleNamespace(learning_rate=.001, weight_decay=.001,
+                               epochs=20, batch_size=2, class_weights="1,1,1")
+        path = train_head.write_evaluation_text(
+            self.root, result, args=args, config_path=self.root / "data.yaml",
+            counts={"train": 360, "validation": 120, "test": 90, "unseen": 30},
+            test_metrics=metrics, started_at=datetime.now(timezone.utc),
+            total_elapsed_seconds=14.0, selection_metric="binary_water_iou")
+        report = path.read_text()
+        self.assertIn("Total elapsed", report)
+        self.assertIn("Selected checkpoint on test split", report)
+        self.assertIn("Unseen split: reserved", report)
 
 
 if __name__ == "__main__":

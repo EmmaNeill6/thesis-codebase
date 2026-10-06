@@ -1,0 +1,106 @@
+# Run with run_tampere_channel_random.py; membership is assigned by its dedicated runner.
+schema_version: 1
+experiment:
+  name: tampere_channel_random_head_only_v1
+  description: Separate channel-only experiment using the dock run training parameters
+    and seeded random 60/20/20 split.
+  output_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_channel_random_head_only_v1
+  seed: 4022
+  label_source_confirmed: true
+labels:
+  obstacle: 0
+  water: 1
+  sky: 2
+data:
+  train:
+    sequence_id: tampere_channel_random_train_not_a_recording_id
+    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel
+    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    expected_count: 120
+    selection:
+      kind: assigned_by_run_tampere_channel_random
+  validation:
+    sequence_id: tampere_channel_random_validation_not_a_recording_id
+    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel
+    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    expected_count: 40
+    selection:
+      kind: assigned_by_run_tampere_channel_random
+  test:
+    sequence_id: tampere_channel_random_test_not_a_recording_id
+    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel
+    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    expected_count: 40
+    selection:
+      kind: assigned_by_run_tampere_channel_random
+model:
+  architecture: ewasr_resnet18
+  checkpoint: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  imu: false
+  trainable_module: decoder.seg_head
+  frozen_modules:
+  - backbone
+  - decoder.metaformers
+  - decoder.metaformers_skip2
+  - decoder.sim1
+  - decoder.sim2
+  - decoder.sim3
+  - decoder.sim4
+  frozen_batchnorm_affine_parameters: true
+preprocessing:
+  input_width: 512
+  input_height: 384
+  mask_width: 128
+  mask_height: 96
+  mask_interpolation: nearest
+  image_normalization: imagenet
+  image_mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  image_std:
+  - 0.229
+  - 0.224
+  - 0.225
+training:
+  optimizer: adamw
+  initial_learning_rate: 0.001
+  learning_rates:
+  - 0.0003
+  - 0.001
+  - 0.003
+  weight_decay: 0.0001
+  batch_size: 2
+  epochs: 10
+  loss: cross_entropy
+  class_weights: null
+  checkpoint_selection_metric: validation_mean_iou
+methodology_notes:
+  mask_source_status: User corrected the dataset to channel only. All 200 channel
+    images pair with Tampere_Channel_5ppt masks.
+  split_status: 'Same seeded random assignment method as the dock experiment: 120/40/40,
+    seed 4022. Reuse membership across all LR trials. No shared image/mask paths or
+    identical image bytes across roles; nearby frames may remain correlated.'
+  pseudo_label_role: Training, validation and test references are SAM3 pseudo-labels
+    (5% reflection padding); metrics measure SAM3 agreement.
+  resolution_policy: Resize 1920x1080 RGB images to 512x384 without padding. Nearest-neighbour
+    masks to 128x96; training metrics are at head resolution.
+  independence: Separate from the earlier tampere_channel_head_only_v1 chronological/external-test
+    experiment and from the dock run. Every trial reloads the original pretrained
+    checkpoint.
+  test_selection: Only validation mean IoU chooses LR/epoch; pretrained and selected
+    models are then evaluated on the same held-out test split.
+  parameter_reference: TestingPart3/DataSource/head_only_tampere_dock_v1.yaml
+split_policy:
+  method: random_images
+  seed: 4022
+  ratios:
+    train: 0.6
+    validation: 0.2
+    test: 0.2
+  independence_checks:
+  - disjoint_image_paths
+  - disjoint_mask_paths
+  - no_identical_image_bytes_across_splits
+  independence_scope: file-level disjointness; recording/statistical independence
+    cannot be established from available metadata

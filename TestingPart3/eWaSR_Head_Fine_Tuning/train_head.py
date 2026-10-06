@@ -11,7 +11,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import time
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator
 
@@ -25,6 +28,11 @@ DEFAULT_WEIGHTS = (
     PROJECT_DIR / "TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
 )
 DEFAULT_OUTPUT = SCRIPT_DIR / "outputs/head_only"
+FIXED_LEARNING_RATE = 0.001
+FIXED_WEIGHT_DECAY = 0.001
+FIXED_EPOCHS = 20
+FIXED_BATCH_SIZE = 2
+FIXED_CLASS_WEIGHTS = "1,1,1"
 
 CLASS_NAMES = ("obstacle", "water", "sky")
 NUM_CLASSES = len(CLASS_NAMES)
@@ -120,6 +128,111 @@ def validate_dataset(samples: list[Sample]) -> None:
         validate_mask(sample.mask_path)
 
 
+def configured_path(value: str, config_path: Path) -> Path:
+    path = Path(value).expanduser()
+    return (path if path.is_absolute() else config_path.parent / path).resolve()
+
+
+def select_configured_samples(samples: list[Sample], selection: dict, role: str) -> list[Sample]:
+    """Apply the filename selection recorded in a DataSource YAML file."""
+    kind = selection.get("kind")
+    if kind == "all":
+        return sorted(samples, key=lambda sample: str(sample.image_path))
+    if kind == "filename_regex":
+        pattern = re.compile(str(selection["pattern"]))
+        return sorted((sample for sample in samples if pattern.fullmatch(sample.image_path.stem)),
+                      key=lambda sample: str(sample.image_path))
+    if kind == "sequence_ids":
+        pattern = re.compile(str(selection["pattern"]))
+        ids = list(selection["ids"])
+        if not ids or len(ids) != len(set(ids)):
+            raise ValueError(f"{role} sequence_ids must be nonempty and unique")
+        chosen = []
+        found = set()
+        for sample in samples:
+            match = pattern.fullmatch(sample.image_path.stem)
+            if match is None or len(match.groups()) != 1:
+                raise ValueError(f"{role} filename does not match its sequence pattern: {sample.image_path.name}")
+            if match.group(1) in ids:
+                chosen.append(sample)
+                found.add(match.group(1))
+        if found != set(ids):
+            raise ValueError(f"{role} missing sequence IDs: {sorted(set(ids) - found)}")
+        return sorted(chosen, key=lambda sample: str(sample.image_path))
+    if kind not in {"inclusive_range", "every_nth"}:
+        raise ValueError(f"Unsupported {role} selection kind: {kind!r}")
+    pattern = re.compile(str(selection["index_pattern"]))
+    start, end = int(selection["start"]), int(selection["end"])
+    step = int(selection.get("step", 1)) if kind == "every_nth" else 1
+    if start > end or step <= 0:
+        raise ValueError(f"Invalid {role} selection range or step")
+    chosen = []
+    for sample in samples:
+        match = pattern.fullmatch(sample.image_path.stem)
+        if match is None or len(match.groups()) != 1:
+            raise ValueError(f"{role} filename does not match its index pattern: {sample.image_path.name}")
+        index = int(match.group(1))
+        if start <= index <= end and (index - start) % step == 0:
+            chosen.append((index, sample))
+    return [sample for _, sample in sorted(chosen, key=lambda pair: pair[0])]
+
+
+def load_configured_splits(config_path: Path) -> tuple[dict, dict[str, list[Sample]]]:
+    """Resolve YAML paths relative to the YAML and validate all selected pairs."""
+    import yaml
+
+    config_path = config_path.expanduser().resolve()
+    if config_path.parent != (SCRIPT_DIR.parent / "DataSource").resolve():
+        raise ValueError("--config must be a YAML file in TestingPart3/DataSource")
+    with config_path.open("r", encoding="utf-8") as source:
+        config = yaml.safe_load(source)
+    if not isinstance(config, dict) or config.get("schema_version") != 1:
+        raise ValueError("Expected a schema_version: 1 DataSource YAML")
+    if config.get("labels") != {"obstacle": 0, "water": 1, "sky": 2}:
+        raise ValueError("Expected labels obstacle=0, water=1, sky=2")
+    model = config["model"]
+    if model.get("imu") is not False or model.get("trainable_module") != "decoder.seg_head":
+        raise ValueError("Expected non-IMU eWaSR with only decoder.seg_head trainable")
+    data = config["data"]
+    roles = ("train", "validation", "test", "unseen")
+    splits = {}
+    for role in roles:
+        if role not in data:
+            if role == "unseen":
+                continue
+            raise ValueError(f"Missing data.{role} split")
+        split = data[role]
+        sources = split.get("sources", [split])
+        if not isinstance(sources, list) or not sources:
+            raise ValueError(f"data.{role}.sources must be a nonempty list")
+        selected = []
+        for source in sources:
+            images = configured_path(source["images_dir"], config_path)
+            masks = configured_path(source["masks_dir"], config_path)
+            available = find_samples(images, masks,
+                                     ignore_masks_without_images=bool(source.get("shared_masks_dir", False)))
+            subset = select_configured_samples(available, source["selection"], role)
+            if "expected_count" in source and len(subset) != int(source["expected_count"]):
+                raise ValueError(f"{role} source selected {len(subset)} pairs; expected {source['expected_count']}")
+            if role != "unseen":
+                validate_dataset(subset)
+            selected.extend(subset)
+        if "expected_count" in split and len(selected) != int(split["expected_count"]):
+            raise ValueError(f"{role} selected {len(selected)} pairs; expected {split['expected_count']}")
+        if not selected:
+            raise ValueError(f"{role} has no selected pairs")
+        splits[role] = selected
+    image_owners, mask_owners = set(), set()
+    for role, samples in splits.items():
+        for sample in samples:
+            image, mask = sample.image_path.resolve(), sample.mask_path.resolve()
+            if image in image_owners or mask in mask_owners:
+                raise ValueError(f"Image or mask appears in multiple YAML splits: {role}: {image}")
+            image_owners.add(image)
+            mask_owners.add(mask)
+    return config, splits
+
+
 def load_sample(
     sample: Sample,
     *,
@@ -203,7 +316,22 @@ def confusion_metrics(confusion: np.ndarray) -> dict[str, object]:
         "binary_water_iou": float(water_iou),
         "binary_non_water_iou": float(non_water_iou),
         "binary_mean_iou": float(np.nanmean([water_iou, non_water_iou])),
+        "obstacle_recall": float(intersection[0] / true_pixels[0]) if true_pixels[0] else None,
+        "obstacle_precision": float(intersection[0] / predicted_pixels[0]) if predicted_pixels[0] else None,
+        "obstacle_miss_rate": float(1 - intersection[0] / true_pixels[0]) if true_pixels[0] else None,
+        "water_as_obstacle_rate": float(confusion[1, 0] / true_pixels[1]) if true_pixels[1] else None,
+        "confusion_matrix": confusion.tolist(),
     }
+
+
+def validation_selection_score(record: dict[str, object], metric: str) -> float:
+    """Choose checkpoints by an explicit validation metric, never test data."""
+    if metric not in {"mean_iou", "binary_water_iou"}:
+        raise ValueError(f"Unsupported checkpoint selection metric: {metric}")
+    value = record["validation"][metric]
+    if value is None or not np.isfinite(value):
+        raise ValueError(f"Undefined validation {metric}")
+    return float(value)
 
 
 def parse_class_weights(value: str | None) -> np.ndarray | None:
@@ -267,6 +395,7 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[s
     if not mx.metal.is_available():
         raise RuntimeError("MLX cannot access an Apple Metal GPU")
 
+    training_started = time.perf_counter()
     model = create_head_finetuning_model(args.weights)
     trainable_names, trainable_count = flat_parameter_summary(
         model.trainable_parameters()
@@ -341,8 +470,12 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[s
     best_score = -np.inf
     best_epoch = None
     best_record = None
+    selection_metric = getattr(args, "selection_metric", "mean_iou")
+    if selection_metric not in {"mean_iou", "binary_water_iou"}:
+        raise ValueError(f"Unsupported checkpoint selection metric: {selection_metric}")
     with history_path.open("w", encoding="utf-8") as history_file:
         for epoch in range(1, args.epochs + 1):
+            epoch_started = time.perf_counter()
             model.set_head_training_mode(True)
             training_losses = []
             for images, masks in batches(
@@ -363,7 +496,7 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[s
             }
             if validation_samples:
                 record["validation"] = evaluate(model, validation_samples, args)
-                score = float(record["validation"]["mean_iou"])
+                score = validation_selection_score(record, selection_metric)
             else:
                 score = -float(record["training_loss"])
 
@@ -374,6 +507,7 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[s
                 best_record = record
                 model.save_weights(str(best_path))
 
+            record["epoch_elapsed_seconds"] = time.perf_counter() - epoch_started
             history_file.write(json.dumps(record) + "\n")
             history_file.flush()
             print(json.dumps(record))
@@ -381,6 +515,8 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[s
     print(f"Latest checkpoint: {latest_path}")
     print(f"Best checkpoint: {best_path}")
     print(f"Training history: {history_path}")
+    training_elapsed_seconds = time.perf_counter() - training_started
+    print(f"Training elapsed: {training_elapsed_seconds:.2f} seconds")
     return {
         "best_checkpoint": best_path,
         "latest_checkpoint": latest_path,
@@ -390,24 +526,78 @@ def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[s
         "best_record": best_record,
         "trainable_parameter_names": trainable_names,
         "trainable_parameter_count": trainable_count,
+        "training_elapsed_seconds": training_elapsed_seconds,
     }
+
+
+def format_metrics(metrics: dict[str, object], label: str) -> list[str]:
+    lines = [label]
+    for key in ("loss", "pixel_accuracy", "mean_iou", "binary_water_iou",
+                "binary_non_water_iou", "binary_mean_iou", "obstacle_recall",
+                "obstacle_precision", "obstacle_miss_rate", "water_as_obstacle_rate"):
+        value = metrics.get(key)
+        lines.append(f"  {key}: {value:.6f}" if value is not None else f"  {key}: unavailable")
+    for name, value in metrics["class_iou"].items():
+        lines.append(f"  {name}_iou: {value:.6f}" if value is not None else f"  {name}_iou: unavailable")
+    lines.append(f"  confusion_matrix (rows=true, columns=predicted): {metrics['confusion_matrix']}")
+    return lines
+
+
+def write_evaluation_text(output_dir: Path, result: dict[str, object], *,
+                          args: argparse.Namespace,
+                          config_path: Path | None, counts: dict[str, int],
+                          test_metrics: dict[str, object] | None,
+                          started_at: datetime, total_elapsed_seconds: float,
+                          selection_metric: str) -> Path:
+    lines = [
+        "eWaSR segmentation-head fine-tuning evaluation",
+        f"Started (UTC): {started_at.isoformat()}",
+        f"Finished (UTC): {datetime.now(timezone.utc).isoformat()}",
+        f"Dataset YAML: {config_path if config_path else 'direct image/mask directories'}",
+        f"Split counts: {counts}",
+        "Optimizer: AdamW",
+        f"Learning rate: {args.learning_rate}",
+        f"Weight decay: {args.weight_decay}",
+        f"Epochs: {args.epochs}",
+        f"Batch size: {args.batch_size}",
+        f"Class weights (obstacle, water, sky): {args.class_weights or 'unweighted'}",
+        f"Best epoch: {result['best_epoch']}",
+        f"Checkpoint selection: validation {selection_metric}" if counts.get("validation") else "Checkpoint selection: lowest training loss",
+        f"Best checkpoint: {result['best_checkpoint']}",
+        f"Training elapsed: {result['training_elapsed_seconds']:.2f} seconds",
+        f"Total elapsed (data loading, training and evaluation): {total_elapsed_seconds:.2f} seconds",
+        "",
+        "Metrics against pseudo-label masks measure agreement with those labels.",
+        "",
+    ]
+    if counts.get("validation"):
+        lines.extend(format_metrics(result["best_record"]["validation"], "Best validation epoch:"))
+    if test_metrics is not None:
+        lines.extend([""] + format_metrics(test_metrics, "Selected checkpoint on test split:"))
+    if counts.get("unseen"):
+        lines.extend(["", "Unseen split: reserved; no evaluation performed."])
+    path = output_dir / "evaluation.txt"
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return path
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Fine-tune only the eWaSR segmentation head with MLX."
     )
-    parser.add_argument("--train-images", type=Path, required=True)
-    parser.add_argument("--train-masks", type=Path, required=True)
+    parser.add_argument("--config", type=Path, help="DataSource YAML defining image/mask paths and splits")
+    parser.add_argument("--train-images", type=Path)
+    parser.add_argument("--train-masks", type=Path)
     parser.add_argument("--val-images", type=Path)
     parser.add_argument("--val-masks", type=Path)
-    parser.add_argument("--weights", type=Path, default=DEFAULT_WEIGHTS)
-    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--epochs", type=int, default=10)
-    parser.add_argument("--batch-size", type=int, default=2)
-    parser.add_argument("--learning-rate", type=float, default=1e-3)
-    parser.add_argument("--weight-decay", type=float, default=1e-4)
-    parser.add_argument("--class-weights", help="Obstacle,water,sky weights, e.g. 2,1,1")
+    parser.add_argument("--weights", type=Path)
+    parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--epochs", type=int, default=FIXED_EPOCHS)
+    parser.add_argument("--batch-size", type=int, default=FIXED_BATCH_SIZE)
+    parser.add_argument("--learning-rate", type=float, default=FIXED_LEARNING_RATE)
+    parser.add_argument("--weight-decay", type=float, default=FIXED_WEIGHT_DECAY)
+    parser.add_argument("--class-weights", default=FIXED_CLASS_WEIGHTS,
+                        help="Obstacle,water,sky weights (default: 1,1,1)")
     parser.add_argument("--width", type=int, default=512)
     parser.add_argument("--height", type=int, default=384)
     parser.add_argument("--seed", type=int, default=4022)
@@ -420,6 +610,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
+    total_started = time.perf_counter()
+    started_at = datetime.now(timezone.utc)
     args = parse_args()
     if args.epochs <= 0 or args.batch_size <= 0:
         raise ValueError("--epochs and --batch-size must be positive")
@@ -427,23 +619,93 @@ def main() -> None:
         raise ValueError("Learning rate must be positive and weight decay non-negative")
     if args.width % 64 or args.height % 64:
         raise ValueError("--width and --height must both be divisible by 64")
-    if (args.val_images is None) != (args.val_masks is None):
-        raise ValueError("Provide both --val-images and --val-masks, or neither")
-
-    train_samples = find_samples(args.train_images, args.train_masks)
-    validation_samples = (
-        find_samples(args.val_images, args.val_masks) if args.val_images else []
-    )
-    validate_dataset(train_samples)
-    validate_dataset(validation_samples)
-    print(f"Validated {len(train_samples)} training pairs")
-    print(f"Validated {len(validation_samples)} validation pairs")
+    if args.config is not None:
+        requested = {"learning_rate": FIXED_LEARNING_RATE,
+                     "weight_decay": FIXED_WEIGHT_DECAY, "epochs": FIXED_EPOCHS,
+                     "batch_size": FIXED_BATCH_SIZE, "class_weights": FIXED_CLASS_WEIGHTS}
+        for name, fixed_value in requested.items():
+            if getattr(args, name) != fixed_value:
+                raise ValueError(f"--config uses fixed {name}={fixed_value}; do not override it")
+        if any(value is not None for value in (args.train_images, args.train_masks,
+                                               args.val_images, args.val_masks)):
+            raise ValueError("Use --config or direct image/mask directories, not both")
+        if args.weights is not None:
+            raise ValueError("The YAML model.checkpoint supplies --weights")
+        config_path = args.config.expanduser().resolve()
+        config, splits = load_configured_splits(config_path)
+        preprocessing = config["preprocessing"]
+        if (int(preprocessing["input_width"]), int(preprocessing["input_height"])) != (512, 384):
+            raise ValueError("This head-only recipe requires 512 x 384 input")
+        if (int(preprocessing["mask_width"]), int(preprocessing["mask_height"])) != (128, 96):
+            raise ValueError("This head-only recipe requires 128 x 96 masks")
+        if preprocessing.get("mask_interpolation") != "nearest":
+            raise ValueError("Mask interpolation must be nearest")
+        args.width, args.height = 512, 384
+        args.weights = configured_path(config["model"]["checkpoint"], config_path)
+        if not args.weights.is_file():
+            raise FileNotFoundError(f"Pretrained checkpoint not found: {args.weights}")
+        yaml_output = configured_path(config["experiment"]["output_dir"], config_path)
+        args.output_dir = (args.output_dir or yaml_output / "head_only_lr1e-3_wd1e-3_20ep").expanduser().resolve()
+        args.seed = int(config["experiment"].get("seed", args.seed))
+        configured_metric = config.get("training", {}).get("checkpoint_selection_metric", "validation_mean_iou")
+        metric_names = {"validation_mean_iou": "mean_iou",
+                        "validation_binary_water_iou": "binary_water_iou"}
+        if configured_metric not in metric_names:
+            raise ValueError(f"Unsupported validation selection metric: {configured_metric}")
+        args.selection_metric = metric_names[configured_metric]
+        # This single-run recipe uses the requested fixed settings; the YAML's
+        # training block belongs to other experiment runners.
+        args.learning_rate = FIXED_LEARNING_RATE
+        args.weight_decay = FIXED_WEIGHT_DECAY
+        args.epochs = FIXED_EPOCHS
+        args.batch_size = FIXED_BATCH_SIZE
+        args.class_weights = FIXED_CLASS_WEIGHTS
+        args.config = config_path
+        train_samples, validation_samples = splits["train"], splits["validation"]
+        print("Validated split counts:", {role: len(samples) for role, samples in splits.items()})
+    else:
+        if args.train_images is None or args.train_masks is None:
+            raise ValueError("Provide --config or both --train-images and --train-masks")
+        if (args.val_images is None) != (args.val_masks is None):
+            raise ValueError("Provide both --val-images and --val-masks, or neither")
+        train_samples = find_samples(args.train_images, args.train_masks)
+        validation_samples = (find_samples(args.val_images, args.val_masks)
+                              if args.val_images else [])
+        validate_dataset(train_samples)
+        validate_dataset(validation_samples)
+        splits = {"train": train_samples, "validation": validation_samples}
+        args.weights = (args.weights or DEFAULT_WEIGHTS).expanduser().resolve()
+        args.output_dir = (args.output_dir or DEFAULT_OUTPUT).expanduser().resolve()
+        args.selection_metric = "mean_iou"
+        config_path = None
+        print(f"Validated {len(train_samples)} training pairs")
+        print(f"Validated {len(validation_samples)} validation pairs")
     if args.check_data:
         return
 
-    args.weights = args.weights.expanduser().resolve()
-    args.output_dir = args.output_dir.expanduser().resolve()
-    train(args, train_samples, validation_samples)
+    if config_path is not None and args.output_dir.exists() and any(args.output_dir.iterdir()):
+        raise FileExistsError(f"Output directory is not empty: {args.output_dir}")
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    if config_path is not None:
+        manifest = {role: [{"image": str(sample.image_path), "mask": str(sample.mask_path)}
+                           for sample in samples] for role, samples in splits.items()}
+        (args.output_dir / "resolved_splits.json").write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    result = train(args, train_samples, validation_samples)
+    test_metrics = None
+    if "test" in splits:
+        from ewasr_mlx import create_head_finetuning_model
+
+        selected_model = create_head_finetuning_model(result["best_checkpoint"])
+        test_metrics = evaluate(selected_model, splits["test"], args)
+    report = write_evaluation_text(
+        args.output_dir, result, args=args, config_path=config_path,
+        counts={role: len(samples) for role, samples in splits.items()},
+        test_metrics=test_metrics, started_at=started_at,
+        total_elapsed_seconds=time.perf_counter() - total_started,
+        selection_metric=args.selection_metric,
+    )
+    print(f"Evaluation report: {report}")
 
 
 if __name__ == "__main__":

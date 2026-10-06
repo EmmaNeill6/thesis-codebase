@@ -1,0 +1,238 @@
+TAMPERE DOCK HEAD-ONLY EWASR — SEPARATE EXPERIMENT V1
+==================================================
+
+STATUS
+COMPLETE. Dock pseudo-label source confirmed. The user replaced recording-based
+splitting with a seeded random split. All three 10-epoch LR trials and final
+held-out evaluation finished successfully. Results are appended below.
+
+FILES AND COMMANDS (run from thesis-codebase)
+Configuration: TestingPart3/DataSource/head_only_tampere_dock_v1.yaml
+Runner: TestingPart3/eWaSR_Head_Fine_Tuning/run_tampere_dock.py
+Output: TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1/
+
+Check the fully resolved split:
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/run_tampere_dock.py --config TestingPart3/DataSource/head_only_tampere_dock_v1.yaml --check-data
+
+Run all three learning rates and final held-out evaluation:
+.venv-sam3-mlx/bin/python -u TestingPart3/eWaSR_Head_Fine_Tuning/run_tampere_dock.py --config TestingPart3/DataSource/head_only_tampere_dock_v1.yaml
+
+Use the dock-specific runner. It adds split and coverage checks beyond the
+general run_experiment.py runner. It requires an empty output directory, so a
+new attempt cannot silently overwrite an earlier trained experiment.
+MLX training needs access to the Apple Metal GPU outside the restricted sandbox.
+
+CONFIRMED PSEUDO-LABEL SOURCE
+Images: data/Tampere-WaterSeg/images/dock (200 dock_image_*.jpg files).
+Use ONLY TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks.
+The user confirmed these masks, generated on these exact dock images with 5%
+reflection padding in this session; all 200 names match. The runner rejects a
+different mask directory. The earlier channel path had zero matching dock names
+and is not used. YAML label_source_confirmed=true.
+Labels: 0=obstacle, 1=water, 2=sky. No ignored label or class weights.
+
+RANDOM 60/20/20 SPLIT AND THE MEANING OF INDEPENDENCE
+The user requested a random split after the initial recording split proposal.
+Method: random_images. Seed 4022 shuffles the sorted list of 200 source images
+with Python random.Random, assigns 120 train, 40 validation, 40 test, and sorts
+each role's membership for stable iteration. This assignment is generated ONCE
+per experiment and reused for every LR trial, validation and final test.
+Exact membership is saved in resolved_splits.json and resolved_experiment.yaml.
+Every source image is assigned once. Image paths and mask paths cannot overlap
+between roles. SHA-256 hashes reject identical image bytes crossing roles.
+All checks passed for the real dock dataset; split_audit.json stores this audit.
+Training batch order is shuffled within the fixed training subset each epoch.
+
+Independence here is FILE-LEVEL separation. No trip IDs or exact recording
+boundaries exist in the available dock metadata. Different files can be adjacent
+frames or share a scene, so statistical/recording independence is NOT verified.
+Results describe held-out random dock frames from the same source collection;
+they cannot establish generalization to unseen trips or a separate dock domain.
+No visual-similarity grouping or temporal exclusion gap is applied. A future
+recording-level study must use verified trip IDs and a new experiment directory.
+Optional recording_sequence CSV support remains available in the runner, but is
+not active in this user-requested random-image experiment.
+
+MODEL AND FROZEN STATE
+Initialize every trial independently from the original non-IMU checkpoint:
+TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+The existing decoder.seg_head is retained, not reinitialized. Only its two
+convolutions and BatchNorm affine weight/bias receive gradients. ResNet-18,
+MetaFormer refinement, SIM fusion and all their BatchNorm affine parameters
+remain frozen. Frozen BatchNorm layers stay in evaluation mode and do not
+update running statistics. Head BatchNorm uses training statistics and updates
+its running mean/variance as non-gradient state; it uses evaluation statistics
+for validation/test. The checkpoint contains the full model despite the
+best_head_only.npz/latest_head_only.npz filenames.
+Earlier channel, port and LaRS experiments are not used as initial weights.
+
+PREPROCESSING AND TRAINING
+RGB input: width 512, height 384; bilinear resize from native 1920x1080.
+This resize changes the source aspect ratio, matching the existing trainer.
+Input scaled to [0,1], then ImageNet normalization:
+mean=(0.485,0.456,0.406), std=(0.229,0.224,0.225).
+Loss targets: width 128, height 96, nearest-neighbour directly from raw masks.
+No 5% reflection padding is applied during eWaSR training; it was part of SAM3
+pseudo-label generation, whose saved masks were cropped to the source size.
+Optimizer AdamW, initial LR 1e-3; independent LR trials 3e-4, 1e-3, 3e-3.
+Weight decay 1e-4; batch size 2; 10 epochs per trial; seed 4022.
+Standard unweighted per-pixel cross-entropy. Constant LR; no scheduler,
+augmentation, early stopping or backbone fine-tuning in this first attempt.
+
+SELECTION, EVALUATION AND ARTIFACTS
+Best epoch for each trial: maximum validation three-class mean IoU.
+Chosen LR: highest best validation mean IoU among the three independent trials.
+Test data are evaluated only for the pretrained baseline and selected model
+after selection; test scores do not select an epoch or LR.
+Metrics in this trainer are computed at 128x96 head resolution. They are not
+directly comparable to the earlier native-resolution 200-image evaluation
+(global mIoU 0.723021), which also included potential future training images.
+Compare baseline and adapted model on the SAME held-out split and resolution.
+All three-class validation/test scores measure agreement with SAM3 pseudo
+labels. The dataset's original binary water masks cannot independently validate
+the obstacle-versus-sky separation. Independent human three-class annotations
+are needed for claims about true three-class segmentation performance.
+
+Completed output files:
+resolved_experiment.yaml: actual image membership, compatible with existing
+  visualization tooling; use it rather than proposed ranges for grouped trips.
+resolved_splits.json: all exact image/mask pairs by role.
+recording_sequences.csv: snapshot of supplied recording metadata, when used.
+split_audit.json: overlap checks, SHA-256 image hashes and independence scope.
+lr_3e-04/, lr_1e-03/, lr_3e-03/: run_config.json, training_history.jsonl,
+  best_head_only.npz, latest_head_only.npz (full-model checkpoint files).
+selected_model.json: selected checkpoint, LR, epoch, validation/test metrics.
+experiment_results.json: baseline metrics and complete LR comparison.
+experiment_summary.txt: report-ready completed results and interpretation.
+frozen_parameter_verification.json: all six saved checkpoints checked against
+  the pretrained file; all 312 tensors outside decoder.seg_head unchanged.
+The six full checkpoints occupy about 1.45 GB in total.
+
+CURRENT VALIDATION
+Dock images: 200. Proposed dock masks: 200 matching filenames.
+Channel masks are excluded; source is confirmed as the matching dock labels.
+All 200 dock pairs passed source dimension and class-ID validation.
+Random split validated: 120 training, 40 validation, 40 test pairs; zero overlaps
+and zero identical image bytes across roles.
+All 13 data/split tests passed, including deterministic random assignment,
+different-seed behavior, exact ratios, duplicate-byte and shared-mask rejection,
+and the optional recording-boundary checks.
+Actual training reports 67,075 trainable parameters across six head tensors:
+decoder.seg_head.conv.weight/bias, bn.weight/bias, conv1.weight/bias.
+All 30 epochs are present in the saved training histories. Best epoch selection
+was independently checked against each history's highest validation mean IoU.
+All six full checkpoints were compared with the original pretrained checkpoint.
+Only the six trainable head tensors and two head BatchNorm running-state tensors
+changed; every parameter and BatchNorm state outside the head stayed identical.
+
+
+COMPLETED RESULTS
+=================
+HEAD-ONLY EWASR FINE-TUNING — EXPERIMENT SUMMARY
+=================================================
+
+Configuration: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/DataSource/head_only_tampere_dock_v1.yaml
+Training pairs: 120
+Validation pairs: 40
+Test pairs: 40
+
+Important interpretation:
+Validation and test masks are SAM3 pseudo-labels. These metrics measure
+agreement with SAM3 and are not a substitute for final human-ground-truth
+evaluation.
+
+Pretrained baseline on validation:
+  loss: 0.215121
+  pixel accuracy: 0.924715
+  three-class mean IoU: 0.851800
+  obstacle IoU: 0.879071
+  water IoU: 0.834135
+  sky IoU: 0.842195
+  binary water IoU: 0.834135
+  binary non-water IoU: 0.896272
+  binary mean IoU: 0.865204
+
+Learning-rate trials (best validation epoch):
+
+  learning rate: 0.0003
+  best epoch: 9
+    loss: 0.043320
+    pixel accuracy: 0.985138
+    three-class mean IoU: 0.963517
+    obstacle IoU: 0.974906
+    water IoU: 0.966977
+    sky IoU: 0.948669
+    binary water IoU: 0.966977
+    binary non-water IoU: 0.980520
+    binary mean IoU: 0.973749
+
+  learning rate: 0.001
+  best epoch: 8
+    loss: 0.033549
+    pixel accuracy: 0.987482
+    three-class mean IoU: 0.968024
+    obstacle IoU: 0.978819
+    water IoU: 0.972654
+    sky IoU: 0.952598
+    binary water IoU: 0.972654
+    binary non-water IoU: 0.983930
+    binary mean IoU: 0.978292
+
+  learning rate: 0.003
+  best epoch: 10
+    loss: 0.031607
+    pixel accuracy: 0.988253
+    three-class mean IoU: 0.970450
+    obstacle IoU: 0.980135
+    water IoU: 0.974014
+    sky IoU: 0.957200
+    binary water IoU: 0.974014
+    binary non-water IoU: 0.984777
+    binary mean IoU: 0.979396
+
+Selected learning rate: 0.003
+Selected best epoch: 10
+Selected checkpoint: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1/lr_3e-03/best_head_only.npz
+Selection criterion: validation three-class mean IoU
+
+Pretrained baseline on held-out test:
+  loss: 0.203894
+  pixel accuracy: 0.928459
+  three-class mean IoU: 0.848916
+  obstacle IoU: 0.882841
+  water IoU: 0.850254
+  sky IoU: 0.813654
+  binary water IoU: 0.850254
+  binary non-water IoU: 0.898243
+  binary mean IoU: 0.874249
+
+Selected adapted model on held-out test:
+  loss: 0.033257
+  pixel accuracy: 0.987642
+  three-class mean IoU: 0.970620
+  obstacle IoU: 0.978658
+  water IoU: 0.972681
+  sky IoU: 0.960521
+  binary water IoU: 0.972681
+  binary non-water IoU: 0.982711
+  binary mean IoU: 0.977696
+
+Test deltas (adapted minus pretrained):
+  three-class mean IoU: +0.121704
+  binary water IoU: +0.122427
+  pixel accuracy: +0.059184
+
+Do not use these held-out test results to revise hyperparameters. Run the
+chosen model once more against independent human ground truth for the
+final performance claim.
+
+SPLIT AND RESOLUTION PROVENANCE
+Random image membership, seed 4022, fixed 120 train / 40 validation / 40 test.
+Only Tampere-Dock_5ppt/masks are used. Zero shared image or mask paths and
+zero identical image bytes across roles. Recording/statistical independence
+is not verified: nearby frames from the same dock collection may correlate.
+All metrics here are evaluated on 128x96 nearest-neighbour pseudo-label masks
+from RGB inputs resized to 512x384. They are not a repeat of the earlier
+native-resolution 200-image evaluation.
+All 30 training epochs completed. All six checkpoints checked: all 312 tensors
+outside decoder.seg_head are unchanged from the original pretrained file.

@@ -1,0 +1,118 @@
+# Pohang left-camera canal + pier, head-only staged experiment (steps 1-6).
+# Each recording has 299 consecutively numbered frames. Four contiguous
+# temporal blocks per recording yield 358/120/90/30 image-mask pairs,
+# with equal canal/pier counts in every split. Integer frame counts make
+# the requested 60/20/15/5 fractions approximate (within 0.14 percentage points).
+# These blocks share their parent recordings: adjacent-frame correlation near
+# block boundaries remains possible. This is not a trip-independent split.
+# The requested Pohang_Canal_5ppt/masks directory is absent locally. The
+# available Pohang_Canal/masks set is used; its padding setting is unverified.
+schema_version: 1
+experiment:
+  name: pohang_canal_pier_staged_v1
+  output_dir: ../eWaSR_Head_Fine_Tuning/outputs/pohang_canal_pier_staged_v1
+  seed: 4022
+  description: Head-only eWaSR fine-tuning on contiguous Pohang canal/pier frame blocks.
+
+source_inventory:
+  canal: {images: 299, first_frame: 1258, last_frame: 1556}
+  pier: {images: 299, first_frame: 153, last_frame: 451}
+  requested_canal_masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Pohang_Canal_5ppt/masks
+  requested_canal_masks_status: absent; the existing Pohang_Canal masks have unknown padding provenance.
+  actual_canal_masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Pohang_Canal/masks
+  pier_masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks
+
+labels: {obstacle: 0, water: 1, sky: 2}
+data:
+  train:
+    expected_count: 358
+    sources:
+      - source_id: canal_early_block
+        sequence_id: pohang00_canal_frames_001258_to_001436
+        images_dir: &canal_images ../../data/pohang00/pohang00_canal/left_images
+        masks_dir: &canal_masks ../SAM3_Pseudo_Labels_Generator/output/Pohang_Canal/masks
+        expected_count: 179
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 1258, end: 1436}
+      - source_id: pier_early_block
+        sequence_id: pohang00_pier_frames_000153_to_000331
+        images_dir: &pier_images ../../data/pohang00/pohang00_pier/left_images
+        masks_dir: &pier_masks ../SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks
+        expected_count: 179
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 153, end: 331}
+  validation:
+    expected_count: 120
+    sources:
+      - source_id: canal_middle_block
+        sequence_id: pohang00_canal_frames_001437_to_001496
+        images_dir: *canal_images
+        masks_dir: *canal_masks
+        expected_count: 60
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 1437, end: 1496}
+      - source_id: pier_middle_block
+        sequence_id: pohang00_pier_frames_000332_to_000391
+        images_dir: *pier_images
+        masks_dir: *pier_masks
+        expected_count: 60
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 332, end: 391}
+  test:
+    expected_count: 90
+    sources:
+      - source_id: canal_late_block
+        sequence_id: pohang00_canal_frames_001497_to_001541
+        images_dir: *canal_images
+        masks_dir: *canal_masks
+        expected_count: 45
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 1497, end: 1541}
+      - source_id: pier_late_block
+        sequence_id: pohang00_pier_frames_000392_to_000436
+        images_dir: *pier_images
+        masks_dir: *pier_masks
+        expected_count: 45
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 392, end: 436}
+  unseen:  # Heldout split; the staged runner calls this role "unseen".
+    expected_count: 30
+    sources:
+      - source_id: canal_final_block
+        sequence_id: pohang00_canal_frames_001542_to_001556
+        images_dir: *canal_images
+        masks_dir: *canal_masks
+        expected_count: 15
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 1542, end: 1556}
+      - source_id: pier_final_block
+        sequence_id: pohang00_pier_frames_000437_to_000451
+        images_dir: *pier_images
+        masks_dir: *pier_masks
+        expected_count: 15
+        selection: {kind: inclusive_range, index_pattern: '^(\d+)$', start: 437, end: 451}
+
+split_policy:
+  fractions: {train: 0.60, validation: 0.20, test: 0.15, unseen: 0.05}
+  max_fraction_deviation: 0.0014
+  counts: {train: 358, validation: 120, test: 90, unseen: 30}
+  method: contiguous frame-number blocks within each of the two recordings
+  independence_scope: Blocks from the same recording are correlated; this does not establish independent trips.
+
+model:
+  architecture: ewasr_resnet18
+  checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  imu: false
+  trainable_module: decoder.seg_head
+preprocessing:
+  input_width: 512
+  input_height: 384
+  mask_width: 128
+  mask_height: 96
+  mask_interpolation: nearest
+  image_normalization: imagenet
+  image_mean: [0.485, 0.456, 0.406]
+  image_std: [0.229, 0.224, 0.225]
+training:
+  optimizer: adamw
+  initial_learning_rate: 0.001
+  learning_rates: [0.0003, 0.001, 0.003]
+  weight_decay: 0.0001
+  batch_size: 2
+  epochs: 10
+  loss: cross_entropy
+  class_weights: null
+  checkpoint_selection_metric: validation_binary_water_iou

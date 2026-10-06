@@ -1,0 +1,124 @@
+{
+  "created_at": "2026-09-30T08:50:53+02:00",
+  "evaluation_type": "three_class",
+  "number_of_images": 137,
+  "configuration": {
+    "dataset": "custom",
+    "dataset_name": "LaSR Channel test; SAM3 5% pseudo-label reference",
+    "model_name": "eWaSR_pretrained",
+    "run_name": "LaSR_Channel_test_vs_SAM3_5ppt",
+    "prediction_dir": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/Pretrained_eWaSR_output/LaSR_eWaSR/masks/test/images/Channel",
+    "ground_truth_dir": "/Users/user/Documents/Documents - User\u2019s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks",
+    "selection_file": null,
+    "prediction_class_ids": {
+      "obstacle": 0,
+      "water": 1,
+      "sky": 2
+    },
+    "ground_truth_class_values": {
+      "obstacle": 0,
+      "water": 1,
+      "sky": 2
+    },
+    "ground_truth_ignore_value": null,
+    "resolution_policy": "native resolution; mismatched masks rejected"
+  },
+  "definitions": {
+    "confusion_matrix": "Rows: ground truth; columns: prediction; order: obstacle, water, sky",
+    "macro_metrics": "Equal-weight average across images; undefined values excluded per metric",
+    "global_metrics": "Computed from the summed pixel confusion matrix",
+    "mean_iou": "Equal-weight average of class IoUs with nonzero union",
+    "undefined_metrics": "NaN in CSV; null in JSON; never replaced with zero",
+    "dice": "Per-class Dice equals per-class F1"
+  },
+  "pairing": {
+    "expected": 137,
+    "evaluated": 137,
+    "predictions_without_ground_truth": 0,
+    "missing_predictions": 0
+  },
+  "valid_pixel_count": 375700032,
+  "ignored_pixel_count": 0,
+  "confusion_matrix": [
+    [
+      116292594,
+      17336482,
+      8950357
+    ],
+    [
+      30525575,
+      121491397,
+      21661040
+    ],
+    [
+      101655,
+      149869,
+      59191063
+    ]
+  ],
+  "macro_metrics": {
+    "pixel_accuracy": 0.790457888489081,
+    "mean_iou": 0.6522889643080106,
+    "mean_dice": 0.7750757675973373,
+    "mean_precision": 0.7697947651866355,
+    "mean_recall": 0.8371082136825239,
+    "obstacle_iou": 0.6875222134985295,
+    "obstacle_dice": 0.8101405482339357,
+    "obstacle_precision": 0.8038236068402786,
+    "obstacle_recall": 0.8290338758908594,
+    "water_iou": 0.641140853578752,
+    "water_dice": 0.7715940150974411,
+    "water_precision": 0.875599428362144,
+    "water_recall": 0.6995553458982466,
+    "sky_iou": 0.6282038258467507,
+    "sky_dice": 0.7434927394606348,
+    "sky_precision": 0.6299612603574843,
+    "sky_recall": 0.9909910154512259
+  },
+  "global_metrics": {
+    "true_obstacle_pred_obstacle": 116292594,
+    "true_obstacle_pred_water": 17336482,
+    "true_obstacle_pred_sky": 8950357,
+    "true_water_pred_obstacle": 30525575,
+    "true_water_pred_water": 121491397,
+    "true_water_pred_sky": 21661040,
+    "true_sky_pred_obstacle": 101655,
+    "true_sky_pred_water": 149869,
+    "true_sky_pred_sky": 59191063,
+    "pixel_accuracy": 0.7904578884890806,
+    "obstacle_true_positive": 116292594,
+    "obstacle_false_positive": 30627230,
+    "obstacle_false_negative": 26286839,
+    "obstacle_true_negative": 202493369,
+    "obstacle_support": 142579433,
+    "obstacle_predicted_pixels": 146919824,
+    "obstacle_iou": 0.6714094711240988,
+    "obstacle_dice": 0.8034051292919208,
+    "obstacle_precision": 0.791537798193932,
+    "obstacle_recall": 0.8156337246761249,
+    "water_true_positive": 121491397,
+    "water_false_positive": 17486351,
+    "water_false_negative": 52186615,
+    "water_true_negative": 184535669,
+    "water_support": 173678012,
+    "water_predicted_pixels": 138977748,
+    "water_iou": 0.6355337108517449,
+    "water_dice": 0.7771575805927899,
+    "water_precision": 0.874178771410226,
+    "water_recall": 0.6995208869617876,
+    "sky_true_positive": 59191063,
+    "sky_false_positive": 30611397,
+    "sky_false_negative": 251524,
+    "sky_true_negative": 285646048,
+    "sky_support": 59442587,
+    "sky_predicted_pixels": 89802460,
+    "sky_iou": 0.6572842240938502,
+    "sky_dice": 0.7932063969935297,
+    "sky_precision": 0.6591251843212312,
+    "sky_recall": 0.9957686229234942,
+    "mean_iou": 0.654742468689898,
+    "mean_dice": 0.7912563689594134,
+    "mean_precision": 0.7749472513084631,
+    "mean_recall": 0.8369744115204689
+  }
+}

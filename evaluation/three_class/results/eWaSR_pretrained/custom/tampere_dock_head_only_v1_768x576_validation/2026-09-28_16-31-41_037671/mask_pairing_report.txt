@@ -1,0 +1,13 @@
+Three-class mask pairing report
+Dataset: Tampere Dock validation — full-resolution SAM3 5% pseudo-labels
+Prediction directory: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1/768x576_resolution_validation/2026-09-28_16-31-25_518996/pretrained/masks
+Expected predictions: 40
+Matched predictions: 40
+
+Predictions without ground truth (0):
+None
+
+Missing predictions (0):
+None
+
+Metrics are withheld if any selected prediction is missing or invalid.

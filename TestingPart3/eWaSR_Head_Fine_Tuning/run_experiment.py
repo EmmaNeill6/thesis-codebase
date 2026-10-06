@@ -53,6 +53,29 @@ def select_samples(
     kind = selection.get("kind")
     if kind == "all":
         return sorted(samples, key=lambda sample: str(sample.image_path))
+    if kind == "filename_regex":
+        pattern = re.compile(str(selection["pattern"]))
+        return sorted(
+            (sample for sample in samples if pattern.fullmatch(sample.image_path.stem)),
+            key=lambda sample: str(sample.image_path),
+        )
+    if kind == "sequence_ids":
+        pattern = re.compile(str(selection["pattern"]))
+        ids = list(selection["ids"])
+        if not ids or len(ids) != len(set(ids)):
+            raise ValueError(f"{split_name} sequence_ids must be nonempty and unique")
+        selected = []
+        found = set()
+        for sample in samples:
+            match = pattern.fullmatch(sample.image_path.stem)
+            if match is None or len(match.groups()) != 1:
+                raise ValueError(f"{split_name} filename does not match its one-group sequence pattern: {sample.image_path.name}")
+            if match.group(1) in ids:
+                selected.append(sample)
+                found.add(match.group(1))
+        if found != set(ids):
+            raise ValueError(f"{split_name} missing sequence IDs: {sorted(set(ids) - found)}")
+        return sorted(selected, key=lambda sample: str(sample.image_path))
 
     pattern = re.compile(str(selection["index_pattern"]))
     indexed = [(extract_index(sample, pattern, split_name), sample) for sample in samples]

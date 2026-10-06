@@ -1,0 +1,44 @@
+Pooled three-class split evaluation
+Reference: SAM3 5% reflection padded pseudo labels; no human ground truth
+Images: 292 (test=137, train=140, val=15)
+Valid pixels: 800762112
+Macro metrics (per-image average):
+  pixel_accuracy: 0.781797
+  mean_iou: 0.637961
+  mean_dice: 0.766348
+  mean_precision: 0.761556
+  mean_recall: 0.828607
+  obstacle_iou: 0.672643
+  obstacle_dice: 0.799521
+  obstacle_precision: 0.809502
+  obstacle_recall: 0.802733
+  water_iou: 0.632005
+  water_dice: 0.766453
+  water_precision: 0.864111
+  water_recall: 0.699195
+  sky_iou: 0.609236
+  sky_dice: 0.733071
+  sky_precision: 0.611055
+  sky_recall: 0.991727
+Global metrics (all pixels):
+  pixel_accuracy: 0.781797
+  obstacle_iou: 0.661567
+  obstacle_dice: 0.796317
+  obstacle_precision: 0.799171
+  obstacle_recall: 0.793484
+  water_iou: 0.628324
+  water_dice: 0.771743
+  water_precision: 0.860166
+  water_recall: 0.699804
+  sky_iou: 0.632803
+  sky_dice: 0.775112
+  sky_precision: 0.634641
+  sky_recall: 0.995443
+  mean_iou: 0.640898
+  mean_dice: 0.781057
+  mean_precision: 0.764659
+  mean_recall: 0.829577
+Confusion matrix (reference rows, prediction columns; obstacle/water/sky):
+  243382372 41607969 21736036
+  60979615 258328444 49835761
+  181693 387403 124322819

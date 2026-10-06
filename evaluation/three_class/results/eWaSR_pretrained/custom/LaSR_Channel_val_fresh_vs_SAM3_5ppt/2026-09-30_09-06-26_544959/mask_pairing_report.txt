@@ -1,0 +1,13 @@
+Three-class mask pairing report
+Dataset: LaSR Channel val; SAM3 5% pseudo-label reference
+Prediction directory: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/Pretrained_eWaSR_output/LaSR_eWaSR/val_channel_rerun/masks
+Expected predictions: 15
+Matched predictions: 15
+
+Predictions without ground truth (0):
+None
+
+Missing predictions (0):
+None
+
+Metrics are withheld if any selected prediction is missing or invalid.
