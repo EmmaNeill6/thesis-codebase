@@ -1,0 +1,39 @@
+# Isolated decoder.sim4 + decoder.seg_head experiment.
+# The current split YAML's boundaries differ from the completed V3 run. The
+# completed V3 resolved manifest is authoritative for exact role membership.
+schema_version: 1
+experiment:
+  name: pohang_canal_pier_head_sim4_v1
+  output_dir: outputs/pohang_canal_pier_head_sim4_v1
+  seed: 4022
+split_source:
+  definition_yaml: ../DataSource/head_only_pohang_canal_pier_staged_v1.yaml
+  definition_sha256: 0779e7bec1a540f7c748fb89b6dad06f6e452f31820a8b1f45491d6b2dcc6c07
+  v3_resolved_manifest: outputs/pohang_canal_pier_staged_v1/resolved_splits.json
+  manifest_sha256: 991a5c77d69cefda2a650da75f8eabd465e11b008c154679dbdf206d56d6de8e
+  expected_counts: {train: 359, validation: 119, test: 90, unseen: 30}
+model:
+  architecture: ewasr_resnet18
+  checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  imu: false
+  trainable_modules: [decoder.sim4, decoder.seg_head]
+  sim4_batchnorm_mode: eval
+  seg_head_batchnorm_mode: train
+preprocessing:
+  input_width: 512
+  input_height: 384
+  mask_width: 128
+  mask_height: 96
+  mask_interpolation: nearest
+  image_normalization: imagenet
+  image_mean: [0.485, 0.456, 0.406]
+  image_std: [0.229, 0.224, 0.225]
+training:
+  optimizer: adamw
+  learning_rates: {decoder.seg_head: 0.001, decoder.sim4: 0.00001}
+  weight_decay: 0.001
+  epochs: 20
+  batch_size: 2
+  class_weights: [1, 1, 1]
+  loss: cross_entropy
+  checkpoint_selection_metric: validation_binary_water_iou

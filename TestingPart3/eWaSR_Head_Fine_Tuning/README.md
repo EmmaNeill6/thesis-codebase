@@ -378,3 +378,29 @@ running it on the fixed test split. A 512x384 run with the same score interpolat
 provides a fair full-resolution-reference baseline; the old 128x96 scores use a
 different evaluation procedure. Run results live under
 `outputs/tampere_dock_head_only_v1/<width>x<height>_resolution_<split>/`.
+
+## Compare saved masks with SAM3
+
+`compare_masks_against_sam3.py` compares one or two folders of saved class-ID
+prediction PNGs with SAM3 pseudo-label PNGs. From `thesis-codebase`:
+
+```sh
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/compare_masks_against_sam3.py \
+  --sam3-masks /path/to/SAM3/masks \
+  --prediction /path/to/first/run-or-predicted_masks \
+  --prediction /path/to/second/run-or-predicted_masks \
+  --images /path/to/original/images \
+  --output-dir /path/to/results
+```
+
+Omit the second `--prediction` for a single output. If `--images` is omitted,
+the script reads original image paths from a nearby `visualization_manifest.json`;
+it asks for `--images` when no manifest is available. A run directory is accepted when it contains
+`test_visualizations/predicted_masks/`; direct `predicted_masks/` folders also work.
+The command writes `failure_masks/`, `failure_overlays/`, `summary.csv`, and
+`manifest.json` inside the supplied output folder.
+For two predictions, blue means only the first differs from SAM3, purple means
+only the second differs, and red means both differ. For one prediction, red
+means it differs. Black means agreement. The prediction folders must contain
+the same image names, and all masks for an image must have the same dimensions.
+This script compares saved masks; it does not run a model checkpoint.

@@ -1,0 +1,134 @@
+# CataRob split with the 2845-3290 block reserved for testing.
+# Paths are relative to the thesis-codebase root.
+dataset: Catarob
+images_root: data/Catarob
+images_dir: data/Catarob/left_frames
+pseudo_labels_root: TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt
+masks_dir: TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks
+filename_pattern: "left_frame_{frame_number:04d}.png"
+
+selection:
+  frame_number_source: The four-digit number in each image filename.
+  rule: Start at each stated range's first frame and take every fifth image until its count is reached.
+  step: 5
+  range_end_note: The stated end bounds the range; it is not always a selected frame.
+
+split:
+  fractions: {train: 0.60, val: 0.20, test: 0.15, held_out: 0.05}
+  total_images: 600
+  train:
+    count: 360
+    ranges:
+      - {start: 75, end: 525, count: 90, last_selected: 520}
+      - {start: 1600, end: 2050, count: 90, last_selected: 2045}
+      - {start: 2390, end: 2840, count: 90, last_selected: 2835}
+      - {start: 1200, end: 1426, count: 45, last_selected: 1420}
+      - {start: 550, end: 770, count: 45, last_selected: 770}
+  val:
+    count: 120
+    ranges:
+      - {start: 825, end: 1125, count: 60, last_selected: 1120}
+      - {start: 2070, end: 2370, count: 60, last_selected: 2365}
+  test:
+    count: 90
+    ranges:
+      - {start: 2845, end: 3290, count: 90, last_selected: 3290}
+  held_out:
+    count: 30
+    ranges:
+      - {start: 3385, end: 3536, count: 30, last_selected: 3530}
+
+# Runnable configuration for run_staged_experiment.py. Each selected contiguous
+# frame block is treated as a temporal group; all frames remain from one bag.
+schema_version: 1
+experiment:
+  name: catarob_staged_test_2845_v1
+  output_dir: ../eWaSR_Head_Fine_Tuning/outputs/catarob_staged_test_2845_v1
+  seed: 4022
+  description: Head-only staged tuning on a disjoint 600-frame CataRob split with the 2845-3290 block for testing.
+labels: {obstacle: 0, water: 1, sky: 2}
+data:
+  train:
+    expected_count: 360
+    sources:
+      - sequence_id: catarob_0075_0520
+        images_dir: &images ../../data/Catarob/left_frames
+        masks_dir: &masks ../SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks
+        expected_count: 90
+        selection: {kind: every_nth, index_pattern: &frame_index '^left_frame_(\d+)$', start: 75, end: 520, step: 5}
+      - sequence_id: catarob_1600_2045
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 90
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 1600, end: 2045, step: 5}
+      - sequence_id: catarob_2390_2835
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 90
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 2390, end: 2835, step: 5}
+      - sequence_id: catarob_1200_1420
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 45
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 1200, end: 1420, step: 5}
+      - sequence_id: catarob_0550_0770
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 45
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 550, end: 770, step: 5}
+  validation:
+    expected_count: 120
+    sources:
+      - sequence_id: catarob_0825_1120
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 60
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 825, end: 1120, step: 5}
+      - sequence_id: catarob_2070_2365
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 60
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 2070, end: 2365, step: 5}
+  test:
+    expected_count: 90
+    sources:
+      - sequence_id: catarob_2845_3290
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 90
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 2845, end: 3290, step: 5}
+  unseen:
+    expected_count: 30
+    sources:
+      - sequence_id: catarob_3385_3530
+        images_dir: *images
+        masks_dir: *masks
+        expected_count: 30
+        selection: {kind: every_nth, index_pattern: *frame_index, start: 3385, end: 3530, step: 5}
+split_policy:
+  fractions: {train: 0.60, validation: 0.20, test: 0.15, unseen: 0.05}
+  max_fraction_deviation: 0.0
+model:
+  architecture: ewasr_resnet18
+  checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  imu: false
+  trainable_module: decoder.seg_head
+preprocessing:
+  input_width: 512
+  input_height: 384
+  mask_width: 128
+  mask_height: 96
+  mask_interpolation: nearest
+  image_normalization: imagenet
+  image_mean: [0.485, 0.456, 0.406]
+  image_std: [0.229, 0.224, 0.225]
+training:
+  optimizer: adamw
+  initial_learning_rate: 0.001
+  learning_rates: [0.0003, 0.001, 0.003]
+  weight_decay: 0.0001
+  batch_size: 2
+  epochs: 10
+  loss: cross_entropy
+  class_weights: null
+  checkpoint_selection_metric: validation_binary_water_iou

@@ -1,8 +1,9 @@
 """Render held-out test predictions from the selected fine-tuned eWaSR model.
 
-The script reads the test split from the experiment YAML, the original
-pretrained checkpoint from the YAML, and the chosen fine-tuned checkpoint from
-``selected_model.json`` or a completed staged run's ``stage_state.json``.
+The script reads the test split from the experiment YAML and the original
+pretrained checkpoint from the YAML. It reads the fine-tuned checkpoint from
+``--checkpoint``, ``selected_model.json``, or a completed staged run's
+``stage_state.json``.
 It writes class-index masks, full-resolution overlays,
 side-by-side comparisons with the SAM3 pseudo-labels, and a small contact sheet.
 It intentionally does not benchmark inference time.
@@ -18,7 +19,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 from ewasr_mlx.model import create_head_finetuning_model
-from run_experiment import DEFAULT_CONFIG, load_config, load_split, validate_configuration
+from run_experiment import DEFAULT_CONFIG, load_config, load_split
 from run_staged_experiment import normalize_paths
 from train_head import NORMALIZE_MEAN, NORMALIZE_STD, Sample
 
@@ -44,11 +45,18 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_CONFIG,
         help="Experiment YAML (default: %(default)s)",
     )
-    parser.add_argument(
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument(
         "--selection",
         type=Path,
         default=None,
         help="Selected-model or staged-state JSON (default: record in experiment output)",
+    )
+    selection.add_argument(
+        "--checkpoint",
+        type=Path,
+        default=None,
+        help="Use this fine-tuned checkpoint directly instead of a selection record",
     )
     parser.add_argument(
         "--output-dir",
@@ -182,7 +190,7 @@ def write_manifest(
     output_path: Path,
     *,
     config_path: Path,
-    selection_path: Path,
+    selection_path: Path | None,
     pretrained_checkpoint: Path,
     fine_tuned_checkpoint: Path,
     selection: dict[str, object],
@@ -191,7 +199,7 @@ def write_manifest(
 ) -> None:
     manifest = {
         "config": str(config_path),
-        "selection_record": str(selection_path),
+        "selection_record": str(selection_path) if selection_path is not None else None,
         "pretrained_checkpoint": str(pretrained_checkpoint),
         "fine_tuned_checkpoint": str(fine_tuned_checkpoint),
         "learning_rate": selection.get("learning_rate"),
@@ -219,10 +227,19 @@ def main() -> None:
         raise ValueError("--opacity must be between 0 and 1")
 
     config = normalize_paths(load_config(args.config))
-    validate_configuration(config)
+    if config.get("labels") != {"obstacle": 0, "water": 1, "sky": 2}:
+        raise ValueError("labels must be obstacle=0, water=1, sky=2")
+    if config["model"].get("imu") is not False:
+        raise ValueError("Visualization requires the non-IMU model")
     samples = load_split(config, "test")
     experiment_output = Path(config["experiment"]["output_dir"]).expanduser().resolve()
-    if args.selection is not None:
+    if args.checkpoint is not None:
+        selection_path = None
+        fine_tuned_checkpoint = args.checkpoint.expanduser().resolve()
+        if not fine_tuned_checkpoint.is_file():
+            raise FileNotFoundError(f"Fine-tuned checkpoint not found: {fine_tuned_checkpoint}")
+        selection = {"checkpoint": str(fine_tuned_checkpoint)}
+    elif args.selection is not None:
         selection_path = args.selection.expanduser().resolve()
     else:
         selection_path = experiment_output / "selected_model.json"
@@ -233,7 +250,8 @@ def main() -> None:
         if args.output_dir is not None
         else experiment_output / "test_visualizations"
     )
-    fine_tuned_checkpoint, selection = load_selected_checkpoint(selection_path)
+    if args.checkpoint is None:
+        fine_tuned_checkpoint, selection = load_selected_checkpoint(selection_path)
     pretrained_checkpoint = Path(config["model"]["checkpoint"]).expanduser().resolve()
     if not pretrained_checkpoint.is_file():
         raise FileNotFoundError(
