@@ -1,0 +1,16 @@
+# Tampere Channel has 200 consecutive paired frames. Separate trip boundaries
+# are not known, so the collection is represented as one source group.
+schema_version: 1
+dataset: tampere_channel_sweep
+model_checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+training_seed: 4022
+split_seeds: [4022, 4023, 4024]
+subtrip_size: 10
+sources:
+  - trip_id: tampere_channel_collection
+    images_dir: ../../data/Tampere-WaterSeg/images/channel
+    masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    frame_pattern: '^channel_image_(?P<frame>\d{3})$'
+    first_frame: 1
+    last_frame: 200
+    require_complete_range: true

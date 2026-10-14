@@ -1,5 +1,156 @@
 # eWaSR head-only fine-tuning with MLX
 
+## Training data-size evaluation
+
+`data_size_sweep.py` generates, checks, runs, and reports training-data budgets
+while preserving a chosen sub-trip split. The CataRob study recipe is
+`../DataSource/data_size_catarob_80_10_10_subtrips.yaml`. It freezes
+`catarob_all_5pct_sweep_5_2_1` (80/10/10 after the separate reserve), using
+iteration 1 by convention rather than ranking test results. Validation, test,
+common test core, and held-out membership remain identical in every run.
+
+From the `thesis-codebase` directory:
+
+```bash
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/data_size_sweep.py generate \
+  --study-config TestingPart3/DataSource/data_size_catarob_80_10_10_subtrips.yaml
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/data_size_sweep.py check \
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/data_size_sweeps/catarob_80_10_10_subtrips
+.venv-sam3-mlx/bin/python -u TestingPart3/eWaSR_Head_Fine_Tuning/data_size_sweep.py train \
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/data_size_sweeps/catarob_80_10_10_subtrips
+```
+
+Generation writes files only; it never starts training. Refuse an existing
+nonempty study directory rather than overwrite experiments. `check` verifies
+provenance, counts, nesting, and fixed memberships, then invokes the unchanged
+`train_head.py --check-data` on every generated YAML (no Metal GPU needed).
+
+Budgets refer to the 539-image training pool: 25% = 135, 50% = 270,
+75% = 404, and 100% = 539. The fixed validation/test/reserve counts are
+67/67/35. Percentages can be configured in the recipe as increasing integers
+ending at 100; its source YAML supplies image pairing and frame spacing.
+
+Three selection seeds use shifted temporal phases within the **original**
+training sub-trips. Each sub-trip's frame order progressively refines an equally
+spaced dyadic grid. Group orders are interleaved by fractional sampling density,
+allocating frames approximately proportionally and meeting exact total counts.
+Every budget is a prefix of one ordering per repetition. This gives nested,
+approximately uniform temporal coverage; it is not a strict every-k stride or
+content-based adaptive sampling. `selection_orders/` records ranks and phases.
+Unselected training images are omitted from the active manifest and recorded
+as `unused_train` in the full inventory. Sampling never moves a frame across
+the original sub-trip's training/validation/test assignment.
+
+The existing recipe uses AdamW, LR 0.001, decay 0.001, 20 epochs, batch 2, and
+class weights 1/1/1. Checkpoint selection uses validation binary water IoU.
+There are ten unique runs: three per smaller size and one 100% endpoint.
+The default recipe trains the 100% endpoint afresh alongside the smaller runs
+for comparable timings. Optional `reuse_baseline_result: true` requires a
+completed result with matching membership, recipe, and hashes; its timing may
+have been measured under different machine load. A fixed epoch count
+means larger sizes receive more optimizer updates; this is a practical
+training-budget experiment, not a comparison at equal compute.
+
+`train` updates `summary.csv`, `aggregate.csv`, and `report.md` after every run.
+It skips completed runs and refuses to overwrite partial outputs. `summary`
+rebuilds the reports, and `train --run-id RUN_ID` runs one generated subset.
+The reported sample SD measures subset-selection variation, with one fixed
+training seed. The single 100% endpoint has no estimated SD. Results measure
+agreement with pseudo-labels from one recording; the held-out reserve remains
+unevaluated. The test set was already used in the split sweep.
+
+Training seconds include validation passes and checkpoint saving within the
+training loop. Total elapsed also includes initial loading and final test
+evaluation. Planned optimizer updates are 1,360/2,700/4,040/5,400 under
+20 epochs and batch 2. These measure adaptation cost, not inference latency or
+SAM3 pseudo-labelling time.
+
+After the entire study finishes, `train` invokes the Matplotlib plotter to
+export performance and training-cost curves as PNG, PDF, and SVG. Install
+Matplotlib in the environment used for training/plotting. Rebuild the plots with:
+
+```bash
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/data_size_sweep.py plot \
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/data_size_sweeps/catarob_80_10_10_subtrips
+```
+
+Direct generation arguments (`--spec`, `--base-config`, `--output-dir`) are
+also supported for another chosen sub-trip run; do not mix them with
+`--study-config`. Each generated YAML references its membership CSV and can
+be passed directly to the original trainer.
+
+## Reproducible split sweep
+
+`split_sweep.py` generates the five train/validation/test ratios and three
+train/validation sorting methods discussed in the methodology. It removes one
+fixed held-out reserve first, then applies each ratio to the remaining images.
+The initial ratio is the exact `60/95 : 20/95 : 15/95` form of the original
+`60/20/15/5` split. The three methods are consecutive blocks, whole contiguous
+sub-trip windows, and random images. Consecutive blocks have one iteration;
+the other methods each have three distinct split iterations, for 35 runs total.
+The training seed and the fixed head-only AdamW recipe stay the same in all runs.
+
+The example spec `../DataSource/split_sweep_pohang_100_smoke.yaml` selects 50
+consecutively numbered image/mask pairs from Pohang Canal and 50 from Pier.
+From the `thesis-codebase` directory:
+
+```bash
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/split_sweep.py generate \
+  --spec TestingPart3/DataSource/split_sweep_pohang_100_smoke.yaml \
+  --output-dir TestingPart3/eWaSR_Head_Fine_Tuning/outputs/split_sweeps/pohang_100_smoke
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/split_sweep.py check \
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/split_sweeps/pohang_100_smoke \
+  --run-id pohang_100_smoke_1_1_1
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/split_sweep.py train \
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/split_sweeps/pohang_100_smoke \
+  --run-id pohang_100_smoke_1_1_1
+```
+
+`generate` only writes manifests, configs, audits, and an initial summary. `check`
+uses `train_head.py --check-data` and does not train. `train` runs one named job;
+pass `--all` instead of `--run-id` for the full sweep. It skips completed jobs
+and stops at a partial output so that a failed run is inspected before retrying.
+Run `split_sweep.py summary STUDY_DIR` to rebuild `summary.csv` from completed
+evaluation reports. `--refresh` may regenerate a study only before training
+starts. The generated run name is `dataset_splitversion_sortversion_iteration`.
+
+Each study has a `source_inventory.csv`, `fixed_partitions.csv`, `study.json`,
+and `summary.csv`. Each run has a `split_manifest.csv` listing every image and
+mask, its recording and frame, its sub-trip when applicable, and its exact role.
+It also has `split_audit.json` and a generated `config.yaml`. The trainer writes
+`resolved_splits.json` from the CSV it actually loaded. All test sets are nested:
+the smallest test set is a common core in every run, while larger test sets add
+fixed images. The selected checkpoint is evaluated on both its full test set
+and the common core; the fixed held-out set is never evaluated by the sweep.
+The `summary.csv` records comparable common-core metrics after runs complete.
+The trainer also writes `test_per_image_metrics.csv`, keyed by `image_id`, with
+each test image's IoU and a flag for common-core membership. For a run completed
+before that CSV existed, use `train_head.py --config RUN_CONFIG --per-image-only`
+to calculate it from the saved best checkpoint without retraining.
+Each audit records split counts, membership hashes, path overlap, and temporal
+gaps within each role and recording. Before checking or training, the runner
+also verifies that the source spec, starting checkpoint, generated config, and
+split manifests still match their saved hashes. `hash_content: true`
+additionally records SHA256 hashes and reports exact image bytes found in more
+than one role; this is a diagnostic count and does not stop training. With the
+default `false`, content overlap is unmeasured. The consecutive method
+requires an unbroken train and validation block per recording, so generation
+rejects pinned held-out or test choices that break those blocks.
+
+The source spec can list multiple recordings, each with its image and mask
+directories, `trip_id`, `frame_pattern` with a named `frame` capture, and an
+optional first/last frame range. `require_complete_range: true` rejects missing
+numbers or pairs. The default held-out assignment takes the final 5% of images,
+apportioned across recordings; the test order then takes late development
+frames from each recording. To preserve an existing reserve or test selection,
+provide `held_out_image_ids` or `held_out_ids_file`, and `test_order_image_ids`
+or `test_order_ids_file`. The test order list must cover at least the largest
+requested test set. When using `frame_step` greater than one, also set
+`first_frame` to anchor the sequence. The default avoids reading all image
+bytes just to plan the sweep. A dataset with adjacent frames from one recording
+can still have temporal similarity across split boundaries; its sub-trips are
+temporal windows, not independent trips.
+
 ## Single CataRob run from the split YAML
 
 `train_head.py` accepts a `TestingPart3/DataSource` YAML through `--config`.

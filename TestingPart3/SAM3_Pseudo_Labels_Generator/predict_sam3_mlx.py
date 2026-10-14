@@ -13,6 +13,7 @@ uses obstacle as the fallback for pixels that SAM 3 leaves uncovered.
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -112,6 +113,36 @@ def predict_image(
 ) -> np.ndarray:
     """Run MLX SAM 3 on a reflected border, then crop to the input size."""
 
+    class_mask, _ = _predict_image(
+        predictor, image, confidence_threshold, padding_percent, collect_scores=False
+    )
+    return class_mask
+
+
+def predict_image_with_scores(
+    predictor: Any,
+    image: Image.Image,
+    confidence_threshold: float,
+    padding_percent: float,
+) -> tuple[np.ndarray, dict[str, Any]]:
+    """Return the class mask and accepted instance scores for inspection."""
+
+    class_mask, report = _predict_image(
+        predictor, image, confidence_threshold, padding_percent, collect_scores=True
+    )
+    assert report is not None
+    return class_mask, report
+
+
+def _predict_image(
+    predictor: Any,
+    image: Image.Image,
+    confidence_threshold: float,
+    padding_percent: float,
+    collect_scores: bool,
+) -> tuple[np.ndarray, dict[str, Any] | None]:
+    """Run inference, optionally collecting per-instance score metadata."""
+
     from mlx_vlm.models.sam3.generate import predict_multi
 
     image = image.convert("RGB")
@@ -129,12 +160,36 @@ def predict_image(
         scores=result.scores,
         image_shape=(padded_image.height, padded_image.width),
     )
-    return crop_padding(
+    class_mask = crop_padding(
         padded_mask,
         original_shape=original_shape,
         pad_y=pad_y,
         pad_x=pad_x,
     )
+    if not collect_scores:
+        return class_mask, None
+
+    class_scores: dict[str, list[float]] = {prompt: [] for prompt in CLASS_PROMPTS}
+    if result.labels:
+        cropped_masks = np.asarray(result.masks).astype(bool)[
+            :, pad_y : pad_y + original_shape[0], pad_x : pad_x + original_shape[1]
+        ]
+        for label, instance_mask, score in zip(
+            result.labels, cropped_masks, np.asarray(result.scores).reshape(-1)
+        ):
+            if instance_mask.any():
+                class_scores[label].append(float(score))
+        uncovered_pixels = int((~np.any(cropped_masks, axis=0)).sum())
+    else:
+        uncovered_pixels = int(class_mask.size)
+
+    report = {
+        "score_meaning": "One score per accepted SAM 3 instance visible in the saved image, not per pixel",
+        "confidence_threshold": confidence_threshold,
+        "instance_scores_by_class": class_scores,
+        "uncovered_pixels_assigned_obstacle": uncovered_pixels,
+    }
+    return class_mask, report
 
 
 def add_reflection_padding(
@@ -249,6 +304,13 @@ def save_outputs(
     Image.fromarray(overlay, mode="RGB").save(overlay_path)
 
 
+def save_score_report(report: dict[str, Any], path: Path) -> None:
+    """Save the accepted instance scores alongside one output mask."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Segment images into obstacle, water and sky with SAM 3 on MLX."
@@ -296,6 +358,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Recompute images whose mask and overlay already exist",
     )
+    parser.add_argument(
+        "--save-scores",
+        action="store_true",
+        help="Save accepted per-instance scores in scores/<input-name>.json",
+    )
     return parser.parse_args()
 
 
@@ -314,13 +381,17 @@ def main() -> None:
         images = images[: args.max_images]
 
     output_dir = args.output_dir.expanduser().resolve()
-    pending: list[tuple[Path, Path, Path]] = []
+    pending: list[tuple[Path, Path, Path, Path]] = []
     for image_path in images:
         relative_path = relative_output_path(image_path, image_root)
         mask_path = output_dir / "masks" / relative_path
         overlay_path = output_dir / "overlays" / relative_path
-        if args.overwrite or not (mask_path.is_file() and overlay_path.is_file()):
-            pending.append((image_path, mask_path, overlay_path))
+        score_path = output_dir / "scores" / relative_path.with_suffix(".json")
+        complete = mask_path.is_file() and overlay_path.is_file()
+        if args.save_scores:
+            complete = complete and score_path.is_file()
+        if args.overwrite or not complete:
+            pending.append((image_path, mask_path, overlay_path, score_path))
 
     print(f"Input: {image_root}")
     print(f"Images selected: {len(images)}")
@@ -333,20 +404,35 @@ def main() -> None:
     print(f"Loading {args.model_id} with MLX...")
     predictor = create_predictor(args.model_id, args.confidence_threshold)
 
-    for index, (image_path, mask_path, overlay_path) in enumerate(pending, start=1):
+    for index, (image_path, mask_path, overlay_path, score_path) in enumerate(
+        pending, start=1
+    ):
         with Image.open(image_path) as source:
             image = source.convert("RGB")
-        class_mask = predict_image(
-            predictor,
-            image,
-            confidence_threshold=args.confidence_threshold,
-            padding_percent=args.padding_percent,
-        )
+        if args.save_scores:
+            class_mask, report = predict_image_with_scores(
+                predictor,
+                image,
+                confidence_threshold=args.confidence_threshold,
+                padding_percent=args.padding_percent,
+            )
+        else:
+            class_mask = predict_image(
+                predictor,
+                image,
+                confidence_threshold=args.confidence_threshold,
+                padding_percent=args.padding_percent,
+            )
         save_outputs(image, class_mask, mask_path, overlay_path)
+        if args.save_scores:
+            save_score_report(report, score_path)
+            print(f"  scores: {report['instance_scores_by_class']}")
         print(f"[{index}/{len(pending)}] {image_path.name}")
 
     print(f"Masks: {output_dir / 'masks'}")
     print(f"Overlays: {output_dir / 'overlays'}")
+    if args.save_scores:
+        print(f"Scores: {output_dir / 'scores'}")
 
 
 if __name__ == "__main__":

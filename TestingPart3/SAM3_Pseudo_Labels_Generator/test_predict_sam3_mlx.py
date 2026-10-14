@@ -1,9 +1,12 @@
 """Unit tests for SAM 3 result merging and output rendering."""
 
 import importlib.util
+import sys
 import tempfile
+import types
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 from PIL import Image
@@ -17,6 +20,30 @@ SPEC.loader.exec_module(MODULE)
 
 
 class SemanticMaskTests(unittest.TestCase):
+    def test_score_report_distinguishes_instances_from_fallback_obstacle(self):
+        masks = np.zeros((2, 2, 3), dtype=bool)
+        masks[0, 0, :2] = True
+        masks[1, 1, 2] = True
+        fake_result = types.SimpleNamespace(
+            labels=["navigable water", "sky"],
+            masks=masks,
+            scores=np.array([0.82, 0.93]),
+        )
+        generate = types.ModuleType("mlx_vlm.models.sam3.generate")
+        generate.predict_multi = lambda *args, **kwargs: fake_result
+        predictor = types.SimpleNamespace()
+
+        with patch.dict(sys.modules, {"mlx_vlm.models.sam3.generate": generate}):
+            class_mask, report = MODULE.predict_image_with_scores(
+                predictor, Image.new("RGB", (3, 2)), 0.5, 0
+            )
+
+        np.testing.assert_array_equal(class_mask, [[1, 1, 0], [0, 0, 2]])
+        self.assertEqual(report["instance_scores_by_class"]["navigable water"], [0.82])
+        self.assertEqual(report["instance_scores_by_class"]["sky"], [0.93])
+        self.assertEqual(report["instance_scores_by_class"]["obstacle"], [])
+        self.assertEqual(report["uncovered_pixels_assigned_obstacle"], 3)
+
     def test_reflection_padding_scales_with_each_image_dimension(self):
         pixels = np.arange(4 * 6 * 3, dtype=np.uint8).reshape(4, 6, 3)
         image = Image.fromarray(pixels, mode="RGB")

@@ -1,0 +1,16 @@
+# Pohang Canal left-camera recording: 299 consecutive paired frames, 001258–001556.
+# The available Pohang_Canal masks have unverified reflection-padding provenance.
+schema_version: 1
+dataset: pohang_canal_sweep
+model_checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+training_seed: 4022
+split_seeds: [4022, 4023, 4024]
+subtrip_size: 10
+sources:
+  - trip_id: pohang_canal
+    images_dir: ../../data/pohang00/pohang00_canal/left_images
+    masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Pohang_Canal/masks
+    frame_pattern: '^(?P<frame>\d{6})$'
+    first_frame: 1258
+    last_frame: 1556
+    require_complete_range: true

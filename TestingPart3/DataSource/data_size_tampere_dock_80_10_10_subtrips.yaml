@@ -1,0 +1,12 @@
+# Freeze iteration 1 by convention, without ranking the three test scores.
+# 80/10/10 applies to development data after the separate fixed 5% reserve.
+schema_version: 1
+kind: training_data_size_sweep
+source_spec: split_sweep_tampere_dock.yaml
+base_config: ../eWaSR_Head_Fine_Tuning/outputs/split_sweeps/tampere_dock_sweep/runs/tampere_dock_sweep_5_2_1/config.yaml
+output_dir: ../eWaSR_Head_Fine_Tuning/outputs/data_size_sweeps/tampere_dock_80_10_10_subtrips
+sampling_method: nested_uniform_temporal
+percentages: [25, 50, 75, 100]
+selection_seeds: [4022, 4023, 4024]
+# Train 100% afresh in the same batch for comparable training-cost measurements.
+reuse_baseline_result: false

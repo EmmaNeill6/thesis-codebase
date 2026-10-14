@@ -1,0 +1,17 @@
+# All 708 labelled frames from the CataRob recording: 0000, 0005, ..., 3535.
+# The label manifest's source field records pseudo-label provenance, not trips.
+schema_version: 1
+dataset: catarob_all_5pct_sweep
+model_checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+training_seed: 4022
+split_seeds: [4022, 4023, 4024]
+subtrip_size: 10
+sources:
+  - trip_id: catarob_recording
+    images_dir: ../../data/Catarob/left_frames
+    masks_dir: ../SAM3_Pseudo_Labels_Generator/output/CataRob_All_5pct/masks
+    frame_pattern: '^left_frame_(?P<frame>\d{4})$'
+    first_frame: 0
+    last_frame: 3535
+    frame_step: 5
+    require_complete_range: true

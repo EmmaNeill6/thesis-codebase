@@ -10,6 +10,7 @@ records training loss and segmentation quality for the fine-tuning study.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 import time
@@ -19,7 +20,7 @@ from pathlib import Path
 from typing import Iterator
 
 import numpy as np
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -45,6 +46,7 @@ NORMALIZE_STD = np.array((0.229, 0.224, 0.225), dtype=np.float32)
 class Sample:
     image_path: Path
     mask_path: Path
+    image_id: str | None = None
 
 
 def find_samples(
@@ -177,23 +179,84 @@ def select_configured_samples(samples: list[Sample], selection: dict, role: str)
     return [sample for _, sample in sorted(chosen, key=lambda pair: pair[0])]
 
 
+def load_manifest_splits(config_path: Path, data: dict) -> dict[str, list[Sample]]:
+    """Load exact sweep membership from a CSV beside a generated YAML."""
+    manifest_path = configured_path(data["manifest_csv"], config_path)
+    if not manifest_path.is_file():
+        raise FileNotFoundError(f"Split manifest not found: {manifest_path}")
+    splits = {role: [] for role in ("train", "validation", "test", "unseen")}
+    image_owners, mask_owners, image_ids = set(), set(), set()
+    with manifest_path.open(newline="", encoding="utf-8") as source:
+        reader = csv.DictReader(source)
+        required = {"image_id", "image_path", "mask_path", "role"}
+        if not required.issubset(reader.fieldnames or []):
+            raise ValueError(f"Split manifest requires columns: {sorted(required)}")
+        for line_number, row in enumerate(reader, start=2):
+            role = "unseen" if row["role"] == "held_out" else row["role"]
+            if role not in splits:
+                raise ValueError(f"Invalid manifest role on line {line_number}: {row['role']!r}")
+            image_id = row["image_id"]
+            if not image_id or image_id in image_ids:
+                raise ValueError(f"Missing or repeated image_id on line {line_number}: {image_id!r}")
+            image_ids.add(image_id)
+            image = configured_path(row["image_path"], manifest_path)
+            mask = configured_path(row["mask_path"], manifest_path)
+            if image in image_owners or mask in mask_owners:
+                raise ValueError(f"Image or mask appears twice in split manifest: {image_id}")
+            if not image.is_file() or not mask.is_file():
+                raise FileNotFoundError(f"Missing image or mask for {image_id}: {image}, {mask}")
+            if image.stem != mask.stem:
+                raise ValueError(f"Image and mask stems differ for {image_id}")
+            image_owners.add(image)
+            mask_owners.add(mask)
+            splits[role].append(Sample(image, mask, image_id))
+    if any(not samples for samples in splits.values()):
+        raise ValueError("Sweep manifest must contain train, validation, test, and held_out rows")
+    expected = data.get("expected_counts", {})
+    for role, samples in splits.items():
+        expected_count = expected.get("held_out" if role == "unseen" else role)
+        if expected_count is not None and len(samples) != int(expected_count):
+            raise ValueError(f"{role} has {len(samples)} pairs; expected {expected_count}")
+        if role != "unseen":
+            validate_dataset(samples)
+    return splits
+
+
+def validate_common_test_membership(config_path: Path, data: dict,
+                                    splits: dict[str, list[Sample]]) -> None:
+    requested = [configured_path(value, config_path)
+                 for value in data.get("common_test_image_paths", [])]
+    if not requested:
+        return
+    if len(requested) != len(set(requested)):
+        raise ValueError("Repeated common test image path in YAML")
+    test_paths = {sample.image_path.resolve() for sample in splits["test"]}
+    if not set(requested).issubset(test_paths):
+        raise ValueError("Common test images must all belong to the test split")
+
+
 def load_configured_splits(config_path: Path) -> tuple[dict, dict[str, list[Sample]]]:
     """Resolve YAML paths relative to the YAML and validate all selected pairs."""
     import yaml
 
     config_path = config_path.expanduser().resolve()
-    if config_path.parent != (SCRIPT_DIR.parent / "DataSource").resolve():
-        raise ValueError("--config must be a YAML file in TestingPart3/DataSource")
     with config_path.open("r", encoding="utf-8") as source:
         config = yaml.safe_load(source)
     if not isinstance(config, dict) or config.get("schema_version") != 1:
         raise ValueError("Expected a schema_version: 1 DataSource YAML")
+    if ("manifest_csv" not in config.get("data", {}) and
+        config_path.parent != (SCRIPT_DIR.parent / "DataSource").resolve()):
+        raise ValueError("Legacy --config YAML must be in TestingPart3/DataSource")
     if config.get("labels") != {"obstacle": 0, "water": 1, "sky": 2}:
         raise ValueError("Expected labels obstacle=0, water=1, sky=2")
     model = config["model"]
     if model.get("imu") is not False or model.get("trainable_module") != "decoder.seg_head":
         raise ValueError("Expected non-IMU eWaSR with only decoder.seg_head trainable")
     data = config["data"]
+    if "manifest_csv" in data:
+        splits = load_manifest_splits(config_path, data)
+        validate_common_test_membership(config_path, data, splits)
+        return config, splits
     roles = ("train", "validation", "test", "unseen")
     splits = {}
     for role in roles:
@@ -230,6 +293,7 @@ def load_configured_splits(config_path: Path) -> tuple[dict, dict[str, list[Samp
                 raise ValueError(f"Image or mask appears in multiple YAML splits: {role}: {image}")
             image_owners.add(image)
             mask_owners.add(mask)
+    validate_common_test_membership(config_path, data, splits)
     return config, splits
 
 
@@ -241,14 +305,20 @@ def load_sample(
 ) -> tuple[np.ndarray, np.ndarray]:
     """Resize and normalize one image and downsample its mask to head resolution."""
 
-    with Image.open(sample.image_path) as source:
-        image = source.convert("RGB").resize(
-            (width, height), Image.Resampling.BILINEAR
-        )
-    with Image.open(sample.mask_path) as source:
-        mask = source.convert("L").resize(
-            (width // 4, height // 4), Image.Resampling.NEAREST
-        )
+    def read_resized(path: Path, mode: str, size: tuple[int, int], resampling):
+        for attempt in range(3):
+            try:
+                with Image.open(path) as source:
+                    return source.convert(mode).resize(size, resampling)
+            except (UnidentifiedImageError, OSError):
+                if attempt == 2:
+                    raise
+                time.sleep(0.25 * 2**attempt)
+
+    image = read_resized(sample.image_path, "RGB", (width, height),
+                         Image.Resampling.BILINEAR)
+    mask = read_resized(sample.mask_path, "L", (width // 4, height // 4),
+                        Image.Resampling.NEAREST)
 
     image_array = np.asarray(image, dtype=np.float32) / 255.0
     image_array = (image_array - NORMALIZE_MEAN) / NORMALIZE_STD
@@ -352,13 +422,14 @@ def flat_parameter_summary(parameters) -> tuple[list[str], int]:
     return [name for name, _ in flattened], sum(value.size for _, value in flattened)
 
 
-def evaluate(model, samples, args) -> dict[str, object]:
+def evaluate(model, samples, args, *, per_image_rows: list[dict] | None = None) -> dict[str, object]:
     import mlx.core as mx
     import mlx.nn as nn
 
     model.set_head_training_mode(False)
     confusion = np.zeros((NUM_CLASSES, NUM_CLASSES), dtype=np.int64)
     losses = []
+    sample_offset = 0
     for images, masks in batches(
         samples,
         batch_size=args.batch_size,
@@ -378,11 +449,46 @@ def evaluate(model, samples, args) -> dict[str, object]:
             target_np * NUM_CLASSES + prediction_np,
             minlength=NUM_CLASSES * NUM_CLASSES,
         ).reshape(NUM_CLASSES, NUM_CLASSES)
+        if per_image_rows is not None:
+            predictions = prediction_np.reshape(masks.shape)
+            for index, (target, predicted) in enumerate(zip(masks, predictions)):
+                sample = samples[sample_offset + index]
+                matrix = np.bincount(
+                    target.reshape(-1) * NUM_CLASSES + predicted.reshape(-1),
+                    minlength=NUM_CLASSES * NUM_CLASSES,
+                ).reshape(NUM_CLASSES, NUM_CLASSES)
+                metrics = confusion_metrics(matrix)
+                per_image_rows.append({
+                    "image_id": sample.image_id or str(sample.image_path),
+                    "image_path": str(sample.image_path),
+                    "pixel_accuracy": metrics["pixel_accuracy"],
+                    "mean_iou": metrics["mean_iou"],
+                    "obstacle_iou": metrics["class_iou"]["obstacle"],
+                    "water_iou": metrics["class_iou"]["water"],
+                    "sky_iou": metrics["class_iou"]["sky"],
+                    "binary_water_iou": metrics["binary_water_iou"],
+                    "obstacle_miss_rate": metrics["obstacle_miss_rate"],
+                })
+        sample_offset += len(masks)
 
     result = confusion_metrics(confusion)
     result["loss"] = float(np.mean(losses))
     model.set_head_training_mode(True)
     return result
+
+
+def write_test_per_image_metrics(output_dir: Path, rows: list[dict],
+                                 common_paths: set[Path]) -> Path:
+    path = output_dir / "test_per_image_metrics.csv"
+    fields = ("image_id", "image_path", "is_common_test", "pixel_accuracy",
+              "mean_iou", "obstacle_iou", "water_iou", "sky_iou",
+              "binary_water_iou", "obstacle_miss_rate")
+    with path.open("w", newline="", encoding="utf-8") as target:
+        writer = csv.DictWriter(target, fieldnames=fields)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({**row, "is_common_test": int(Path(row["image_path"]) in common_paths)})
+    return path
 
 
 def train(args: argparse.Namespace, train_samples, validation_samples) -> dict[str, object]:
@@ -548,7 +654,8 @@ def write_evaluation_text(output_dir: Path, result: dict[str, object], *,
                           config_path: Path | None, counts: dict[str, int],
                           test_metrics: dict[str, object] | None,
                           started_at: datetime, total_elapsed_seconds: float,
-                          selection_metric: str) -> Path:
+                          selection_metric: str,
+                          common_test_metrics: dict[str, object] | None = None) -> Path:
     lines = [
         "eWaSR segmentation-head fine-tuning evaluation",
         f"Started (UTC): {started_at.isoformat()}",
@@ -574,6 +681,8 @@ def write_evaluation_text(output_dir: Path, result: dict[str, object], *,
         lines.extend(format_metrics(result["best_record"]["validation"], "Best validation epoch:"))
     if test_metrics is not None:
         lines.extend([""] + format_metrics(test_metrics, "Selected checkpoint on test split:"))
+    if common_test_metrics is not None:
+        lines.extend([""] + format_metrics(common_test_metrics, "Selected checkpoint on common test core:"))
     if counts.get("unseen"):
         lines.extend(["", "Unseen split: reserved; no evaluation performed."])
     path = output_dir / "evaluation.txt"
@@ -606,6 +715,8 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Validate image/mask pairing and class IDs without loading MLX",
     )
+    parser.add_argument("--per-image-only", action="store_true",
+                        help="Write test image metrics from an existing best checkpoint")
     return parser.parse_args()
 
 
@@ -683,27 +794,68 @@ def main() -> None:
     if args.check_data:
         return
 
-    if config_path is not None and args.output_dir.exists() and any(args.output_dir.iterdir()):
-        raise FileExistsError(f"Output directory is not empty: {args.output_dir}")
-    args.output_dir.mkdir(parents=True, exist_ok=True)
+    manifest = None
     if config_path is not None:
         manifest = {role: [{"image": str(sample.image_path), "mask": str(sample.mask_path)}
                            for sample in samples] for role, samples in splits.items()}
+    if args.per_image_only:
+        if config_path is None or "test" not in splits:
+            raise ValueError("--per-image-only requires a config with a test split")
+        recorded = args.output_dir / "resolved_splits.json"
+        checkpoint = args.output_dir / "best_head_only.npz"
+        if (not recorded.is_file() or
+            json.loads(recorded.read_text(encoding="utf-8")) != manifest or
+            not checkpoint.is_file()):
+            raise ValueError("Existing checkpoint and resolved splits must match this config")
+        from ewasr_mlx import create_head_finetuning_model
+
+        selected_model = create_head_finetuning_model(checkpoint)
+        per_image_rows: list[dict] = []
+        evaluate(selected_model, splits["test"], args, per_image_rows=per_image_rows)
+        common_paths = {configured_path(value, config_path) for value in
+                        config["data"].get("common_test_image_paths", [])}
+        report = write_test_per_image_metrics(args.output_dir, per_image_rows, common_paths)
+        print(f"Per-image test metrics: {report}")
+        return
+    if config_path is not None and args.output_dir.exists() and any(args.output_dir.iterdir()):
+        existing = list(args.output_dir.iterdir())
+        if (len(existing) != 1 or existing[0].name != "resolved_splits.json" or
+            json.loads(existing[0].read_text(encoding="utf-8")) != manifest):
+            raise FileExistsError(f"Output directory is not empty: {args.output_dir}")
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    if config_path is not None:
         (args.output_dir / "resolved_splits.json").write_text(
             json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     result = train(args, train_samples, validation_samples)
     test_metrics = None
+    common_test_metrics = None
     if "test" in splits:
         from ewasr_mlx import create_head_finetuning_model
 
         selected_model = create_head_finetuning_model(result["best_checkpoint"])
-        test_metrics = evaluate(selected_model, splits["test"], args)
+        per_image_rows: list[dict] = []
+        test_metrics = evaluate(selected_model, splits["test"], args,
+                                per_image_rows=per_image_rows)
+        common_paths = set()
+        if config_path is not None and config["data"].get("common_test_image_paths"):
+            requested = {configured_path(value, config_path)
+                         for value in config["data"]["common_test_image_paths"]}
+            common_paths = requested
+            common = [sample for sample in splits["test"]
+                      if sample.image_path.resolve() in requested]
+            common_test_metrics = evaluate(selected_model, common, args)
+            (args.output_dir / "common_test_metrics.json").write_text(
+                json.dumps({"image_count": len(common), "metrics": common_test_metrics}, indent=2),
+                encoding="utf-8",
+            )
+        write_test_per_image_metrics(args.output_dir, per_image_rows, common_paths)
     report = write_evaluation_text(
         args.output_dir, result, args=args, config_path=config_path,
         counts={role: len(samples) for role, samples in splits.items()},
         test_metrics=test_metrics, started_at=started_at,
         total_elapsed_seconds=time.perf_counter() - total_started,
         selection_metric=args.selection_metric,
+        common_test_metrics=common_test_metrics,
     )
     print(f"Evaluation report: {report}")
 

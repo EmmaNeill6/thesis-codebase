@@ -1,0 +1,16 @@
+# Tampere Dock has 200 consecutive paired frames. The collection has no
+# independently verified trip boundaries, so this is one source group.
+schema_version: 1
+dataset: tampere_dock_sweep
+model_checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+training_seed: 4022
+split_seeds: [4022, 4023, 4024]
+subtrip_size: 10
+sources:
+  - trip_id: tampere_dock_collection
+    images_dir: ../../data/Tampere-WaterSeg/images/dock
+    masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
+    frame_pattern: '^dock_image_(?P<frame>\d{3})$'
+    first_frame: 1
+    last_frame: 200
+    require_complete_range: true

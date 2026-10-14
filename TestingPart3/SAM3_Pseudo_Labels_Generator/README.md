@@ -7,6 +7,13 @@ SAM 3 through MLX-VLM, reads an image or directory, and writes:
   `1 = water`, and `2 = sky`;
 - an RGB overlay using the repository's eWaSR/MaSTr colours.
 
+Add `--save-scores` to write `scores/<input-name>.json` and print the accepted
+SAM 3 instance scores for `obstacle`, `navigable water`, and `sky`. Each value
+belongs to one detected instance, not every pixel in that region. Pixels not
+covered by any accepted instance are assigned obstacle without a SAM 3 score;
+the JSON reports their count. Existing PNG masks contain only class IDs, so
+their scores cannot be recovered without running inference again.
+
 There is no timing, benchmarking, manifest, or evaluation code in this runner.
 
 SAM 3 is prompted for `obstacle`, `navigable water`, and `sky` in one
@@ -56,7 +63,9 @@ From the `thesis-codebase` directory, run one image first:
   --input data/Tampere-WaterSeg \
   --subset open \
   --max-images 1 \
-  --padding-percent 5
+  --padding-percent 5 \
+  --output-dir TestingPart3/SAM3_Pseudo_Labels_Generator/output/confidence_inspection \
+  --save-scores
 ```
 
 Then process all 200 open-subset images by omitting `--max-images`:
@@ -79,7 +88,9 @@ Outputs are written beneath
 ```text
 masks/<input-name>.png
 overlays/<input-name>.png
+scores/<input-name>.json  # only with --save-scores
 ```
 
 Pass `--output-dir PATH` to change the destination. Existing complete mask and
-overlay pairs are skipped unless `--overwrite` is supplied.
+overlay pairs are skipped unless `--overwrite` is supplied. With
+`--save-scores`, an image without a score JSON is processed again.

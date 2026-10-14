@@ -1,13 +1,15 @@
 import importlib.util
+import csv
 import sys
 import tempfile
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import patch
 
 import numpy as np
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 
 
 MODULE_PATH = Path(__file__).parents[1] / "train_head.py"
@@ -56,6 +58,27 @@ class TrainingDataTests(unittest.TestCase):
         self.assertEqual(mask.shape, (96, 128))
         self.assertEqual(set(np.unique(mask)), {0, 1, 2})
 
+    def test_load_sample_retries_a_transient_image_read_error(self):
+        self.write_pair()
+        sample = train_head.find_samples(self.images, self.masks)[0]
+        original_open = train_head.Image.open
+        failures = 0
+
+        def open_once_unavailable(path, *args, **kwargs):
+            nonlocal failures
+            if Path(path) == sample.image_path and failures == 0:
+                failures += 1
+                raise UnidentifiedImageError("temporary read failure")
+            return original_open(path, *args, **kwargs)
+
+        with patch.object(train_head.Image, "open", side_effect=open_once_unavailable), \
+             patch.object(train_head.time, "sleep") as delay:
+            image, mask = train_head.load_sample(sample, width=512, height=384)
+        self.assertEqual(failures, 1)
+        delay.assert_called_once_with(0.25)
+        self.assertEqual(image.shape, (384, 512, 3))
+        self.assertEqual(mask.shape, (96, 128))
+
     def test_invalid_mask_values_are_rejected(self):
         self.write_pair()
         Image.fromarray(np.full((64, 128), 255, dtype=np.uint8)).save(
@@ -93,11 +116,28 @@ class TrainingDataTests(unittest.TestCase):
             self.root, result, args=args, config_path=self.root / "data.yaml",
             counts={"train": 360, "validation": 120, "test": 90, "unseen": 30},
             test_metrics=metrics, started_at=datetime.now(timezone.utc),
-            total_elapsed_seconds=14.0, selection_metric="binary_water_iou")
+            total_elapsed_seconds=14.0, selection_metric="binary_water_iou",
+            common_test_metrics=metrics)
         report = path.read_text()
         self.assertIn("Total elapsed", report)
         self.assertIn("Selected checkpoint on test split", report)
+        self.assertIn("Selected checkpoint on common test core", report)
         self.assertIn("Unseen split: reserved", report)
+
+    def test_per_image_csv_marks_shared_test_core(self):
+        first = self.images / "frame_001.png"
+        second = self.images / "frame_002.png"
+        path = train_head.write_test_per_image_metrics(self.root, [
+            {"image_id": "trip/frame_001", "image_path": str(first),
+             "binary_water_iou": 0.9},
+            {"image_id": "trip/frame_002", "image_path": str(second),
+             "binary_water_iou": 0.8},
+        ], {first})
+        with path.open(newline="", encoding="utf-8") as source:
+            rows = list(csv.DictReader(source))
+        self.assertEqual([row["image_id"] for row in rows],
+                         ["trip/frame_001", "trip/frame_002"])
+        self.assertEqual([row["is_common_test"] for row in rows], ["1", "0"])
 
 
 if __name__ == "__main__":
