@@ -13,7 +13,9 @@ uses obstacle as the fallback for pixels that SAM 3 leaves uncovered.
 from __future__ import annotations
 
 import argparse
+import csv
 import json
+import os
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -281,6 +283,42 @@ def find_images(input_path: Path, recursive: bool) -> list[Path]:
     return images
 
 
+def images_from_manifest(manifest_path: Path) -> tuple[Path, list[Path]]:
+    """Select exactly the source images listed in a label manifest."""
+
+    manifest_path = manifest_path.expanduser().resolve()
+    if not manifest_path.is_file():
+        raise FileNotFoundError(manifest_path)
+
+    images: list[Path] = []
+    seen: set[Path] = set()
+    with manifest_path.open(newline="", encoding="utf-8") as source:
+        reader = csv.DictReader(source)
+        if not reader.fieldnames or "image" not in reader.fieldnames:
+            raise ValueError(f"Manifest has no image column: {manifest_path}")
+        for row in reader:
+            image_value = row["image"]
+            if not image_value:
+                raise ValueError(f"Empty image path in {manifest_path}")
+            image = Path(image_value)
+            if not image.is_absolute():
+                image = PROJECT_DIR / image
+            image = image.resolve()
+            if not image.is_file():
+                raise FileNotFoundError(image)
+            if image.suffix.casefold() not in SUPPORTED_EXTENSIONS:
+                raise ValueError(f"Unsupported image extension: {image}")
+            if image in seen:
+                raise ValueError(f"Duplicate image in manifest: {image}")
+            seen.add(image)
+            images.append(image)
+
+    if not images:
+        raise ValueError(f"No images in manifest: {manifest_path}")
+    image_root = Path(os.path.commonpath([str(image.parent) for image in images]))
+    return image_root, images
+
+
 def relative_output_path(image_path: Path, image_root: Path) -> Path:
     """Return a collision-resistant PNG path below an output directory."""
 
@@ -309,6 +347,51 @@ def save_score_report(report: dict[str, Any], path: Path) -> None:
 
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+
+
+def export_scores_csv(output_dir: Path) -> Path:
+    """Rebuild one dataset CSV from saved per-image score reports."""
+
+    score_dir = output_dir / "scores"
+    score_paths = sorted(score_dir.rglob("*.json"))
+    if not score_paths:
+        raise FileNotFoundError(f"No score reports found in {score_dir}")
+
+    csv_path = output_dir / "instance_scores.csv"
+    with csv_path.open("w", encoding="utf-8", newline="") as output:
+        writer = csv.writer(output)
+        writer.writerow(
+            (
+                "image",
+                "class_id",
+                "class_prompt",
+                "instance_id",
+                "score",
+                "instance_count",
+                "uncovered_pixels_assigned_obstacle",
+                "confidence_threshold",
+            )
+        )
+        for score_path in score_paths:
+            report = json.loads(score_path.read_text(encoding="utf-8"))
+            image = score_path.relative_to(score_dir).with_suffix("").as_posix()
+            class_scores = report["instance_scores_by_class"]
+            for class_prompt in CLASS_PROMPTS:
+                scores = class_scores[class_prompt]
+                for instance_id, score in enumerate(scores or [None], start=1):
+                    writer.writerow(
+                        (
+                            image,
+                            CLASS_IDS[class_prompt],
+                            class_prompt,
+                            instance_id if score is not None else "",
+                            score if score is not None else "",
+                            len(scores),
+                            report["uncovered_pixels_assigned_obstacle"],
+                            report["confidence_threshold"],
+                        )
+                    )
+    return csv_path
 
 
 def parse_args() -> argparse.Namespace:
@@ -349,6 +432,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--recursive", action="store_true")
     parser.add_argument(
+        "--selection-manifest",
+        type=Path,
+        help="Process only images in a manifest's image column",
+    )
+    parser.add_argument(
         "--max-images",
         type=int,
         help="Process only the first N images (useful for an initial test)",
@@ -361,44 +449,69 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--save-scores",
         action="store_true",
-        help="Save accepted per-instance scores in scores/<input-name>.json",
+        help="Save per-image score JSON and rebuild instance_scores.csv",
+    )
+    parser.add_argument(
+        "--scores-only",
+        action="store_true",
+        help="Save score JSON and CSV without writing new masks or overlays",
+    )
+    parser.add_argument(
+        "--scores-csv-only",
+        action="store_true",
+        help="Build instance_scores.csv from existing score JSON without loading SAM 3",
     )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+    output_dir = args.output_dir.expanduser().resolve()
+    if args.scores_csv_only:
+        print(f"Dataset scores: {export_scores_csv(output_dir)}")
+        return
+
     if not 0.0 <= args.confidence_threshold <= 1.0:
         raise ValueError("--confidence-threshold must be between 0 and 1")
     if not 0.0 <= args.padding_percent <= 50.0:
         raise ValueError("--padding-percent must be between 0 and 50")
     if args.max_images is not None and args.max_images <= 0:
         raise ValueError("--max-images must be positive")
+    collect_scores = args.save_scores or args.scores_only
 
-    image_root = resolve_image_root(args.input, args.subset)
-    images = find_images(image_root, args.recursive)
+    if args.selection_manifest:
+        image_root, images = images_from_manifest(args.selection_manifest)
+    else:
+        image_root = resolve_image_root(args.input, args.subset)
+        images = find_images(image_root, args.recursive)
     if args.max_images is not None:
         images = images[: args.max_images]
 
-    output_dir = args.output_dir.expanduser().resolve()
     pending: list[tuple[Path, Path, Path, Path]] = []
     for image_path in images:
         relative_path = relative_output_path(image_path, image_root)
         mask_path = output_dir / "masks" / relative_path
         overlay_path = output_dir / "overlays" / relative_path
         score_path = output_dir / "scores" / relative_path.with_suffix(".json")
-        complete = mask_path.is_file() and overlay_path.is_file()
-        if args.save_scores:
-            complete = complete and score_path.is_file()
+        if args.scores_only:
+            complete = score_path.is_file()
+        else:
+            complete = mask_path.is_file() and overlay_path.is_file()
+            if collect_scores:
+                complete = complete and score_path.is_file()
         if args.overwrite or not complete:
             pending.append((image_path, mask_path, overlay_path, score_path))
 
     print(f"Input: {image_root}")
+    if args.selection_manifest:
+        print(f"Selection manifest: {args.selection_manifest.expanduser().resolve()}")
     print(f"Images selected: {len(images)}")
     print(f"Images to process: {len(pending)}")
     print(f"Reflection padding per side: {args.padding_percent:g}%")
     if not pending:
-        print(f"All outputs already exist in: {output_dir}")
+        print(f"All selected outputs already exist in: {output_dir}")
+        if collect_scores:
+            print(f"Dataset scores: {export_scores_csv(output_dir)}")
         return
 
     print(f"Loading {args.model_id} with MLX...")
@@ -409,7 +522,7 @@ def main() -> None:
     ):
         with Image.open(image_path) as source:
             image = source.convert("RGB")
-        if args.save_scores:
+        if collect_scores:
             class_mask, report = predict_image_with_scores(
                 predictor,
                 image,
@@ -423,16 +536,19 @@ def main() -> None:
                 confidence_threshold=args.confidence_threshold,
                 padding_percent=args.padding_percent,
             )
-        save_outputs(image, class_mask, mask_path, overlay_path)
-        if args.save_scores:
+        if not args.scores_only:
+            save_outputs(image, class_mask, mask_path, overlay_path)
+        if collect_scores:
             save_score_report(report, score_path)
             print(f"  scores: {report['instance_scores_by_class']}")
         print(f"[{index}/{len(pending)}] {image_path.name}")
 
-    print(f"Masks: {output_dir / 'masks'}")
-    print(f"Overlays: {output_dir / 'overlays'}")
-    if args.save_scores:
+    if not args.scores_only:
+        print(f"Masks: {output_dir / 'masks'}")
+        print(f"Overlays: {output_dir / 'overlays'}")
+    if collect_scores:
         print(f"Scores: {output_dir / 'scores'}")
+        print(f"Dataset scores: {export_scores_csv(output_dir)}")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 """Unit tests for SAM 3 result merging and output rendering."""
 
+import csv
 import importlib.util
 import sys
 import tempfile
@@ -20,6 +21,59 @@ SPEC.loader.exec_module(MODULE)
 
 
 class SemanticMaskTests(unittest.TestCase):
+    def test_selection_manifest_uses_only_listed_images(self):
+        with tempfile.TemporaryDirectory() as temporary_dir:
+            root = Path(temporary_dir)
+            for frame in (0, 1, 5):
+                (root / f"left_frame_{frame:04d}.png").touch()
+            manifest = root / "manifest.csv"
+            with manifest.open("w", newline="", encoding="utf-8") as output:
+                writer = csv.DictWriter(output, fieldnames=["image"])
+                writer.writeheader()
+                writer.writerows(
+                    [
+                        {"image": str(root / "left_frame_0000.png")},
+                        {"image": str(root / "left_frame_0005.png")},
+                    ]
+                )
+
+            image_root, images = MODULE.images_from_manifest(manifest)
+
+        self.assertEqual(image_root, root.resolve())
+        self.assertEqual([image.name for image in images], [
+            "left_frame_0000.png", "left_frame_0005.png"
+        ])
+
+    def test_dataset_csv_rebuilds_without_duplicates_and_marks_missing_class(self):
+        with tempfile.TemporaryDirectory() as temporary_dir:
+            output_dir = Path(temporary_dir)
+            report = {
+                "confidence_threshold": 0.5,
+                "instance_scores_by_class": {
+                    "obstacle": [],
+                    "navigable water": [0.82, 0.76],
+                    "sky": [0.93],
+                },
+                "uncovered_pixels_assigned_obstacle": 3,
+            }
+            MODULE.save_score_report(report, output_dir / "scores/scene/frame_1.json")
+
+            csv_path = MODULE.export_scores_csv(output_dir)
+            MODULE.export_scores_csv(output_dir)
+            with csv_path.open(newline="", encoding="utf-8") as source:
+                rows = list(csv.DictReader(source))
+
+        self.assertEqual(len(rows), 4)
+        self.assertEqual(rows[0]["image"], "scene/frame_1")
+        self.assertEqual(rows[0]["class_prompt"], "obstacle")
+        self.assertEqual(rows[0]["score"], "")
+        self.assertEqual(rows[0]["instance_count"], "0")
+        self.assertEqual(
+            [(row["instance_id"], row["score"]) for row in rows[1:3]],
+            [("1", "0.82"), ("2", "0.76")],
+        )
+        self.assertEqual(rows[3]["class_prompt"], "sky")
+
     def test_score_report_distinguishes_instances_from_fallback_obstacle(self):
         masks = np.zeros((2, 2, 3), dtype=bool)
         masks[0, 0, :2] = True

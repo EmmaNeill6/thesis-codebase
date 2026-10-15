@@ -30,6 +30,7 @@ __pycache__/
 /TestingPart2/YOLOWorld/output_mps/
 /TestingPart3/SAM3_Pseudo_Labels_Generator/output/
 /TestingPart3/eWaSR_Head_Fine_Tuning/outputs/
+/TestingPart3/Domain_Adaptation_Outputs/
 /TestingPart3/Pretrained_eWaSR_output/*_eWaSR/
 /ground_truths/output/
 

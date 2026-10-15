@@ -1,0 +1,55 @@
+# The single editable pipeline configuration. All paths are relative to this file.
+dataset:
+  name: Pohang_Pier
+  images_dir: ../../data/pohang00/pohang00_pier/left_images
+  selection_mode: all  # Use frame_range with first_frame/last_frame/frame_step for numbered frames.
+
+model:
+  pretrained_checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  bank_checkpoints:
+    - ../eWaSR_Head_Fine_Tuning/outputs/final_bank_20261015_061604/catarob/best_head_only.npz
+    - ../eWaSR_Head_Fine_Tuning/outputs/final_bank_20261015_061604/tampere_channel/best_head_only.npz
+    - ../eWaSR_Head_Fine_Tuning/outputs/final_bank_20261015_061604/pohang_canal/best_head_only.npz
+
+sam3:
+  generator_script: ../SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py
+  existing_masks_dir: ../SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt  # Raw masks folder or SAM3 output parent; null if unavailable.
+  cache_dir: ../Domain_Adaptation_Outputs/pseudo_labels  # Generated labels are reused across runs.
+  model_id: facebook/sam3
+  confidence_threshold: 0.5
+  padding_mode: reflect
+  padding_percent: 5  # Percentage of each image dimension, on each side.
+  prompts:
+    obstacle: 0
+    navigable water: 1
+    sky: 2
+
+evaluation:
+  modes: [binary, three_class]
+  input_width: 512
+  input_height: 384
+  reference_mask_resolution: original
+  interpolate_class_scores_before_argmax: true
+  acceptance_metric: binary_water_iou
+  acceptance_threshold: 0.95  # 95% original-resolution binary water IoU.
+
+splitting:
+  train: 0.6
+  validation: 0.2
+  test: 0.2
+  grouping: sub_trip
+  group_size: 10  # Keep consecutive Pohang frames together in each split unit.
+  seed: 4022
+
+training:
+  trainer_script: ../eWaSR_Head_Fine_Tuning/train_head.py
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.001
+  epochs: 2  # Small execution trial; change this recipe here for longer training.
+  batch_size: 2
+  class_weights: [1, 1, 1]  # Obstacle, water, sky.
+
+runtime:
+  python: ../../.venv-sam3-mlx/bin/python
+  output_dir: ../Domain_Adaptation_Outputs  # A new run subfolder is created here for each --run.

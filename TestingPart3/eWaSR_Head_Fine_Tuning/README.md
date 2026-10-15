@@ -67,7 +67,19 @@ SAM3 pseudo-labelling time.
 
 After the entire study finishes, `train` invokes the Matplotlib plotter to
 export performance and training-cost curves as PNG, PDF, and SVG. Install
-Matplotlib in the environment used for training/plotting. Rebuild the plots with:
+Matplotlib in the environment used for training/plotting. Each performance graph
+overlays test and validation curves. Completed studies in the same parent folder
+share a Water IoU axis and, separately, a training-time axis. The limits include
+all individual runs and mean ± sample SD bars. IoU values remain percentages;
+this changes the display scale rather than rescaling measured scores.
+Rebuild every completed dataset's plots together with:
+
+```bash
+.venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/plot_data_size_sweep.py \
+  TestingPart3/eWaSR_Head_Fine_Tuning/outputs/data_size_sweeps --all
+```
+
+Rebuild one study with:
 
 ```bash
 .venv-sam3-mlx/bin/python TestingPart3/eWaSR_Head_Fine_Tuning/data_size_sweep.py plot \

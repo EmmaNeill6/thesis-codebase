@@ -7,12 +7,15 @@ SAM 3 through MLX-VLM, reads an image or directory, and writes:
   `1 = water`, and `2 = sky`;
 - an RGB overlay using the repository's eWaSR/MaSTr colours.
 
-Add `--save-scores` to write `scores/<input-name>.json` and print the accepted
-SAM 3 instance scores for `obstacle`, `navigable water`, and `sky`. Each value
-belongs to one detected instance, not every pixel in that region. Pixels not
-covered by any accepted instance are assigned obstacle without a SAM 3 score;
-the JSON reports their count. Existing PNG masks contain only class IDs, so
-their scores cannot be recovered without running inference again.
+Add `--save-scores` to write `scores/<input-name>.json`, print accepted SAM 3
+instance scores, and rebuild `instance_scores.csv` for all score reports in the
+output directory. The CSV has one row per detected instance, with its image,
+class and score. A class with no accepted instance has one row with an empty
+score and `instance_count = 0`. Each score belongs to one detected instance,
+not every pixel in that region. Pixels not covered by any accepted instance
+are assigned obstacle without a SAM 3 score; the reports include their count.
+Existing PNG masks contain only class IDs, so their scores cannot be recovered
+without running inference again.
 
 There is no timing, benchmarking, manifest, or evaluation code in this runner.
 
@@ -73,7 +76,17 @@ Then process all 200 open-subset images by omitting `--max-images`:
 ```bash
 .venv-sam3-mlx/bin/python TestingPart3/SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py \
   --input data/Tampere-WaterSeg \
-  --subset open
+  --subset open \
+  --output-dir TestingPart3/SAM3_Pseudo_Labels_Generator/output/confidence_inspection \
+  --save-scores
+```
+
+To rebuild the CSV from existing score JSON files without loading SAM 3:
+
+```bash
+.venv-sam3-mlx/bin/python TestingPart3/SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py \
+  --output-dir TestingPart3/SAM3_Pseudo_Labels_Generator/output/confidence_inspection \
+  --scores-csv-only
 ```
 
 The defaults already point to this dataset and subset, so this also works:
@@ -89,8 +102,32 @@ Outputs are written beneath
 masks/<input-name>.png
 overlays/<input-name>.png
 scores/<input-name>.json  # only with --save-scores
+instance_scores.csv         # with --save-scores or --scores-csv-only
 ```
 
 Pass `--output-dir PATH` to change the destination. Existing complete mask and
 overlay pairs are skipped unless `--overwrite` is supplied. With
 `--save-scores`, an image without a score JSON is processed again.
+
+## CataRob every-fifth-frame scores
+
+`output/CataRob_All_5pct/manifest.csv` lists exactly the 708 source frames
+used for that pseudo-label set: frame 0000, 0005, ..., 3535. Use it as the
+selection source, rather than pointing at the complete source image directory.
+From the `thesis-codebase` directory:
+
+```bash
+.venv-sam3-mlx/bin/python TestingPart3/SAM3_Pseudo_Labels_Generator/predict_sam3_mlx.py \
+  --selection-manifest TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_All_5pct/manifest.csv \
+  --output-dir TestingPart3/SAM3_Pseudo_Labels_Generator/output_confidence/CataRob_All_5pct \
+  --padding-percent 5 \
+  --confidence-threshold 0.5 \
+  --scores-only
+```
+
+This reruns SAM 3 on the selected source images and writes score JSON plus
+`instance_scores.csv` in the separate confidence directory. It does not
+rewrite the existing pseudo-label masks or overlays. Add `--max-images 5` for
+a short trial, then remove it and rerun the same command to continue; saved
+score reports are skipped. Use `--scores-csv-only` with the same `--output-dir`
+to rebuild a CSV from completed reports after an interrupted run.
