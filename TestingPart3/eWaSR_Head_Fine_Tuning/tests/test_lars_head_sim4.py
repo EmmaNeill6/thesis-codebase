@@ -1,3 +1,4 @@
+import os
 import json
 import sys
 import tempfile
@@ -26,6 +27,8 @@ class LaSRHeadSim4Tests(unittest.TestCase):
             splits = self.make_splits(Path(temporary))
             manifest = self.make_manifest(splits)
             counts = {role: 1 for role in experiment.ROLES}
+            manifest["train"] = [{key: os.path.relpath(value, experiment.HERE.parents[1])
+                                  for key, value in manifest["train"][0].items()}]
             experiment.assert_matching_v2_manifest(splits, manifest, counts)
             manifest["test"], manifest["validation"] = manifest["validation"], manifest["test"]
             with self.assertRaisesRegex(ValueError, "membership does not match"):
@@ -43,6 +46,7 @@ class LaSRHeadSim4Tests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "must both contain"):
                 experiment.assert_matching_v2_manifest(splits, manifest, counts)
 
+    @unittest.skipUnless(experiment.DEFAULT_WEIGHTS.is_file(), "external pretrained checkpoint required")
     def test_config_is_locked_to_original_checkpoint_and_new_output(self):
         config, paths = experiment.load_experiment_config(experiment.DEFAULT_CONFIG)
         self.assertEqual(paths["definition"], experiment.SOURCE_YAML)

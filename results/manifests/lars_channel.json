@@ -1,0 +1,1178 @@
+{
+  "train": [
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_01_00017.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_01_00017.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_01_00070.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_01_00070.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_01_00120.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_01_00120.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_01_00207.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_01_00207.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_01_00260.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_01_00260.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_01_00349.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_01_00349.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_03_00038.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_03_00038.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_03_00140.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_03_00140.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_04_00049.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_04_00049.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_04_00169.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_04_00169.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_05_00049.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_05_00049.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_05_00067.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_05_00067.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_05_00093.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_05_00093.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_05_00118.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_05_00118.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_05_00201.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_05_00201.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_06_00035.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_06_00035.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_06_00156.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_06_00156.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_06_00182.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_06_00182.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_06_00257.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_06_00257.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_06_00275.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_06_00275.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_00065.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_00065.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_00186.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_00186.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_00327.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_00327.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_00548.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_00548.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_00729.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_00729.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_00848.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_00848.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_01019.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_01019.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_01150.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_01150.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_07_01277.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_07_01277.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_13_00027.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_13_00027.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_13_00082.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_13_00082.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_13_00156.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_13_00156.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00016.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00016.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00074.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00074.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00096.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00096.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00145.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00145.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00237.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00237.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00328.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00328.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_14_00384.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_14_00384.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_15_00045.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_15_00045.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_15_00124.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_15_00124.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_15_00191.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_15_00191.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_15_00213.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_15_00213.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_15_00288.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_15_00288.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_15_00305.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_15_00305.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_16_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_16_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_16_00129.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_16_00129.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_16_00249.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_16_00249.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_17_00016.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_17_00016.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_17_00089.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_17_00089.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_17_00187.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_17_00187.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_17_00294.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_17_00294.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_18_00116.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_18_00116.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_18_00210.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_18_00210.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_18_00302.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_18_00302.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_18_00375.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_18_00375.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_19_00016.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_19_00016.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_19_00069.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_19_00069.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_20_00025.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_20_00025.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_20_00115.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_20_00115.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_21_00019.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_21_00019.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_21_00054.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_21_00054.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_21_00094.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_21_00094.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_22_00049.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_22_00049.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_22_00120.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_22_00120.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_23_00057.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_23_00057.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_23_00112.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_23_00112.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_24_00034.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_24_00034.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_24_00102.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_24_00102.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_24_00150.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_24_00150.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_25_00047.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_25_00047.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_25_00100.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_25_00100.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_25_00240.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_25_00240.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_25_00363.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_25_00363.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_25_00473.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_25_00473.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_33_00027.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_33_00027.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_33_00083.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_33_00083.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_33_00132.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_33_00132.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_33_00184.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_33_00184.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_33_00268.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_33_00268.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_38_00038.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_38_00038.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_38_00209.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_38_00209.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_38_00279.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_38_00279.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_43_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_43_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_43_00068.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_43_00068.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_43_00199.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_43_00199.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_47_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_47_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_47_00082.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_47_00082.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_47_00164.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_47_00164.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_48_00028.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_48_00028.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_48_00180.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_48_00180.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_48_00271.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_48_00271.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_48_00317.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_48_00317.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_48_00452.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_48_00452.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_48_00726.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_48_00726.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_49_00017.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_49_00017.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_49_00046.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_49_00046.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_49_00090.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_49_00090.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_49_00143.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_49_00143.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_49_00171.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_49_00171.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_50_00047.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_50_00047.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_50_00081.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_50_00081.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_50_00148.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_50_00148.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_54_00018.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_54_00018.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_54_00052.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_54_00052.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_54_00096.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_54_00096.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_54_00156.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_54_00156.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_58_00040.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_58_00040.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_58_00128.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_58_00128.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_58_00262.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_58_00262.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_58_00319.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_58_00319.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00012.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00012.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00059.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00059.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00178.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00178.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00298.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00298.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00430.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00430.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00628.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00628.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_59_00811.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_59_00811.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_60_00025.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_60_00025.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_60_00108.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_60_00108.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_60_00264.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_60_00264.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_60_00382.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_60_00382.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_60_00494.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_60_00494.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_64_00033.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_64_00033.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_64_00103.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_64_00103.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_64_00197.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_64_00197.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_64_00364.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_64_00364.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_64_00511.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_64_00511.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_65_00028.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_65_00028.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_65_00123.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_65_00123.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_65_00249.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_65_00249.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_65_00365.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_65_00365.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_66_00055.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_66_00055.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_66_00102.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_66_00102.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_66_00183.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_66_00183.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_66_00256.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_66_00256.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_66_00379.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_66_00379.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_67_00041.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_67_00041.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_67_00130.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_67_00130.png"
+    },
+    {
+      "image": "data/lars_v1-2/train/images/Channel/davimar_seq_67_00226.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/train/masks/davimar_seq_67_00226.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00014.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00014.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00048.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00048.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00073.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00073.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00110.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00110.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00175.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00175.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00241.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00241.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_09_00312.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_09_00312.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_26_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_26_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_26_00070.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_26_00070.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_26_00164.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_26_00164.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_28_00015.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_28_00015.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_28_00068.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_28_00068.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_28_00145.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_28_00145.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_28_00207.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_28_00207.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_31_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_31_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_31_00064.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_31_00064.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_31_00156.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_31_00156.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_31_00236.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_31_00236.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_35_00034.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_35_00034.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_35_00131.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_35_00131.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_35_00209.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_35_00209.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_35_00232.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_35_00232.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_39_00012.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_39_00012.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_39_00066.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_39_00066.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_39_00151.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_39_00151.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_51_00033.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_51_00033.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_51_00072.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_51_00072.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_51_00099.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_51_00099.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_51_00139.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_51_00139.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_51_00222.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_51_00222.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_56_00039.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_56_00039.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_56_00080.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_56_00080.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_56_00140.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_56_00140.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_56_00228.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_56_00228.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_56_00337.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_56_00337.png"
+    }
+  ],
+  "validation": [
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_08_00008.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_08_00008.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_08_00037.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_08_00037.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_36_00024.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_36_00024.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_36_00062.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_36_00062.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_36_00141.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_36_00141.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_36_00210.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_36_00210.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_42_00025.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_42_00025.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_42_00199.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_42_00199.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_69_00037.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_69_00037.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_69_00099.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_69_00099.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_69_00226.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_69_00226.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_69_00286.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_69_00286.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_70_00039.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_70_00039.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_70_00101.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_70_00101.png"
+    },
+    {
+      "image": "data/lars_v1-2/val/images/Channel/davimar_seq_70_00185.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/val/masks/davimar_seq_70_00185.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_10_00036.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_10_00036.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_10_00109.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_10_00109.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_10_00184.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_10_00184.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_40_00059.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_40_00059.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_40_00179.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_40_00179.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_40_00274.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_40_00274.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_44_00046.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_44_00046.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_44_00093.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_44_00093.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_44_00212.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_44_00212.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_44_00329.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_44_00329.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_45_00049.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_45_00049.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_45_00182.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_45_00182.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_45_00228.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_45_00228.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_55_00033.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_55_00033.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_55_00106.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_55_00106.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_55_00238.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_55_00238.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_55_00295.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_55_00295.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_55_00338.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_55_00338.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_57_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_57_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_57_00085.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_57_00085.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_57_00155.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_57_00155.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_57_00231.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_57_00231.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_57_00390.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_57_00390.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00059.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00059.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00115.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00115.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00194.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00194.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00257.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00257.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00308.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00308.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00379.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00379.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00521.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00521.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00755.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00755.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_00886.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_00886.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_62_01006.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_62_01006.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_63_00029.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_63_00029.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_63_00111.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_63_00111.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_63_00210.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_63_00210.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_63_00340.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_63_00340.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_63_00392.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_63_00392.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_68_00033.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_68_00033.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_68_00118.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_68_00118.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_68_00306.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_68_00306.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_68_00522.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_68_00522.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_68_00720.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_68_00720.png"
+    }
+  ],
+  "test": [
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_02_00040.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_02_00040.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_02_00102.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_02_00102.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_12_00018.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_12_00018.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_12_00078.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_12_00078.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_12_00110.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_12_00110.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_12_00129.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_12_00129.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_27_00038.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_27_00038.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_27_00081.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_27_00081.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_30_00037.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_30_00037.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_30_00089.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_30_00089.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_30_00123.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_30_00123.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_30_00179.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_30_00179.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_32_00018.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_32_00018.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_32_00046.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_32_00046.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_32_00155.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_32_00155.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_32_00254.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_32_00254.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_34_00016.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_34_00016.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_34_00050.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_34_00050.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_34_00075.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_34_00075.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_34_00213.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_34_00213.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_37_00028.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_37_00028.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_37_00107.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_37_00107.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_37_00204.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_37_00204.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_41_00110.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_41_00110.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_41_00173.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_41_00173.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_41_00271.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_41_00271.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_41_00372.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_41_00372.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_41_00437.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_41_00437.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_46_00013.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_46_00013.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_46_00069.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_46_00069.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_46_00142.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_46_00142.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_52_00038.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_52_00038.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_52_00071.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_52_00071.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_52_00174.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_52_00174.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_52_00291.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_52_00291.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_52_00364.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_52_00364.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_61_00060.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_61_00060.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_61_00176.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_61_00176.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_61_00360.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_61_00360.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_61_00533.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_61_00533.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_61_00609.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_61_00609.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_71_00025.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_71_00025.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_71_00098.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_71_00098.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_71_00184.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_71_00184.png"
+    }
+  ],
+  "unseen": [
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_11_00016.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_11_00016.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_11_00031.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_11_00031.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_11_00052.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_11_00052.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_11_00096.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_11_00096.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_11_00125.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_11_00125.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_29_00027.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_29_00027.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_29_00100.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_29_00100.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_29_00161.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_29_00161.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_29_00268.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_29_00268.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_53_00025.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_53_00025.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_53_00092.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_53_00092.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_53_00208.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_53_00208.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_53_00306.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_53_00306.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_53_00426.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_53_00426.png"
+    },
+    {
+      "image": "data/lars_v1-2/test/images/Channel/davimar_seq_53_00530.jpg",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_Channel_5ppt/test/masks/davimar_seq_53_00530.png"
+    }
+  ]
+}

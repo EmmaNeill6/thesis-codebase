@@ -4,7 +4,7 @@ experiment:
   name: tampere_channel_random_head_only_v1
   description: Separate channel-only experiment using the dock run training parameters
     and seeded random 60/20/20 split.
-  output_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_channel_random_head_only_v1
+  output_dir: ../../TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_channel_random_head_only_v1
   seed: 4022
   label_source_confirmed: true
 labels:
@@ -14,28 +14,28 @@ labels:
 data:
   train:
     sequence_id: tampere_channel_random_train_not_a_recording_id
-    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel
-    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    images_dir: ../../data/Tampere-WaterSeg/images/channel
+    masks_dir: ../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
     expected_count: 120
     selection:
       kind: assigned_by_run_tampere_channel_random
   validation:
     sequence_id: tampere_channel_random_validation_not_a_recording_id
-    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel
-    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    images_dir: ../../data/Tampere-WaterSeg/images/channel
+    masks_dir: ../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
     expected_count: 40
     selection:
       kind: assigned_by_run_tampere_channel_random
   test:
     sequence_id: tampere_channel_random_test_not_a_recording_id
-    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel
-    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
+    images_dir: ../../data/Tampere-WaterSeg/images/channel
+    masks_dir: ../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks
     expected_count: 40
     selection:
       kind: assigned_by_run_tampere_channel_random
 model:
   architecture: ewasr_resnet18
-  checkpoint: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
   imu: false
   trainable_module: decoder.seg_head
   frozen_modules:

@@ -7,8 +7,8 @@ experiment:
 split_source:
   definition_yaml: ../DataSource/head_only_lars_channel_staged_v1.yaml
   definition_sha256: a64e4342de5f8fd59184c8381522acc848ebc6fbdc39eccb4b85133851383f0d
-  v2_resolved_manifest: outputs/lars_channel_v2/resolved_splits.json
-  manifest_sha256: 3589c4cc4bec47fddf3ffc100c992ed0e535c7285a7898a05fa897675e6b5a3e
+  v2_resolved_manifest: ../../results/manifests/lars_channel.json
+  manifest_sha256: a35601a872506a928868afabd4ac30eb789cb463835464f8ede0ec879510d725
   expected_counts: {train: 175, validation: 58, test: 44, unseen: 15}
 model:
   architecture: ewasr_resnet18

@@ -1,10 +1,10 @@
 # Domain adaptation pipeline
 
-Edit [config.yaml](</Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/Domain_Adaptation_Pipeline/config.yaml>) for each dataset, then run the controller. It always reads this one adjacent configuration; it does not create another YAML for a run.
+Edit the adjacent [config.yaml](config.yaml) for your dataset, external bank
+checkpoints and Python interpreter. From the repository root:
 
 ```bash
-"/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/.venv-sam3-mlx/bin/python" \
-  "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/Domain_Adaptation_Pipeline/run_pipeline.py" --run
+python TestingPart3/Domain_Adaptation_Pipeline/run_pipeline.py --run
 ```
 
 The flow is: prepare fixed splits → reuse/generate pseudo-labels → assess pretrained weights → assess bank if needed → fine-tune if needed → evaluate the recorded checkpoint on the reserved test split.
@@ -72,3 +72,5 @@ Existing trial outputs and their old configurations were preserved under `legacy
 Open its `results.json`, or use the same controller and configuration with `--final-evaluate --run-dir` followed by the absolute run-folder path. Matching completed evaluation is read from the saved report without rerunning inference. Other individual stage flags also require `--run-dir`; normal usage is `--run`.
 
 Model selection and acceptance use validation data. Final test scores do not change the selected model or acceptance status. Scores measure agreement with SAM3 pseudo-labels. Small trials verify execution; their small validation/test splits do not establish reliable domain performance.
+
+The published core excludes Chapter 8 assessment utilities and uncommitted boundary-metric changes. See the [root coverage limits](../../README.md). Shared preprocessing lives in `../eWaSR_Head_Fine_Tuning/inference_preprocessing.py`; the native-resolution experiment runner is not required.

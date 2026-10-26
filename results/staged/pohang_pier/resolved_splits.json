@@ -1,0 +1,1206 @@
+{
+  "train": [
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000153.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000153.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000154.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000154.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000155.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000155.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000156.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000156.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000157.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000157.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000158.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000158.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000159.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000159.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000160.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000160.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000161.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000161.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000162.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000162.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000163.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000163.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000164.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000164.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000165.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000165.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000166.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000166.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000167.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000167.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000168.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000168.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000169.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000169.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000170.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000170.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000171.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000171.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000172.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000172.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000173.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000173.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000174.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000174.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000175.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000175.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000176.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000176.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000177.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000177.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000178.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000178.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000179.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000179.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000180.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000180.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000181.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000181.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000182.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000182.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000183.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000183.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000184.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000184.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000185.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000185.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000186.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000186.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000187.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000187.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000188.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000188.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000189.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000189.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000190.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000190.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000191.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000191.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000192.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000192.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000193.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000193.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000194.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000194.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000195.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000195.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000196.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000196.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000197.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000197.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000198.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000198.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000199.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000199.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000200.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000200.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000201.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000201.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000202.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000202.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000203.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000203.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000204.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000204.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000205.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000205.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000206.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000206.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000207.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000207.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000208.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000208.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000209.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000209.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000210.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000210.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000211.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000211.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000212.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000212.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000213.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000213.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000214.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000214.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000215.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000215.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000216.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000216.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000217.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000217.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000218.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000218.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000219.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000219.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000220.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000220.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000221.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000221.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000222.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000222.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000223.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000223.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000224.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000224.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000225.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000225.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000226.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000226.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000227.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000227.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000228.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000228.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000229.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000229.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000230.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000230.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000231.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000231.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000232.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000232.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000233.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000233.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000234.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000234.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000235.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000235.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000236.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000236.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000237.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000237.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000238.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000238.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000239.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000239.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000240.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000240.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000241.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000241.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000242.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000242.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000243.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000243.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000244.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000244.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000245.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000245.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000246.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000246.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000247.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000247.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000248.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000248.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000249.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000249.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000250.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000250.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000251.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000251.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000252.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000252.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000253.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000253.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000254.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000254.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000255.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000255.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000256.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000256.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000257.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000257.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000258.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000258.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000259.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000259.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000260.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000260.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000261.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000261.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000262.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000262.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000263.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000263.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000264.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000264.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000265.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000265.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000266.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000266.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000267.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000267.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000268.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000268.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000269.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000269.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000270.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000270.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000271.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000271.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000272.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000272.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000273.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000273.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000274.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000274.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000275.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000275.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000276.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000276.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000277.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000277.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000278.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000278.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000279.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000279.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000280.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000280.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000281.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000281.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000282.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000282.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000283.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000283.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000284.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000284.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000285.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000285.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000286.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000286.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000287.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000287.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000288.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000288.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000289.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000289.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000290.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000290.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000291.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000291.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000292.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000292.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000293.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000293.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000294.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000294.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000295.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000295.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000296.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000296.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000297.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000297.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000298.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000298.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000299.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000299.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000300.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000300.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000301.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000301.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000302.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000302.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000303.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000303.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000304.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000304.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000305.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000305.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000306.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000306.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000307.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000307.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000308.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000308.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000309.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000309.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000310.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000310.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000311.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000311.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000312.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000312.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000313.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000313.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000314.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000314.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000315.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000315.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000316.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000316.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000317.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000317.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000318.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000318.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000319.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000319.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000320.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000320.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000321.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000321.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000322.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000322.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000323.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000323.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000324.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000324.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000325.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000325.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000326.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000326.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000327.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000327.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000328.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000328.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000329.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000329.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000330.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000330.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000331.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000331.png"
+    }
+  ],
+  "validation": [
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000332.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000332.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000333.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000333.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000334.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000334.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000335.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000335.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000336.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000336.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000337.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000337.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000338.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000338.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000339.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000339.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000340.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000340.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000341.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000341.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000342.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000342.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000343.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000343.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000344.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000344.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000345.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000345.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000346.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000346.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000347.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000347.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000348.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000348.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000349.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000349.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000350.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000350.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000351.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000351.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000352.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000352.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000353.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000353.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000354.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000354.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000355.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000355.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000356.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000356.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000357.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000357.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000358.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000358.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000359.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000359.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000360.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000360.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000361.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000361.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000362.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000362.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000363.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000363.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000364.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000364.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000365.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000365.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000366.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000366.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000367.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000367.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000368.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000368.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000369.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000369.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000370.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000370.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000371.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000371.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000372.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000372.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000373.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000373.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000374.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000374.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000375.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000375.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000376.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000376.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000377.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000377.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000378.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000378.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000379.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000379.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000380.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000380.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000381.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000381.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000382.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000382.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000383.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000383.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000384.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000384.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000385.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000385.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000386.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000386.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000387.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000387.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000388.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000388.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000389.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000389.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000390.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000390.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000391.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000391.png"
+    }
+  ],
+  "test": [
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000392.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000392.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000393.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000393.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000394.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000394.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000395.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000395.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000396.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000396.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000397.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000397.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000398.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000398.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000399.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000399.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000400.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000400.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000401.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000401.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000402.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000402.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000403.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000403.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000404.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000404.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000405.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000405.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000406.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000406.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000407.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000407.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000408.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000408.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000409.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000409.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000410.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000410.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000411.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000411.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000412.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000412.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000413.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000413.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000414.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000414.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000415.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000415.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000416.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000416.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000417.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000417.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000418.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000418.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000419.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000419.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000420.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000420.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000421.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000421.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000422.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000422.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000423.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000423.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000424.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000424.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000425.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000425.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000426.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000426.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000427.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000427.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000428.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000428.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000429.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000429.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000430.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000430.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000431.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000431.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000432.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000432.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000433.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000433.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000434.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000434.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000435.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000435.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000436.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000436.png"
+    }
+  ],
+  "unseen": [
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000437.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000437.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000438.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000438.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000439.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000439.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000440.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000440.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000441.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000441.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000442.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000442.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000443.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000443.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000444.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000444.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000445.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000445.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000446.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000446.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000447.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000447.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000448.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000448.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000449.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000449.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000450.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000450.png"
+    },
+    {
+      "image": "data/pohang00/pohang00_pier/left_images/000451.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Pier_5ppt/masks/000451.png"
+    }
+  ]
+}

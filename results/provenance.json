@@ -1,0 +1,149 @@
+{
+  "path_policy": "Published evidence replaces the original workstation prefix with repository-relative paths. Original bytes remain local; original and published hashes are recorded here. Historical records are evidence, not resumable run directories.",
+  "files": [
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Catarob_tests/catarob_staged_v1/resolved_config.json",
+      "source_sha256": "7f718fbf4b58f412ac53bc27320491ade3c2ee2e5a321e2e6280a2bf7da0dcec",
+      "published": "results/staged/catarob/resolved_config.json",
+      "published_sha256": "f5525883e863d911070498f38ce5f1c9b589895dd6ee185a4dce5cc7c4389027"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Catarob_tests/catarob_staged_v1/resolved_splits.json",
+      "source_sha256": "9abafbdbc5cbaf4365168322c1740921b626854ef25404fd959cc6bce5ee823b",
+      "published": "results/staged/catarob/resolved_splits.json",
+      "published_sha256": "6faf7d07e87c99d6f95ef9c0af96f150561a1316b03460c457536c5704e3253c"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Catarob_tests/catarob_staged_v1/stage_state.json",
+      "source_sha256": "ef694580e3734a1a98be4bda18fc76d8a3602627b0b99184e62db05b7d648f6c",
+      "published": "results/staged/catarob/stage_state.json",
+      "published_sha256": "7a36bae0b672edc9dc700fb35db0143c15f75168e3708aa6f71515e731c322b9"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Single Sets/pohang_canal_staged_v1/resolved_config.json",
+      "source_sha256": "e57bc37bd7a932165d842d52c01a4204c6248a5c74f6b866328615e32f0bae9d",
+      "published": "results/staged/pohang_canal/resolved_config.json",
+      "published_sha256": "b38581eda38068cfd06b13032116f951595b309b186ba2b3417a755a9221c9c0"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Single Sets/pohang_canal_staged_v1/resolved_splits.json",
+      "source_sha256": "1f1e4c396cfb849df79054af4e2d03291631cdf6f366e8978b8af2da73ceb283",
+      "published": "results/staged/pohang_canal/resolved_splits.json",
+      "published_sha256": "8a6909eeaf06f978265269d32b3d1d2a7f7720ec2d37ed98a1f968e8f00a4bf3"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Single Sets/pohang_canal_staged_v1/stage_state.json",
+      "source_sha256": "2895a76bfaa6b3056313872da9c30623018069ecf63cf2a35e94f675d969e5a6",
+      "published": "results/staged/pohang_canal/stage_state.json",
+      "published_sha256": "90487a60a611925ae8b39a7cd9c749447cb934bd0bf023223b34fede6e881a2c"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Single Sets/pohang_pier_staged_v1/resolved_config.json",
+      "source_sha256": "6cc1d4db910530da823c8bef7848c84413f1e6591e6e090e5a8e75cedee930b9",
+      "published": "results/staged/pohang_pier/resolved_config.json",
+      "published_sha256": "329eb8cd1a963f08d9c977bdb42f2573ddc6051cb4c032764bd321d4e1686470"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Single Sets/pohang_pier_staged_v1/resolved_splits.json",
+      "source_sha256": "337224dc083c9bd734d6ff34a4fe4bd071d6dc206ef3da5d7e1bf1d90eebdd33",
+      "published": "results/staged/pohang_pier/resolved_splits.json",
+      "published_sha256": "4e4043ccb456a0728d76103359ebca844e246842c254338a5beef7acdba752bb"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Single Sets/pohang_pier_staged_v1/stage_state.json",
+      "source_sha256": "a7094239fffe76930c85f7bcccebc7f70d5dc84eed852891c0dbdf33a5a6fed3",
+      "published": "results/staged/pohang_pier/stage_state.json",
+      "published_sha256": "1ed6ea9238fb94da43f4cc920a5d6def8c6f3bb2d1f2162e29ccbbcdc9de4ba6"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/resolved_config.json",
+      "source_sha256": "7eb8b1df51593a933212ede338bb91b553f046b9cceac8eedffd9308fd281cdd",
+      "published": "results/staged/tampere_dock/resolved_config.json",
+      "published_sha256": "445f42810f448c545123e3deeadb21334d181bc8c4370c725c4c22b6ff84fb2f"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/resolved_splits.json",
+      "source_sha256": "fe498eb3df554515033288bea98673a9d08d690edcffff49dfaa3dec48adc2d9",
+      "published": "results/staged/tampere_dock/resolved_splits.json",
+      "published_sha256": "dec20e05481bc7f775e5516d3871346c33f98e5143bd3d8b0e6356cb897c1307"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/stage_state.json",
+      "source_sha256": "3b5cdf167efdd7b438e931d4304c33b64a1c9909b49754e122a6f6a13d90c72c",
+      "published": "results/staged/tampere_dock/stage_state.json",
+      "published_sha256": "856612667157eef980007f8c74b90f0e27f4808a3b18b658a7c6f6758535e500"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/lars_channel_head_sim4_v1/experiment_results.json",
+      "source_sha256": "4f2ac90c1fb709f790678d81543305b01ed4b0145d025743201cc921cf596884",
+      "published": "results/selective_unfreezing/lars_channel/experiment_results.json",
+      "published_sha256": "82457cbf421b8b649880742b63e1585a559c43a01ff084ac04555dc571965bbc"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/pohang_canal_pier_head_sim4_v1/experiment_results.json",
+      "source_sha256": "75f58f44edbd43714f448bbe96139787a95f7db48068741a6ca10aceda630db2",
+      "published": "results/selective_unfreezing/pohang_canal_pier/experiment_results.json",
+      "published_sha256": "ad7c2c0f00e60c9805ebdcbc9d59b485e2db6ad4dcde7f627bd4217c4e1c5e98"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/lars_channel_v2/resolved_splits.json",
+      "source_sha256": "3589c4cc4bec47fddf3ffc100c992ed0e535c7285a7898a05fa897675e6b5a3e",
+      "published": "results/manifests/lars_channel.json",
+      "published_sha256": "a35601a872506a928868afabd4ac30eb789cb463835464f8ede0ec879510d725"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/lars_channel_v2/run_config.json",
+      "source_sha256": "149060996db7a10f5e421a2662721c578dab819cef21daedce1fc15be6f92d7d",
+      "published": "results/selective_unfreezing/lars_channel/head_only_run_config.json",
+      "published_sha256": "5bbef5806f4864a99b9fe2be9eae9a30138b4191e67accd8619ca977c604fb6c"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Pohang_canal_pier_v3/resolved_splits.json",
+      "source_sha256": "4f4cfcf0e523e64eeaf290158f1e3b60195b9e01b764e4cded0256f202ce2afa",
+      "published": "results/manifests/pohang_canal_pier.json",
+      "published_sha256": "12399fc87b381c54e2ed6bad37bdaebf3ba6f835111f26af27f5708b351f922c"
+    },
+    {
+      "source": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_tests/Pohang_canal_pier_v3/run_config.json",
+      "source_sha256": "34ba6eb034f9e20b9b48a9237a000d216d95440185fa3d12ab469f9f943a59d8",
+      "published": "results/selective_unfreezing/pohang_canal_pier/head_only_run_config.json",
+      "published_sha256": "f0f15c8f5397e04e40256ed61f31076a4a91c5bd17f3b92cb77dfe9da3b0bc60"
+    },
+    {
+      "source": "evaluation/binary/results/ewasr/mastr1325/main/2026-09-08_15-47-03_317278/summary.json",
+      "source_sha256": "8a1326f646c516c5bd253cdde6d388f64d16aa19b6c19a091364ff0544369fa4",
+      "published": "results/baseline/ewasr/summary.json",
+      "published_sha256": "3c05003225801e1dd68d0b0b3e82606875a31a9c46e7e9301cd76340a02ec96a"
+    },
+    {
+      "source": "evaluation/binary/results/sam3/mastr1325/sam3_water_only_v1/2026-09-08_15-56-12_860375/summary.json",
+      "source_sha256": "a978702f51975309d234c7afbd02070ad3a64309f54eefc18afafb9db170adad",
+      "published": "results/baseline/sam3/summary.json",
+      "published_sha256": "d192ed07dfdac885eab0f44df35f65843604a5311e05cb330a254c1750b80f24"
+    },
+    {
+      "source": "evaluation/binary/sam3_padding_comparison/20261021_205052_604550/comparison.csv",
+      "source_sha256": "18630142755300e188ed5255e367749edc9c3226e293f788ec1c90f05c497eb5",
+      "published": "results/padding/comparison.csv",
+      "published_sha256": "22d40cbf156fa57cfdff7a256b39cff9ae384085541a7b389f21f6d1473961a2"
+    },
+    {
+      "source": "evaluation/binary/sam3_padding_comparison/20261021_205052_604550/edge_evaluation_20261022_135901_934319/edge_pooled_summary.csv",
+      "source_sha256": "356c833f2b50d91eeff4ac2a222260caa441a473143e704f9d5277fcf13f9a94",
+      "published": "results/padding/edge_pooled_summary.csv",
+      "published_sha256": "1bc991ff99362e706cc8ce356589b0c6d4b8fb60add1d0b0915e1a4439de1f4e"
+    },
+    {
+      "source": "evaluation/binary/sam3_padding_comparison/20261021_205052_604550/edge_evaluation_20261022_135901_934319/edge_comparison.csv",
+      "source_sha256": "c9a53adb1d2d589a2eeb9f2b6750d085b2b2fe2cd106bd2d220030afbfd59c54",
+      "published": "results/padding/edge_comparison.csv",
+      "published_sha256": "c7bd233fa75beaf6a41dc282b4d68b27d5afa7704009419900d9c0aa712d2654"
+    },
+    {
+      "source": "evaluation/binary/sam3_padding_comparison/20261021_205052_604550/edge_evaluation_20261022_135901_934319/protocol.txt",
+      "source_sha256": "06ec0d7e3429533eae6088e01e31c2d86076db799e227dd2ded24990707d6f3c",
+      "published": "results/padding/protocol.txt",
+      "published_sha256": "06ec0d7e3429533eae6088e01e31c2d86076db799e227dd2ded24990707d6f3c"
+    }
+  ]
+}

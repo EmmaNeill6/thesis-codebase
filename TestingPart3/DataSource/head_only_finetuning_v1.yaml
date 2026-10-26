@@ -5,7 +5,7 @@ experiment:
   description: >-
     First head-only eWaSR fine-tuning experiment using SAM3 three-class
     pseudo-labels, chronological Tampere blocks, and a separate CataRob trip.
-  output_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_channel_head_only_v1"
+  output_dir: "../../TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_channel_head_only_v1"
   seed: 4022
 
 labels:
@@ -16,8 +16,8 @@ labels:
 data:
   train:
     sequence_id: tampere_channel_frames_001_to_150
-    images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel"
-    masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks"
+    images_dir: "../../data/Tampere-WaterSeg/images/channel"
+    masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks"
     expected_count: 150
     selection:
       kind: inclusive_range
@@ -27,8 +27,8 @@ data:
 
   validation:
     sequence_id: tampere_channel_frames_151_to_200
-    images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel"
-    masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks"
+    images_dir: "../../data/Tampere-WaterSeg/images/channel"
+    masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks"
     expected_count: 50
     selection:
       kind: inclusive_range
@@ -38,8 +38,8 @@ data:
 
   test:
     sequence_id: catarob_2025_03_27_channel_every_30th_frame
-    images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames"
-    masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks"
+    images_dir: "../../data/Catarob/left_frames"
+    masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks"
     expected_count: 50
     selection:
       kind: every_nth
@@ -50,7 +50,7 @@ data:
 
 model:
   architecture: ewasr_resnet18
-  checkpoint: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
+  checkpoint: "../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
   imu: false
   trainable_module: decoder.seg_head
   frozen_modules:
@@ -84,7 +84,7 @@ training:
   checkpoint_selection_metric: validation_mean_iou
 
 methodology_notes:
-  requested_but_rejected_mask_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Open-padded-5pct/masks"
+  requested_but_rejected_mask_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Open-padded-5pct/masks"
   correction_reason: >-
     The requested directory contains open_image masks generated from different
     source images and cannot be paired with channel_image inputs. Matching

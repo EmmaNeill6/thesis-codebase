@@ -1,0 +1,35 @@
+{
+  "config": "TestingPart3/DataSource/pohang_canal_pier_v2.yaml",
+  "train_images": null,
+  "train_masks": null,
+  "val_images": null,
+  "val_masks": null,
+  "weights": "TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz",
+  "output_dir": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/Pohang_V2",
+  "epochs": 20,
+  "batch_size": 2,
+  "learning_rate": 0.001,
+  "weight_decay": 0.001,
+  "class_weights": "1,1,1",
+  "width": 512,
+  "height": 384,
+  "seed": 4022,
+  "check_data": false,
+  "selection_metric": "binary_water_iou",
+  "train_samples": 358,
+  "validation_samples": 120,
+  "trainable_parameter_names": [
+    "decoder.seg_head.conv.weight",
+    "decoder.seg_head.conv.bias",
+    "decoder.seg_head.bn.weight",
+    "decoder.seg_head.bn.bias",
+    "decoder.seg_head.conv1.weight",
+    "decoder.seg_head.conv1.bias"
+  ],
+  "trainable_parameter_count": 67075,
+  "class_names": [
+    "obstacle",
+    "water",
+    "sky"
+  ]
+}

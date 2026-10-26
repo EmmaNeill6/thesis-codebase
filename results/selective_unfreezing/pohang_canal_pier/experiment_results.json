@@ -1,0 +1,217 @@
+{
+  "best_epoch": 19,
+  "selection_metric": "validation_binary_water_iou",
+  "best_validation": {
+    "pixel_accuracy": 0.9870810628939075,
+    "mean_iou": 0.9735825819449282,
+    "class_iou": {
+      "obstacle": 0.961960855382385,
+      "water": 0.9689327279222366,
+      "sky": 0.9898541625301629
+    },
+    "binary_water_iou": 0.9689327279222366,
+    "binary_non_water_iou": 0.9874104162400773,
+    "binary_mean_iou": 0.978171572081157,
+    "obstacle_recall": 0.9862466478526645,
+    "obstacle_precision": 0.9750407177758094,
+    "obstacle_miss_rate": 0.013753352147335529,
+    "water_as_obstacle_rate": 0.021298566880870933,
+    "confusion_matrix": [
+      [
+        477729,
+        4247,
+        2415
+      ],
+      [
+        8972,
+        412277,
+        0
+      ],
+      [
+        3257,
+        0,
+        553375
+      ]
+    ],
+    "loss": 0.06510163346926372,
+    "water_predicted_as_obstacle_count": 8972,
+    "water_predicted_as_obstacle_rate": 0.021298566880870933,
+    "obstacle_missed_as_water_count": 4247,
+    "obstacle_missed_as_water_rate": 0.008767710382728004
+  },
+  "test": {
+    "aggregate": {
+      "pairs": 90,
+      "metrics": {
+        "pixel_accuracy": 0.9663963035300925,
+        "mean_iou": 0.9351107300012452,
+        "class_iou": {
+          "obstacle": 0.915072,
+          "water": 0.9100795772007692,
+          "sky": 0.9801806128029666
+        },
+        "binary_water_iou": 0.9100795772007692,
+        "binary_non_water_iou": 0.9630506651029366,
+        "binary_mean_iou": 0.9365651211518529,
+        "obstacle_recall": 0.9815263840501718,
+        "obstacle_precision": 0.9311083460281651,
+        "obstacle_miss_rate": 0.018473615949828215,
+        "water_as_obstacle_rate": 0.07621792156934956,
+        "confusion_matrix": [
+          [
+            400344,
+            4899,
+            2636
+          ],
+          [
+            24835,
+            301007,
+            0
+          ],
+          [
+            4786,
+            7,
+            367406
+          ]
+        ],
+        "loss": 0.1825433500111103,
+        "water_predicted_as_obstacle_count": 24835,
+        "water_predicted_as_obstacle_rate": 0.07621792156934956,
+        "obstacle_missed_as_water_count": 4899,
+        "obstacle_missed_as_water_rate": 0.012010915001752972
+      }
+    },
+    "canal": {
+      "pairs": 44,
+      "metrics": {
+        "pixel_accuracy": 0.9904378255208334,
+        "mean_iou": 0.9809936468175708,
+        "class_iou": {
+          "obstacle": 0.9748202840388849,
+          "water": 0.9790475404083149,
+          "sky": 0.9891131160055127
+        },
+        "binary_water_iou": 0.9790475404083149,
+        "binary_non_water_iou": 0.9923566974908883,
+        "binary_mean_iou": 0.9857021189496016,
+        "obstacle_recall": 0.9859171580145114,
+        "obstacle_precision": 0.9885856814758106,
+        "obstacle_miss_rate": 0.014082841985488592,
+        "water_as_obstacle_rate": 0.009647107955731886,
+        "confusion_matrix": [
+          [
+            200154,
+            1659,
+            1200
+          ],
+          [
+            1386,
+            142284,
+            0
+          ],
+          [
+            925,
+            0,
+            193064
+          ]
+        ],
+        "loss": 0.02475273897024718,
+        "water_predicted_as_obstacle_count": 1386,
+        "water_predicted_as_obstacle_rate": 0.009647107955731886,
+        "obstacle_missed_as_water_count": 1659,
+        "obstacle_missed_as_water_rate": 0.00817189047006842
+      }
+    },
+    "pier": {
+      "pairs": 46,
+      "metrics": {
+        "pixel_accuracy": 0.9434000651041666,
+        "mean_iou": 0.8962441585062342,
+        "class_iou": {
+          "obstacle": 0.8622338226173248,
+          "water": 0.8560233848742578,
+          "sky": 0.97047526802712
+        },
+        "binary_water_iou": 0.8560233848742578,
+        "binary_non_water_iou": 0.93433122194207,
+        "binary_mean_iou": 0.8951773034081638,
+        "obstacle_recall": 0.9771753243583611,
+        "obstacle_precision": 0.879956043956044,
+        "obstacle_miss_rate": 0.022824675641638925,
+        "water_as_obstacle_rate": 0.12871901280108908,
+        "confusion_matrix": [
+          [
+            200190,
+            3240,
+            1436
+          ],
+          [
+            23449,
+            158723,
+            0
+          ],
+          [
+            3861,
+            7,
+            174342
+          ]
+        ],
+        "loss": 0.33347349970237067,
+        "water_predicted_as_obstacle_count": 23449,
+        "water_predicted_as_obstacle_rate": 0.12871901280108908,
+        "obstacle_missed_as_water_count": 3240,
+        "obstacle_missed_as_water_rate": 0.015815215799595835
+      }
+    }
+  },
+  "unseen": "reserved; pixels not read or evaluated",
+  "best_checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_canal_pier_head_sim4_v1/best_head_sim4.npz",
+  "training_elapsed_seconds": 970.9490042920224,
+  "total_elapsed_seconds": 990.173962791916,
+  "trainable_parameter_names": [
+    "decoder.sim4.conv_lc.weight",
+    "decoder.sim4.conv_lc.bias",
+    "decoder.sim4.bn_lc.weight",
+    "decoder.sim4.bn_lc.bias",
+    "decoder.sim4.conv_gc.weight",
+    "decoder.sim4.conv_gc.bias",
+    "decoder.sim4.bn_gc.weight",
+    "decoder.sim4.bn_gc.bias",
+    "decoder.sim4.conv_gc1.weight",
+    "decoder.sim4.conv_gc1.bias",
+    "decoder.sim4.bn_gc1.weight",
+    "decoder.sim4.bn_gc1.bias",
+    "decoder.seg_head.conv.weight",
+    "decoder.seg_head.conv.bias",
+    "decoder.seg_head.bn.weight",
+    "decoder.seg_head.bn.bias",
+    "decoder.seg_head.conv1.weight",
+    "decoder.seg_head.conv1.bias"
+  ],
+  "frozen_state_audit": {
+    "changed_tensor_names": [
+      "decoder.sim4.conv_lc.weight",
+      "decoder.sim4.conv_lc.bias",
+      "decoder.sim4.bn_lc.weight",
+      "decoder.sim4.bn_lc.bias",
+      "decoder.sim4.conv_gc.weight",
+      "decoder.sim4.conv_gc.bias",
+      "decoder.sim4.bn_gc.weight",
+      "decoder.sim4.bn_gc.bias",
+      "decoder.sim4.conv_gc1.weight",
+      "decoder.sim4.conv_gc1.bias",
+      "decoder.sim4.bn_gc1.weight",
+      "decoder.sim4.bn_gc1.bias",
+      "decoder.seg_head.conv.weight",
+      "decoder.seg_head.conv.bias",
+      "decoder.seg_head.bn.weight",
+      "decoder.seg_head.bn.bias",
+      "decoder.seg_head.bn.running_mean",
+      "decoder.seg_head.bn.running_var",
+      "decoder.seg_head.conv1.weight",
+      "decoder.seg_head.conv1.bias"
+    ],
+    "frozen_tensors_unchanged": true,
+    "sim4_running_statistics_unchanged": true
+  }
+}

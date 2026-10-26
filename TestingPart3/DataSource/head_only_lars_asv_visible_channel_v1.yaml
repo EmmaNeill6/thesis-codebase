@@ -5,7 +5,7 @@ experiment:
   description: >-
     Head-only adaptation of pretrained non-IMU eWaSR to channel imagery with
     the ASV visible in the frame, using SAM3 three-class pseudo-labels.
-  output_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/lars_asv_visible_channel_head_only_v1"
+  output_dir: "../../TestingPart3/eWaSR_Head_Fine_Tuning/outputs/lars_asv_visible_channel_head_only_v1"
   seed: 4022
 
 labels:
@@ -19,29 +19,29 @@ data:
     expected_count: 110
     sources:
       - source_id: lars_test_asv_channel
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/test/images/ASV_Channel"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
+        images_dir: "../../data/lars_v1-2/test/images/ASV_Channel"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
         shared_masks_dir: true
         expected_count: 2
         selection:
           kind: all
       - source_id: lars_test_asv_channel_2
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/test/images/ASV_Channel_2"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
+        images_dir: "../../data/lars_v1-2/test/images/ASV_Channel_2"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
         shared_masks_dir: true
         expected_count: 83
         selection:
           kind: all
       - source_id: lars_test_asv_channel_3
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/test/images/ASV_Channel_3"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
+        images_dir: "../../data/lars_v1-2/test/images/ASV_Channel_3"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
         shared_masks_dir: true
         expected_count: 23
         selection:
           kind: all
       - source_id: lars_test_asv_channel_4
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/test/images/ASV_Channel_4"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
+        images_dir: "../../data/lars_v1-2/test/images/ASV_Channel_4"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaSR_ASV_Channel_5pct/masks"
         shared_masks_dir: true
         expected_count: 2
         selection:
@@ -49,23 +49,23 @@ data:
 
   validation:
     sequence_id: tampere_channel
-    images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/channel"
-    masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks"
+    images_dir: "../../data/Tampere-WaterSeg/images/channel"
+    masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere_Channel_5ppt/masks"
     expected_count: 200
     selection:
       kind: all
 
   test:
     sequence_id: catarob_2025_03_27_channel_labelled_frames
-    images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/CataRob/zed_camera_export_2025_03_27-10_00_09/left_frames"
-    masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks"
+    images_dir: "../../data/Catarob/left_frames"
+    masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_Channel_5ppt/masks"
     expected_count: 50
     selection:
       kind: all
 
 model:
   architecture: ewasr_resnet18
-  checkpoint: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
+  checkpoint: "../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
   imu: false
   trainable_module: decoder.seg_head
   frozen_modules:

@@ -12,7 +12,7 @@ passed to the project's binary-water mask evaluator.
 Create an isolated Python 3.11 environment from the project root:
 
 ```bash
-/opt/homebrew/opt/python@3.11/bin/python3.11 -m venv .venv-yoloworld-mps
+python3.11 -m venv .venv-yoloworld-mps
 source .venv-yoloworld-mps/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -r TestingPart2/YOLOWorld/requirements-mps.txt

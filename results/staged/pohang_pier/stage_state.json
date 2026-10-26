@@ -1,0 +1,1327 @@
+{
+  "schema_version": 1,
+  "config_sha256": "27f3009daafee38004f165816085f5dcfc0d5c4860cd8a790120462df83534e3",
+  "checkpoint_metric": "validation_binary_water_iou",
+  "stages": {
+    "1": {
+      "status": "complete",
+      "candidates": {
+        "baseline": {
+          "parameters": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9768324110243055,
+            "mean_iou": 0.9500860536200392,
+            "class_iou": {
+              "obstacle": 0.9189725101397026,
+              "water": 0.943739936870457,
+              "sky": 0.9875457138499579
+            },
+            "binary_water_iou": 0.943739936870457,
+            "binary_non_water_iou": 0.9742921259322816,
+            "binary_mean_iou": 0.9590160314013694,
+            "obstacle_recall": 0.975615160702235,
+            "obstacle_precision": 0.9405767055247787,
+            "obstacle_miss_rate": 0.024384839297765026,
+            "water_as_obstacle_rate": 0.04118055825316051,
+            "confusion_matrix": [
+              [
+                193724,
+                3702,
+                1140
+              ],
+              [
+                9541,
+                222146,
+                0
+              ],
+              [
+                2698,
+                0,
+                304329
+              ]
+            ],
+            "loss": 0.10666515746464332
+          },
+          "last_three_validation_water_iou_std": 0.0030791271266210254,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.001,
+          "weight_decay": 0.0001,
+          "epochs": 10,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 9,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9768324110243055,
+          "mean_iou": 0.9500860536200392,
+          "class_iou": {
+            "obstacle": 0.9189725101397026,
+            "water": 0.943739936870457,
+            "sky": 0.9875457138499579
+          },
+          "binary_water_iou": 0.943739936870457,
+          "binary_non_water_iou": 0.9742921259322816,
+          "binary_mean_iou": 0.9590160314013694,
+          "obstacle_recall": 0.975615160702235,
+          "obstacle_precision": 0.9405767055247787,
+          "obstacle_miss_rate": 0.024384839297765026,
+          "water_as_obstacle_rate": 0.04118055825316051,
+          "confusion_matrix": [
+            [
+              193724,
+              3702,
+              1140
+            ],
+            [
+              9541,
+              222146,
+              0
+            ],
+            [
+              2698,
+              0,
+              304329
+            ]
+          ],
+          "loss": 0.10666515746464332
+        },
+        "last_three_validation_water_iou_std": 0.0030791271266210254,
+        "trainable_parameter_count": 67075
+      }
+    },
+    "2": {
+      "status": "complete",
+      "candidates": {
+        "lr_0.0003": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 2,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.0003/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.0003/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9762315538194445,
+            "mean_iou": 0.9489860123499504,
+            "class_iou": {
+              "obstacle": 0.9173180188817365,
+              "water": 0.9437979285888031,
+              "sky": 0.9858420895793115
+            },
+            "binary_water_iou": 0.9437979285888031,
+            "binary_non_water_iou": 0.9744825301239836,
+            "binary_mean_iou": 0.9591402293563933,
+            "obstacle_recall": 0.9781735040238511,
+            "obstacle_precision": 0.9364865842192811,
+            "obstacle_miss_rate": 0.02182649597614894,
+            "water_as_obstacle_rate": 0.04534997647688476,
+            "confusion_matrix": [
+              [
+                194232,
+                2646,
+                1688
+              ],
+              [
+                10507,
+                221163,
+                17
+              ],
+              [
+                2666,
+                0,
+                304361
+              ]
+            ],
+            "loss": 0.07944160314897696
+          },
+          "last_three_validation_water_iou_std": 0.0004727644658754193,
+          "trainable_parameter_count": 67075
+        },
+        "lr_0.001": {
+          "parameters": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9768324110243055,
+            "mean_iou": 0.9500860536200392,
+            "class_iou": {
+              "obstacle": 0.9189725101397026,
+              "water": 0.943739936870457,
+              "sky": 0.9875457138499579
+            },
+            "binary_water_iou": 0.943739936870457,
+            "binary_non_water_iou": 0.9742921259322816,
+            "binary_mean_iou": 0.9590160314013694,
+            "obstacle_recall": 0.975615160702235,
+            "obstacle_precision": 0.9405767055247787,
+            "obstacle_miss_rate": 0.024384839297765026,
+            "water_as_obstacle_rate": 0.04118055825316051,
+            "confusion_matrix": [
+              [
+                193724,
+                3702,
+                1140
+              ],
+              [
+                9541,
+                222146,
+                0
+              ],
+              [
+                2698,
+                0,
+                304329
+              ]
+            ],
+            "loss": 0.10666515746464332
+          },
+          "last_three_validation_water_iou_std": 0.0030791271266210254,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_01/baseline/best_head_only.npz"
+        },
+        "lr_0.003": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9777370876736111,
+            "mean_iou": 0.9518441010634119,
+            "class_iou": {
+              "obstacle": 0.9217546335138433,
+              "water": 0.9452255792589568,
+              "sky": 0.9885520904174357
+            },
+            "binary_water_iou": 0.9452255792589568,
+            "binary_non_water_iou": 0.9749937382409991,
+            "binary_mean_iou": 0.960109658749978,
+            "obstacle_recall": 0.9737920892801386,
+            "obstacle_precision": 0.9452026670316563,
+            "obstacle_miss_rate": 0.026207910719861394,
+            "water_as_obstacle_rate": 0.04073599295601393,
+            "confusion_matrix": [
+              [
+                193362,
+                3441,
+                1763
+              ],
+              [
+                9438,
+                222249,
+                0
+              ],
+              [
+                1772,
+                0,
+                305255
+              ]
+            ],
+            "loss": 0.10767370574176312
+          },
+          "last_three_validation_water_iou_std": 0.0006442537870505618,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.003,
+          "weight_decay": 0.0001,
+          "epochs": 10,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 9,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9777370876736111,
+          "mean_iou": 0.9518441010634119,
+          "class_iou": {
+            "obstacle": 0.9217546335138433,
+            "water": 0.9452255792589568,
+            "sky": 0.9885520904174357
+          },
+          "binary_water_iou": 0.9452255792589568,
+          "binary_non_water_iou": 0.9749937382409991,
+          "binary_mean_iou": 0.960109658749978,
+          "obstacle_recall": 0.9737920892801386,
+          "obstacle_precision": 0.9452026670316563,
+          "obstacle_miss_rate": 0.026207910719861394,
+          "water_as_obstacle_rate": 0.04073599295601393,
+          "confusion_matrix": [
+            [
+              193362,
+              3441,
+              1763
+            ],
+            [
+              9438,
+              222249,
+              0
+            ],
+            [
+              1772,
+              0,
+              305255
+            ]
+          ],
+          "loss": 0.10767370574176312
+        },
+        "last_three_validation_water_iou_std": 0.0006442537870505618,
+        "trainable_parameter_count": 67075
+      }
+    },
+    "3": {
+      "status": "complete",
+      "candidates": {
+        "decay_0": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_0/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_0/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9777696397569444,
+            "mean_iou": 0.9519003921463121,
+            "class_iou": {
+              "obstacle": 0.9218187282067916,
+              "water": 0.9452376195961253,
+              "sky": 0.9886448286360191
+            },
+            "binary_water_iou": 0.9452376195961253,
+            "binary_non_water_iou": 0.9749773253860511,
+            "binary_mean_iou": 0.9601074724910882,
+            "obstacle_recall": 0.9732330811921477,
+            "obstacle_precision": 0.9457974021906169,
+            "obstacle_miss_rate": 0.026766918807852313,
+            "water_as_obstacle_rate": 0.040140361781196184,
+            "confusion_matrix": [
+              [
+                193251,
+                3584,
+                1731
+              ],
+              [
+                9300,
+                222387,
+                0
+              ],
+              [
+                1775,
+                0,
+                305252
+              ]
+            ],
+            "loss": 0.10763427019119262
+          },
+          "last_three_validation_water_iou_std": 0.0005874696900981835,
+          "trainable_parameter_count": 67075
+        },
+        "decay_1e-05": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 1e-05,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_1e-05/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_1e-05/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.97772216796875,
+            "mean_iou": 0.9518103932397688,
+            "class_iou": {
+              "obstacle": 0.9216487862120945,
+              "water": 0.9452667814113598,
+              "sky": 0.9885156120958523
+            },
+            "binary_water_iou": 0.9452667814113598,
+            "binary_non_water_iou": 0.9749851414187323,
+            "binary_mean_iou": 0.960125961415046,
+            "obstacle_recall": 0.9730165285094124,
+            "obstacle_precision": 0.945823032676539,
+            "obstacle_miss_rate": 0.02698347149058755,
+            "water_as_obstacle_rate": 0.03997203123179117,
+            "confusion_matrix": [
+              [
+                193208,
+                3618,
+                1740
+              ],
+              [
+                9261,
+                222426,
+                0
+              ],
+              [
+                1806,
+                0,
+                305221
+              ]
+            ],
+            "loss": 0.10767001261313756
+          },
+          "last_three_validation_water_iou_std": 0.0006258324698754406,
+          "trainable_parameter_count": 67075
+        },
+        "decay_0.0001": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9777370876736111,
+            "mean_iou": 0.9518441010634119,
+            "class_iou": {
+              "obstacle": 0.9217546335138433,
+              "water": 0.9452255792589568,
+              "sky": 0.9885520904174357
+            },
+            "binary_water_iou": 0.9452255792589568,
+            "binary_non_water_iou": 0.9749937382409991,
+            "binary_mean_iou": 0.960109658749978,
+            "obstacle_recall": 0.9737920892801386,
+            "obstacle_precision": 0.9452026670316563,
+            "obstacle_miss_rate": 0.026207910719861394,
+            "water_as_obstacle_rate": 0.04073599295601393,
+            "confusion_matrix": [
+              [
+                193362,
+                3441,
+                1763
+              ],
+              [
+                9438,
+                222249,
+                0
+              ],
+              [
+                1772,
+                0,
+                305255
+              ]
+            ],
+            "loss": 0.10767370574176312
+          },
+          "last_three_validation_water_iou_std": 0.0006442537870505618,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_02/lr_0.003/best_head_only.npz"
+        },
+        "decay_0.001": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_0.001/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_0.001/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9778618706597222,
+            "mean_iou": 0.9520965210455868,
+            "class_iou": {
+              "obstacle": 0.9221022187647652,
+              "water": 0.9455832911844336,
+              "sky": 0.988604053187562
+            },
+            "binary_water_iou": 0.9455832911844336,
+            "binary_non_water_iou": 0.9751304374851886,
+            "binary_mean_iou": 0.960356864334811,
+            "obstacle_recall": 0.9730215646183134,
+            "obstacle_precision": 0.94629580651797,
+            "obstacle_miss_rate": 0.02697843538168665,
+            "water_as_obstacle_rate": 0.03976485517098499,
+            "confusion_matrix": [
+              [
+                193209,
+                3590,
+                1767
+              ],
+              [
+                9213,
+                222474,
+                0
+              ],
+              [
+                1752,
+                0,
+                305275
+              ]
+            ],
+            "loss": 0.1079698342209061
+          },
+          "last_three_validation_water_iou_std": 0.0007396486820956736,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.003,
+          "weight_decay": 0.001,
+          "epochs": 10,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 9,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_0.001/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_03/decay_0.001/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9778618706597222,
+          "mean_iou": 0.9520965210455868,
+          "class_iou": {
+            "obstacle": 0.9221022187647652,
+            "water": 0.9455832911844336,
+            "sky": 0.988604053187562
+          },
+          "binary_water_iou": 0.9455832911844336,
+          "binary_non_water_iou": 0.9751304374851886,
+          "binary_mean_iou": 0.960356864334811,
+          "obstacle_recall": 0.9730215646183134,
+          "obstacle_precision": 0.94629580651797,
+          "obstacle_miss_rate": 0.02697843538168665,
+          "water_as_obstacle_rate": 0.03976485517098499,
+          "confusion_matrix": [
+            [
+              193209,
+              3590,
+              1767
+            ],
+            [
+              9213,
+              222474,
+              0
+            ],
+            [
+              1752,
+              0,
+              305275
+            ]
+          ],
+          "loss": 0.1079698342209061
+        },
+        "last_three_validation_water_iou_std": 0.0007396486820956736,
+        "trainable_parameter_count": 67075
+      }
+    },
+    "4": {
+      "status": "complete",
+      "candidates": {
+        "epochs_20": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 20,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 17,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_20/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_20/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9783487955729167,
+            "mean_iou": 0.9532904045591848,
+            "class_iou": {
+              "obstacle": 0.9241428469598688,
+              "water": 0.9477858220982885,
+              "sky": 0.987942544619397
+            },
+            "binary_water_iou": 0.9477858220982885,
+            "binary_non_water_iou": 0.9762209898406189,
+            "binary_mean_iou": 0.9620034059694538,
+            "obstacle_recall": 0.9793821701600476,
+            "obstacle_precision": 0.9424787124226401,
+            "obstacle_miss_rate": 0.020617829839952417,
+            "water_as_obstacle_rate": 0.04056766240660892,
+            "confusion_matrix": [
+              [
+                194472,
+                2847,
+                1247
+              ],
+              [
+                9399,
+                222288,
+                0
+              ],
+              [
+                2470,
+                0,
+                304557
+              ]
+            ],
+            "loss": 0.1184938079987963
+          },
+          "last_three_validation_water_iou_std": 0.0021602460141574935,
+          "trainable_parameter_count": 67075
+        },
+        "epochs_30": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 26,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9774495442708333,
+            "mean_iou": 0.95175959849007,
+            "class_iou": {
+              "obstacle": 0.9219597829556336,
+              "water": 0.9478531029806809,
+              "sky": 0.9854659095338956
+            },
+            "binary_water_iou": 0.9478531029806809,
+            "binary_non_water_iou": 0.9764677632368832,
+            "binary_mean_iou": 0.9621604331087821,
+            "obstacle_recall": 0.9891824380810411,
+            "obstacle_precision": 0.9313500493134057,
+            "obstacle_miss_rate": 0.010817561918958885,
+            "water_as_obstacle_rate": 0.046636194521056426,
+            "confusion_matrix": [
+              [
+                196418,
+                1347,
+                801
+              ],
+              [
+                10805,
+                220882,
+                0
+              ],
+              [
+                3673,
+                0,
+                303354
+              ]
+            ],
+            "loss": 0.1342190577959021
+          },
+          "last_three_validation_water_iou_std": 0.0008464399026702139,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.003,
+          "weight_decay": 0.001,
+          "epochs": 30,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 26,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9774495442708333,
+          "mean_iou": 0.95175959849007,
+          "class_iou": {
+            "obstacle": 0.9219597829556336,
+            "water": 0.9478531029806809,
+            "sky": 0.9854659095338956
+          },
+          "binary_water_iou": 0.9478531029806809,
+          "binary_non_water_iou": 0.9764677632368832,
+          "binary_mean_iou": 0.9621604331087821,
+          "obstacle_recall": 0.9891824380810411,
+          "obstacle_precision": 0.9313500493134057,
+          "obstacle_miss_rate": 0.010817561918958885,
+          "water_as_obstacle_rate": 0.046636194521056426,
+          "confusion_matrix": [
+            [
+              196418,
+              1347,
+              801
+            ],
+            [
+              10805,
+              220882,
+              0
+            ],
+            [
+              3673,
+              0,
+              303354
+            ]
+          ],
+          "loss": 0.1342190577959021
+        },
+        "last_three_validation_water_iou_std": 0.0008464399026702139,
+        "trainable_parameter_count": 67075
+      },
+      "human_choice": "use30"
+    },
+    "5": {
+      "status": "complete",
+      "candidates": {
+        "batch_2": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 26,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9774495442708333,
+            "mean_iou": 0.95175959849007,
+            "class_iou": {
+              "obstacle": 0.9219597829556336,
+              "water": 0.9478531029806809,
+              "sky": 0.9854659095338956
+            },
+            "binary_water_iou": 0.9478531029806809,
+            "binary_non_water_iou": 0.9764677632368832,
+            "binary_mean_iou": 0.9621604331087821,
+            "obstacle_recall": 0.9891824380810411,
+            "obstacle_precision": 0.9313500493134057,
+            "obstacle_miss_rate": 0.010817561918958885,
+            "water_as_obstacle_rate": 0.046636194521056426,
+            "confusion_matrix": [
+              [
+                196418,
+                1347,
+                801
+              ],
+              [
+                10805,
+                220882,
+                0
+              ],
+              [
+                3673,
+                0,
+                303354
+              ]
+            ],
+            "loss": 0.1342190577959021
+          },
+          "last_three_validation_water_iou_std": 0.0008464399026702139,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz"
+        },
+        "batch_4": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 4,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 26,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_05/batch_4/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_05/batch_4/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9785047743055556,
+            "mean_iou": 0.9536815999034297,
+            "class_iou": {
+              "obstacle": 0.925175046387883,
+              "water": 0.9477959181923056,
+              "sky": 0.9880738351301007
+            },
+            "binary_water_iou": 0.9477959181923056,
+            "binary_non_water_iou": 0.9764213437877708,
+            "binary_mean_iou": 0.9621086309900382,
+            "obstacle_recall": 0.9868406474421603,
+            "obstacle_precision": 0.9367315524791097,
+            "obstacle_miss_rate": 0.013159352557839732,
+            "water_as_obstacle_rate": 0.04609235736144022,
+            "confusion_matrix": [
+              [
+                195953,
+                1494,
+                1119
+              ],
+              [
+                10679,
+                221008,
+                0
+              ],
+              [
+                2556,
+                0,
+                304471
+              ]
+            ],
+            "loss": 0.12440925401945908
+          },
+          "last_three_validation_water_iou_std": 0.001195239129003287,
+          "trainable_parameter_count": 67075
+        },
+        "batch_8": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 8,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_05/batch_8/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_05/batch_8/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.97752685546875,
+            "mean_iou": 0.9516210286689692,
+            "class_iou": {
+              "obstacle": 0.9215906187001335,
+              "water": 0.9457610210893836,
+              "sky": 0.9875114462173905
+            },
+            "binary_water_iou": 0.9457610210893836,
+            "binary_non_water_iou": 0.9753157557767301,
+            "binary_mean_iou": 0.9605383884330569,
+            "obstacle_recall": 0.9807570278899711,
+            "obstacle_precision": 0.9385617828071309,
+            "obstacle_miss_rate": 0.0192429721100289,
+            "water_as_obstacle_rate": 0.04245814396146525,
+            "confusion_matrix": [
+              [
+                194745,
+                2886,
+                935
+              ],
+              [
+                9837,
+                221850,
+                0
+              ],
+              [
+                2911,
+                0,
+                304116
+              ]
+            ],
+            "loss": 0.12296583270654082
+          },
+          "last_three_validation_water_iou_std": 0.00152716982962268,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.003,
+          "weight_decay": 0.001,
+          "epochs": 30,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 26,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9774495442708333,
+          "mean_iou": 0.95175959849007,
+          "class_iou": {
+            "obstacle": 0.9219597829556336,
+            "water": 0.9478531029806809,
+            "sky": 0.9854659095338956
+          },
+          "binary_water_iou": 0.9478531029806809,
+          "binary_non_water_iou": 0.9764677632368832,
+          "binary_mean_iou": 0.9621604331087821,
+          "obstacle_recall": 0.9891824380810411,
+          "obstacle_precision": 0.9313500493134057,
+          "obstacle_miss_rate": 0.010817561918958885,
+          "water_as_obstacle_rate": 0.046636194521056426,
+          "confusion_matrix": [
+            [
+              196418,
+              1347,
+              801
+            ],
+            [
+              10805,
+              220882,
+              0
+            ],
+            [
+              3673,
+              0,
+              303354
+            ]
+          ],
+          "loss": 0.1342190577959021
+        },
+        "last_three_validation_water_iou_std": 0.0008464399026702139,
+        "trainable_parameter_count": 67075,
+        "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz"
+      },
+      "human_choice": "2"
+    },
+    "6": {
+      "status": "complete",
+      "candidates": {
+        "weights_1_1_1": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 26,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9774495442708333,
+            "mean_iou": 0.95175959849007,
+            "class_iou": {
+              "obstacle": 0.9219597829556336,
+              "water": 0.9478531029806809,
+              "sky": 0.9854659095338956
+            },
+            "binary_water_iou": 0.9478531029806809,
+            "binary_non_water_iou": 0.9764677632368832,
+            "binary_mean_iou": 0.9621604331087821,
+            "obstacle_recall": 0.9891824380810411,
+            "obstacle_precision": 0.9313500493134057,
+            "obstacle_miss_rate": 0.010817561918958885,
+            "water_as_obstacle_rate": 0.046636194521056426,
+            "confusion_matrix": [
+              [
+                196418,
+                1347,
+                801
+              ],
+              [
+                10805,
+                220882,
+                0
+              ],
+              [
+                3673,
+                0,
+                303354
+              ]
+            ],
+            "loss": 0.1342190577959021
+          },
+          "last_three_validation_water_iou_std": 0.0008464399026702139,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_04/epochs_30/best_head_only.npz"
+        },
+        "weights_2_1_1": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              2,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 26,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_2_1_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_2_1_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9773505316840277,
+            "mean_iou": 0.9517068553119289,
+            "class_iou": {
+              "obstacle": 0.9217471578927637,
+              "water": 0.9491549434840283,
+              "sky": 0.9842184645589946
+            },
+            "binary_water_iou": 0.9491549434840283,
+            "binary_non_water_iou": 0.9770545603189579,
+            "binary_mean_iou": 0.963104751901493,
+            "obstacle_recall": 0.9905975846821712,
+            "obstacle_precision": 0.9298826176777871,
+            "obstacle_miss_rate": 0.009402415317828816,
+            "water_as_obstacle_rate": 0.04569958607949518,
+            "confusion_matrix": [
+              [
+                196699,
+                1256,
+                611
+              ],
+              [
+                10588,
+                221099,
+                0
+              ],
+              [
+                4244,
+                0,
+                302783
+              ]
+            ],
+            "loss": 0.1393347763766845
+          },
+          "last_three_validation_water_iou_std": 0.0008632906064016554,
+          "trainable_parameter_count": 67075
+        },
+        "weights_3_1_1": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              3,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 26,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_3_1_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_3_1_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9755520290798612,
+            "mean_iou": 0.9481245395048744,
+            "class_iou": {
+              "obstacle": 0.916187349753328,
+              "water": 0.9457125549383273,
+              "sky": 0.9824737138229679
+            },
+            "binary_water_iou": 0.9457125549383273,
+            "binary_non_water_iou": 0.9755663195753691,
+            "binary_mean_iou": 0.9606394372568482,
+            "obstacle_recall": 0.9923048255995488,
+            "obstacle_precision": 0.9227433441824525,
+            "obstacle_miss_rate": 0.007695174400451199,
+            "water_as_obstacle_rate": 0.04990353364668713,
+            "confusion_matrix": [
+              [
+                197038,
+                1074,
+                454
+              ],
+              [
+                11562,
+                220125,
+                0
+              ],
+              [
+                4935,
+                0,
+                302092
+              ]
+            ],
+            "loss": 0.14681961853057146
+          },
+          "last_three_validation_water_iou_std": 0.0015791978134660255,
+          "trainable_parameter_count": 67075
+        },
+        "weights_3_2_1": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              3,
+              2,
+              1
+            ]
+          },
+          "best_epoch": 17,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_3_2_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_3_2_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9765340169270833,
+            "mean_iou": 0.9499505908046126,
+            "class_iou": {
+              "obstacle": 0.9188801417874407,
+              "water": 0.9467817916540089,
+              "sky": 0.9841898389723883
+            },
+            "binary_water_iou": 0.9467817916540089,
+            "binary_non_water_iou": 0.975895395551559,
+            "binary_mean_iou": 0.961338593602784,
+            "obstacle_recall": 0.9869564779468791,
+            "obstacle_precision": 0.9301760431350772,
+            "obstacle_miss_rate": 0.01304352205312087,
+            "water_as_obstacle_rate": 0.04492267585147203,
+            "confusion_matrix": [
+              [
+                195976,
+                2030,
+                560
+              ],
+              [
+                10408,
+                221279,
+                0
+              ],
+              [
+                4303,
+                0,
+                302724
+              ]
+            ],
+            "loss": 0.13143557471533615
+          },
+          "last_three_validation_water_iou_std": 0.00030035646091680466,
+          "trainable_parameter_count": 67075
+        },
+        "weights_1_2_1": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.001,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              2,
+              1
+            ]
+          },
+          "best_epoch": 12,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_1_2_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_1_2_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9772013346354167,
+            "mean_iou": 0.9513267730481635,
+            "class_iou": {
+              "obstacle": 0.9203021208198796,
+              "water": 0.9500846490353404,
+              "sky": 0.9835935492892706
+            },
+            "binary_water_iou": 0.9500846490353404,
+            "binary_non_water_iou": 0.9770845304997419,
+            "binary_mean_iou": 0.9635845897675411,
+            "obstacle_recall": 0.977508737648943,
+            "obstacle_precision": 0.9402110994318045,
+            "obstacle_miss_rate": 0.02249126235105703,
+            "water_as_obstacle_rate": 0.03354525717886631,
+            "confusion_matrix": [
+              [
+                194100,
+                3992,
+                474
+              ],
+              [
+                7772,
+                223915,
+                0
+              ],
+              [
+                4571,
+                0,
+                302456
+              ]
+            ],
+            "loss": 0.10606985973815124
+          },
+          "last_three_validation_water_iou_std": 0.0007388393346116606,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.003,
+          "weight_decay": 0.001,
+          "epochs": 30,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            2,
+            1
+          ]
+        },
+        "best_epoch": 12,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_1_2_1/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/pohang_pier_staged_v1/step_06/weights_1_2_1/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9772013346354167,
+          "mean_iou": 0.9513267730481635,
+          "class_iou": {
+            "obstacle": 0.9203021208198796,
+            "water": 0.9500846490353404,
+            "sky": 0.9835935492892706
+          },
+          "binary_water_iou": 0.9500846490353404,
+          "binary_non_water_iou": 0.9770845304997419,
+          "binary_mean_iou": 0.9635845897675411,
+          "obstacle_recall": 0.977508737648943,
+          "obstacle_precision": 0.9402110994318045,
+          "obstacle_miss_rate": 0.02249126235105703,
+          "water_as_obstacle_rate": 0.03354525717886631,
+          "confusion_matrix": [
+            [
+              194100,
+              3992,
+              474
+            ],
+            [
+              7772,
+              223915,
+              0
+            ],
+            [
+              4571,
+              0,
+              302456
+            ]
+          ],
+          "loss": 0.10606985973815124
+        },
+        "last_three_validation_water_iou_std": 0.0007388393346116606,
+        "trainable_parameter_count": 67075
+      },
+      "human_choice": "1,2,1"
+    }
+  },
+  "pretrained_validation": {
+    "pixel_accuracy": 0.9405707465277777,
+    "mean_iou": 0.8756209345498754,
+    "class_iou": {
+      "obstacle": 0.7887713039076248,
+      "water": 0.8618673578035185,
+      "sky": 0.976224141938483
+    },
+    "binary_water_iou": 0.8618673578035185,
+    "binary_non_water_iou": 0.9284946510742965,
+    "binary_mean_iou": 0.8951810044389075,
+    "obstacle_recall": 0.8239225245006698,
+    "obstacle_precision": 0.9486871709229234,
+    "obstacle_miss_rate": 0.17607747549933017,
+    "water_as_obstacle_rate": 0.018253074190610608,
+    "confusion_matrix": [
+      [
+        163603,
+        32222,
+        2741
+      ],
+      [
+        4229,
+        227458,
+        0
+      ],
+      [
+        4620,
+        4,
+        302403
+      ]
+    ],
+    "loss": 0.14241527592142422
+  }
+}

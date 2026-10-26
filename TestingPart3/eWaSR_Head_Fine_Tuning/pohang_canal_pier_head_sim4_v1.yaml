@@ -9,8 +9,8 @@ experiment:
 split_source:
   definition_yaml: ../DataSource/head_only_pohang_canal_pier_staged_v1.yaml
   definition_sha256: 0779e7bec1a540f7c748fb89b6dad06f6e452f31820a8b1f45491d6b2dcc6c07
-  v3_resolved_manifest: outputs/pohang_canal_pier_staged_v1/resolved_splits.json
-  manifest_sha256: 991a5c77d69cefda2a650da75f8eabd465e11b008c154679dbdf206d56d6de8e
+  v3_resolved_manifest: ../../results/manifests/pohang_canal_pier.json
+  manifest_sha256: 12399fc87b381c54e2ed6bad37bdaebf3ba6f835111f26af27f5708b351f922c
   expected_counts: {train: 359, validation: 119, test: 90, unseen: 30}
 model:
   architecture: ewasr_resnet18

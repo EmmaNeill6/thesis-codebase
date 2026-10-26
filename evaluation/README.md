@@ -9,7 +9,7 @@ evaluation/
 │   ├── water_metrics.py
 │   ├── compare_model_performance.py
 │   ├── test_compare_model_performance.py
-│   └── results/                    # Existing binary runs, including dock_only
+│   └── results/                    # Generated locally; ignored
 ├── three_class/
 │   ├── three_class_evaluator.py
 │   ├── class_metrics.py
@@ -26,13 +26,10 @@ Run examples from the `thesis-codebase` directory with a Python environment
 containing the dependencies in `evaluation/requirements.txt`. The existing
 `.venv-sam3-mlx/bin/python` environment contains these dependencies.
 
-All previous binary runs have moved from `evaluation/results/` to
-`evaluation/binary/results/`. Their stored data are unchanged. The old top-level
-script paths have also moved into `evaluation/binary/`; update external commands
-or notebooks using those paths.
-
-Run the evaluation test suite:
+Generated evaluation runs are ignored. Selected compact historical evidence is
+published under `results/` at the repository root. The established evaluators
+exclude the later uncommitted boundary-metric additions.
 
 ```sh
-.venv-sam3-mlx/bin/python -m unittest discover -s evaluation -v
+python -m unittest discover -s evaluation -v
 ```

@@ -4,7 +4,7 @@ experiment:
   name: tampere_dock_head_only_v1
   description: Separate dock-only head adaptation using confirmed SAM3 masks and a
     seeded random disjoint 60/20/20 image split.
-  output_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1
+  output_dir: ../../TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_head_only_v1
   seed: 4022
   label_source_confirmed: true
 labels:
@@ -14,28 +14,28 @@ labels:
 data:
   train:
     sequence_id: tampere_dock_random_train_not_a_recording_id
-    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/dock
-    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
+    images_dir: ../../data/Tampere-WaterSeg/images/dock
+    masks_dir: ../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
     expected_count: 120
     selection:
       kind: assigned_by_run_tampere_dock
   validation:
     sequence_id: tampere_dock_random_validation_not_a_recording_id
-    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/dock
-    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
+    images_dir: ../../data/Tampere-WaterSeg/images/dock
+    masks_dir: ../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
     expected_count: 40
     selection:
       kind: assigned_by_run_tampere_dock
   test:
     sequence_id: tampere_dock_random_test_not_a_recording_id
-    images_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/Tampere-WaterSeg/images/dock
-    masks_dir: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
+    images_dir: ../../data/Tampere-WaterSeg/images/dock
+    masks_dir: ../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Tampere-Dock_5ppt/masks
     expected_count: 40
     selection:
       kind: assigned_by_run_tampere_dock
 model:
   architecture: ewasr_resnet18
-  checkpoint: /Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
+  checkpoint: ../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz
   imu: false
   trainable_module: decoder.seg_head
   frozen_modules:

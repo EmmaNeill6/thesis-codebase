@@ -6,7 +6,7 @@ experiment:
     Head-only adaptation of non-IMU eWaSR to port-camera imagery in which the
     ASV is not visible. SAM3 masks are the configured target labels for this
     pseudo-label adaptation study.
-  output_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/eWaSR_Head_Fine_Tuning/outputs/port_head_only_v1"
+  output_dir: "../../TestingPart3/eWaSR_Head_Fine_Tuning/outputs/port_head_only_v1"
   seed: 4022
 
 labels:
@@ -22,8 +22,8 @@ data:
     expected_count: 98
     sources:
       - source_id: mods_kope104_port
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/mods/sequences/kope104-00065550-00066030/frames"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/MODS_Port_5ppt/masks"
+        images_dir: "../../data/mods/sequences/kope104-00065550-00066030/frames"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/MODS_Port_5ppt/masks"
         expected_count: 98
         selection:
           kind: all
@@ -35,22 +35,22 @@ data:
       # These are the original LaRS folders. Their roles are retained in the
       # source IDs, but all are validation-only in this experiment.
       - source_id: lars_val_port
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/val/images/Port"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks"
+        images_dir: "../../data/lars_v1-2/val/images/Port"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks"
         shared_masks_dir: true
         expected_count: 9
         selection:
           kind: all
       - source_id: lars_test_port
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/test/images/Port"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks"
+        images_dir: "../../data/lars_v1-2/test/images/Port"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks"
         shared_masks_dir: true
         expected_count: 23
         selection:
           kind: all
       - source_id: lars_train_port
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/lars_v1-2/train/images/Port"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks"
+        images_dir: "../../data/lars_v1-2/train/images/Port"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/LaRS_Port_5ppt/masks"
         shared_masks_dir: true
         expected_count: 3
         selection:
@@ -63,15 +63,15 @@ data:
       # The image folder has more frames, but only these matching 20 frames
       # have SAM3 masks. "all" therefore means all available labelled pairs.
       - source_id: pohang00_port_labelled_frames
-        images_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/data/pohang00/pohang00_port/left_images"
-        masks_dir: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Port_5ppt/masks"
+        images_dir: "../../data/pohang00/pohang00_port/left_images"
+        masks_dir: "../../TestingPart3/SAM3_Pseudo_Labels_Generator/output/Pohang_Port_5ppt/masks"
         expected_count: 20
         selection:
           kind: all
 
 model:
   architecture: ewasr_resnet18
-  checkpoint: "/Users/user/Documents/Documents - User’s MacBook Pro/EEE4022S/thesis-codebase/TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
+  checkpoint: "../../TestingPart1/eWaSR/Pretrained/ewasr_resnet18_mlx.npz"
   imu: false
   trainable_module: decoder.seg_head
   frozen_modules:

@@ -1,0 +1,6 @@
+torch
+torchvision
+timm==0.6.5
+pytorch-lightning
+numpy
+Pillow

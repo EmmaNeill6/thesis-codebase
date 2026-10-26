@@ -156,8 +156,10 @@ def load_v3_splits(config: dict, paths: dict[str, Path]) -> tuple[dict[str, list
             if not isinstance(entry, dict) or set(entry) != {"image", "mask"}:
                 raise ValueError(f"Malformed V3 {role} manifest entry")
             image, mask = Path(entry["image"]), Path(entry["mask"])
-            if not image.is_absolute() or not mask.is_absolute():
-                raise ValueError("V3 manifest paths must be absolute")
+            if not image.is_absolute():
+                image = HERE.parents[1] / image
+            if not mask.is_absolute():
+                mask = HERE.parents[1] / mask
             key = (image.resolve(), mask.resolve())
             if key not in available or key in used:
                 raise ValueError(f"V3 {role} pair is missing, changed or duplicated: {key}")

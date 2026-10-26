@@ -38,7 +38,7 @@ from train_head_sim4 import (
 HERE = Path(__file__).resolve().parent
 DEFAULT_CONFIG = HERE / "lars_channel_head_sim4_v1.yaml"
 SOURCE_YAML = (HERE / "../DataSource/head_only_lars_channel_staged_v1.yaml").resolve()
-V2_MANIFEST = HERE / "outputs/lars_channel_v2/resolved_splits.json"
+V2_MANIFEST = HERE.parents[1] / "results/manifests/lars_channel.json"
 OUTPUT_DIR = HERE / "outputs/lars_channel_head_sim4_v1"
 ROLES = ("train", "validation", "test", "unseen")
 COUNTS = {"train": 175, "validation": 58, "test": 44, "unseen": 15}
@@ -110,7 +110,10 @@ def assert_matching_v2_manifest(
         for entry in entries:
             if not isinstance(entry, dict) or set(entry) != {"image", "mask"}:
                 raise ValueError(f"Malformed V2 {role} manifest entry")
-            recorded.append((Path(entry["image"]).resolve(), Path(entry["mask"]).resolve()))
+            recorded.append(tuple(
+                (Path(entry[key]) if Path(entry[key]).is_absolute() else
+                 HERE.parents[1] / entry[key]).resolve() for key in ("image", "mask")
+            ))
         selected = [(sample.image_path.resolve(), sample.mask_path.resolve()) for sample in samples]
         if (len(set(recorded)) != len(recorded) or len(set(selected)) != len(selected)
             or set(recorded) != set(selected)):

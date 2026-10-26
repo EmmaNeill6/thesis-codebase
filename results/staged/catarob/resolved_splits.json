@@ -1,0 +1,2410 @@
+{
+  "train": [
+    {
+      "image": "data/Catarob/left_frames/left_frame_0075.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0075.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0080.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0080.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0085.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0085.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0090.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0090.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0095.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0095.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0100.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0100.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0105.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0105.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0110.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0110.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0115.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0115.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0120.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0120.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0125.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0125.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0130.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0130.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0135.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0135.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0140.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0140.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0145.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0145.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0150.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0150.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0155.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0155.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0160.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0160.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0165.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0165.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0170.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0170.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0175.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0175.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0180.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0180.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0185.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0185.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0190.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0190.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0195.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0195.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0200.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0200.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0205.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0205.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0210.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0210.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0215.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0215.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0220.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0220.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0225.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0225.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0230.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0230.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0235.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0235.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0240.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0240.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0245.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0245.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0250.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0250.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0255.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0255.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0260.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0260.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0265.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0265.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0270.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0270.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0275.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0275.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0280.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0280.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0285.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0285.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0290.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0290.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0295.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0295.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0300.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0300.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0305.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0305.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0310.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0310.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0315.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0315.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0320.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0320.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0325.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0325.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0330.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0330.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0335.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0335.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0340.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0340.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0345.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0345.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0350.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0350.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0355.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0355.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0360.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0360.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0365.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0365.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0370.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0370.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0375.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0375.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0380.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0380.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0385.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0385.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0390.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0390.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0395.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0395.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0400.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0400.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0405.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0405.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0410.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0410.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0415.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0415.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0420.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0420.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0425.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0425.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0430.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0430.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0435.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0435.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0440.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0440.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0445.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0445.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0450.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0450.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0455.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0455.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0460.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0460.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0465.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0465.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0470.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0470.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0475.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0475.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0480.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0480.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0485.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0485.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0490.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0490.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0495.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0495.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0500.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0500.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0505.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0505.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0510.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0510.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0515.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0515.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0520.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0520.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1600.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1600.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1605.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1605.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1610.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1610.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1615.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1615.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1620.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1620.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1625.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1625.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1630.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1630.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1635.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1635.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1640.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1640.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1645.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1645.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1650.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1650.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1655.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1655.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1660.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1660.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1665.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1665.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1670.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1670.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1675.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1675.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1680.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1680.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1685.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1685.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1690.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1690.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1695.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1695.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1700.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1700.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1705.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1705.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1710.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1710.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1715.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1715.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1720.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1720.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1725.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1725.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1730.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1730.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1735.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1735.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1740.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1740.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1745.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1745.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1750.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1750.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1755.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1755.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1760.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1760.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1765.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1765.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1770.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1770.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1775.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1775.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1780.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1780.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1785.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1785.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1790.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1790.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1795.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1795.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1800.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1800.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1805.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1805.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1810.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1810.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1815.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1815.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1820.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1820.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1825.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1825.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1830.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1830.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1835.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1835.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1840.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1840.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1845.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1845.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1850.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1850.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1855.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1855.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1860.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1860.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1865.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1865.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1870.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1870.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1875.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1875.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1880.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1880.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1885.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1885.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1890.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1890.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1895.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1895.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1900.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1900.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1905.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1905.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1910.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1910.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1915.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1915.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1920.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1920.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1925.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1925.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1930.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1930.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1935.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1935.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1940.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1940.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1945.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1945.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1950.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1950.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1955.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1955.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1960.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1960.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1965.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1965.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1970.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1970.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1975.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1975.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1980.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1980.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1985.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1985.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1990.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1990.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1995.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1995.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2000.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2000.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2005.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2005.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2010.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2010.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2015.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2015.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2020.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2020.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2025.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2025.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2030.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2030.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2035.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2035.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2040.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2040.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2045.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2045.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2390.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2390.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2395.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2395.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2400.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2400.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2405.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2405.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2410.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2410.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2415.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2415.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2420.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2420.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2425.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2425.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2430.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2430.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2435.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2435.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2440.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2440.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2445.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2445.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2450.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2450.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2455.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2455.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2460.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2460.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2465.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2465.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2470.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2470.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2475.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2475.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2480.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2480.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2485.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2485.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2490.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2490.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2495.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2495.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2500.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2500.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2505.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2505.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2510.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2510.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2515.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2515.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2520.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2520.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2525.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2525.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2530.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2530.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2535.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2535.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2540.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2540.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2545.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2545.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2550.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2550.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2555.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2555.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2560.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2560.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2565.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2565.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2570.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2570.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2575.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2575.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2580.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2580.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2585.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2585.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2590.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2590.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2595.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2595.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2600.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2600.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2605.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2605.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2610.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2610.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2615.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2615.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2620.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2620.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2625.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2625.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2630.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2630.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2635.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2635.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2640.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2640.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2645.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2645.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2650.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2650.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2655.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2655.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2660.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2660.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2665.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2665.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2670.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2670.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2675.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2675.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2680.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2680.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2685.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2685.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2690.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2690.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2695.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2695.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2700.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2700.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2705.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2705.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2710.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2710.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2715.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2715.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2720.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2720.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2725.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2725.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2730.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2730.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2735.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2735.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2740.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2740.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2745.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2745.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2750.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2750.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2755.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2755.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2760.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2760.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2765.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2765.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2770.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2770.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2775.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2775.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2780.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2780.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2785.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2785.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2790.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2790.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2795.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2795.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2800.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2800.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2805.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2805.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2810.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2810.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2815.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2815.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2820.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2820.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2825.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2825.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2830.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2830.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2835.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2835.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2845.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2845.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2850.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2850.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2855.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2855.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2860.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2860.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2865.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2865.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2870.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2870.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2875.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2875.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2880.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2880.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2885.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2885.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2890.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2890.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2895.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2895.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2900.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2900.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2905.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2905.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2910.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2910.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2915.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2915.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2920.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2920.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2925.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2925.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2930.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2930.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2935.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2935.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2940.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2940.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2945.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2945.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2950.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2950.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2955.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2955.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2960.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2960.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2965.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2965.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2970.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2970.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2975.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2975.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2980.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2980.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2985.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2985.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2990.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2990.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2995.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2995.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3000.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3000.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3005.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3005.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3010.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3010.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3015.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3015.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3020.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3020.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3025.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3025.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3030.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3030.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3035.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3035.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3040.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3040.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3045.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3045.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3050.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3050.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3055.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3055.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3060.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3060.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3065.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3065.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3070.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3070.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3075.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3075.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3080.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3080.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3085.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3085.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3090.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3090.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3095.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3095.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3100.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3100.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3105.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3105.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3110.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3110.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3115.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3115.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3120.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3120.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3125.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3125.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3130.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3130.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3135.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3135.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3140.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3140.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3145.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3145.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3150.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3150.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3155.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3155.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3160.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3160.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3165.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3165.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3170.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3170.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3175.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3175.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3180.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3180.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3185.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3185.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3190.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3190.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3195.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3195.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3200.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3200.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3205.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3205.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3210.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3210.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3215.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3215.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3220.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3220.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3225.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3225.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3230.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3230.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3235.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3235.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3240.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3240.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3245.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3245.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3250.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3250.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3255.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3255.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3260.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3260.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3265.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3265.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3270.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3270.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3275.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3275.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3280.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3280.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3285.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3285.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3290.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3290.png"
+    }
+  ],
+  "validation": [
+    {
+      "image": "data/Catarob/left_frames/left_frame_0825.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0825.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0830.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0830.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0835.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0835.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0840.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0840.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0845.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0845.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0850.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0850.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0855.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0855.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0860.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0860.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0865.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0865.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0870.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0870.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0875.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0875.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0880.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0880.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0885.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0885.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0890.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0890.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0895.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0895.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0900.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0900.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0905.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0905.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0910.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0910.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0915.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0915.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0920.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0920.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0925.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0925.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0930.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0930.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0935.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0935.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0940.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0940.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0945.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0945.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0950.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0950.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0955.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0955.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0960.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0960.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0965.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0965.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0970.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0970.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0975.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0975.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0980.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0980.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0985.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0985.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0990.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0990.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0995.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0995.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1000.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1000.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1005.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1005.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1010.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1010.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1015.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1015.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1020.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1020.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1025.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1025.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1030.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1030.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1035.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1035.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1040.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1040.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1045.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1045.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1050.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1050.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1055.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1055.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1060.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1060.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1065.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1065.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1070.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1070.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1075.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1075.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1080.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1080.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1085.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1085.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1090.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1090.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1095.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1095.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1100.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1100.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1105.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1105.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1110.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1110.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1115.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1115.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1120.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1120.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2070.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2070.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2075.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2075.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2080.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2080.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2085.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2085.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2090.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2090.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2095.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2095.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2100.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2100.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2105.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2105.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2110.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2110.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2115.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2115.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2120.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2120.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2125.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2125.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2130.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2130.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2135.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2135.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2140.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2140.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2145.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2145.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2150.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2150.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2155.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2155.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2160.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2160.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2165.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2165.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2170.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2170.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2175.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2175.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2180.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2180.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2185.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2185.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2190.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2190.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2195.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2195.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2200.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2200.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2205.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2205.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2210.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2210.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2215.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2215.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2220.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2220.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2225.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2225.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2230.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2230.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2235.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2235.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2240.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2240.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2245.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2245.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2250.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2250.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2255.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2255.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2260.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2260.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2265.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2265.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2270.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2270.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2275.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2275.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2280.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2280.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2285.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2285.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2290.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2290.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2295.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2295.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2300.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2300.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2305.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2305.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2310.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2310.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2315.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2315.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2320.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2320.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2325.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2325.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2330.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2330.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2335.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2335.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2340.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2340.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2345.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2345.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2350.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2350.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2355.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2355.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2360.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2360.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_2365.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_2365.png"
+    }
+  ],
+  "test": [
+    {
+      "image": "data/Catarob/left_frames/left_frame_1200.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1200.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1205.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1205.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1210.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1210.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1215.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1215.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1220.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1220.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1225.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1225.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1230.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1230.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1235.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1235.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1240.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1240.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1245.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1245.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1250.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1250.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1255.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1255.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1260.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1260.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1265.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1265.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1270.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1270.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1275.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1275.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1280.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1280.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1285.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1285.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1290.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1290.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1295.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1295.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1300.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1300.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1305.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1305.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1310.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1310.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1315.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1315.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1320.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1320.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1325.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1325.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1330.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1330.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1335.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1335.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1340.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1340.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1345.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1345.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1350.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1350.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1355.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1355.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1360.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1360.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1365.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1365.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1370.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1370.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1375.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1375.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1380.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1380.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1385.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1385.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1390.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1390.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1395.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1395.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1400.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1400.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1405.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1405.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1410.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1410.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1415.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1415.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_1420.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_1420.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0550.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0550.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0555.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0555.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0560.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0560.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0565.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0565.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0570.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0570.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0575.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0575.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0580.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0580.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0585.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0585.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0590.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0590.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0595.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0595.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0600.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0600.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0605.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0605.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0610.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0610.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0615.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0615.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0620.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0620.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0625.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0625.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0630.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0630.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0635.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0635.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0640.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0640.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0645.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0645.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0650.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0650.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0655.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0655.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0660.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0660.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0665.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0665.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0670.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0670.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0675.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0675.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0680.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0680.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0685.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0685.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0690.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0690.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0695.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0695.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0700.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0700.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0705.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0705.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0710.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0710.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0715.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0715.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0720.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0720.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0725.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0725.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0730.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0730.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0735.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0735.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0740.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0740.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0745.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0745.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0750.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0750.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0755.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0755.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0760.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0760.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0765.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0765.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_0770.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_0770.png"
+    }
+  ],
+  "unseen": [
+    {
+      "image": "data/Catarob/left_frames/left_frame_3385.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3385.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3390.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3390.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3395.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3395.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3400.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3400.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3405.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3405.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3410.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3410.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3415.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3415.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3420.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3420.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3425.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3425.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3430.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3430.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3435.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3435.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3440.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3440.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3445.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3445.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3450.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3450.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3455.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3455.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3460.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3460.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3465.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3465.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3470.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3470.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3475.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3475.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3480.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3480.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3485.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3485.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3490.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3490.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3495.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3495.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3500.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3500.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3505.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3505.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3510.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3510.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3515.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3515.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3520.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3520.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3525.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3525.png"
+    },
+    {
+      "image": "data/Catarob/left_frames/left_frame_3530.png",
+      "mask": "TestingPart3/SAM3_Pseudo_Labels_Generator/output/CataRob_It_1_5ppt/masks/left_frame_3530.png"
+    }
+  ]
+}

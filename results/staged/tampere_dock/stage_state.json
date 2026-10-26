@@ -1,0 +1,1327 @@
+{
+  "schema_version": 1,
+  "config_sha256": "380f529185831eba424596bbda78f25060cd56e5ff95da57ffc0d115deab2fc4",
+  "checkpoint_metric": "validation_binary_water_iou",
+  "stages": {
+    "1": {
+      "status": "complete",
+      "candidates": {
+        "baseline": {
+          "parameters": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9832682291666667,
+            "mean_iou": 0.9664273869020162,
+            "class_iou": {
+              "obstacle": 0.969114869102476,
+              "water": 0.9646421643952944,
+              "sky": 0.9655251272082785
+            },
+            "binary_water_iou": 0.9646421643952944,
+            "binary_non_water_iou": 0.9766107987588859,
+            "binary_mean_iou": 0.9706264815770902,
+            "obstacle_recall": 0.9851381582463561,
+            "obstacle_precision": 0.9834936581498872,
+            "obstacle_miss_rate": 0.014861841753643912,
+            "water_as_obstacle_rate": 0.018425005511096527,
+            "confusion_matrix": [
+              [
+                258053,
+                3424,
+                469
+              ],
+              [
+                3594,
+                191467,
+                0
+              ],
+              [
+                737,
+                0,
+                33776
+              ]
+            ],
+            "loss": 0.04624260785058141
+          },
+          "last_three_validation_water_iou_std": 0.0018158476923929123,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.001,
+          "weight_decay": 0.0001,
+          "epochs": 10,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 9,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9832682291666667,
+          "mean_iou": 0.9664273869020162,
+          "class_iou": {
+            "obstacle": 0.969114869102476,
+            "water": 0.9646421643952944,
+            "sky": 0.9655251272082785
+          },
+          "binary_water_iou": 0.9646421643952944,
+          "binary_non_water_iou": 0.9766107987588859,
+          "binary_mean_iou": 0.9706264815770902,
+          "obstacle_recall": 0.9851381582463561,
+          "obstacle_precision": 0.9834936581498872,
+          "obstacle_miss_rate": 0.014861841753643912,
+          "water_as_obstacle_rate": 0.018425005511096527,
+          "confusion_matrix": [
+            [
+              258053,
+              3424,
+              469
+            ],
+            [
+              3594,
+              191467,
+              0
+            ],
+            [
+              737,
+              0,
+              33776
+            ]
+          ],
+          "loss": 0.04624260785058141
+        },
+        "last_three_validation_water_iou_std": 0.0018158476923929123,
+        "trainable_parameter_count": 67075
+      }
+    },
+    "2": {
+      "status": "complete",
+      "candidates": {
+        "lr_0.0003": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9833150227864583,
+            "mean_iou": 0.9668219914916767,
+            "class_iou": {
+              "obstacle": 0.9690438353785817,
+              "water": 0.9647991024472338,
+              "sky": 0.9666230366492147
+            },
+            "binary_water_iou": 0.9647991024472338,
+            "binary_non_water_iou": 0.9764866474402296,
+            "binary_mean_iou": 0.9706428749437317,
+            "obstacle_recall": 0.9800569583043833,
+            "obstacle_precision": 0.988536729059411,
+            "obstacle_miss_rate": 0.01994304169561667,
+            "water_as_obstacle_rate": 0.012483274462860336,
+            "confusion_matrix": [
+              [
+                256722,
+                4593,
+                631
+              ],
+              [
+                2435,
+                192626,
+                0
+              ],
+              [
+                542,
+                0,
+                33971
+              ]
+            ],
+            "loss": 0.04983375743031502
+          },
+          "last_three_validation_water_iou_std": 0.0006986040600981572,
+          "trainable_parameter_count": 67075
+        },
+        "lr_0.001": {
+          "parameters": {
+            "learning_rate": 0.001,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9832682291666667,
+            "mean_iou": 0.9664273869020162,
+            "class_iou": {
+              "obstacle": 0.969114869102476,
+              "water": 0.9646421643952944,
+              "sky": 0.9655251272082785
+            },
+            "binary_water_iou": 0.9646421643952944,
+            "binary_non_water_iou": 0.9766107987588859,
+            "binary_mean_iou": 0.9706264815770902,
+            "obstacle_recall": 0.9851381582463561,
+            "obstacle_precision": 0.9834936581498872,
+            "obstacle_miss_rate": 0.014861841753643912,
+            "water_as_obstacle_rate": 0.018425005511096527,
+            "confusion_matrix": [
+              [
+                258053,
+                3424,
+                469
+              ],
+              [
+                3594,
+                191467,
+                0
+              ],
+              [
+                737,
+                0,
+                33776
+              ]
+            ],
+            "loss": 0.04624260785058141
+          },
+          "last_three_validation_water_iou_std": 0.0018158476923929123,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_01/baseline/best_head_only.npz"
+        },
+        "lr_0.003": {
+          "parameters": {
+            "learning_rate": 0.003,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 6,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.003/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.003/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.983135986328125,
+            "mean_iou": 0.9666022729362383,
+            "class_iou": {
+              "obstacle": 0.9688217018107411,
+              "water": 0.9641717742016646,
+              "sky": 0.9668133427963095
+            },
+            "binary_water_iou": 0.9641717742016646,
+            "binary_non_water_iou": 0.9762598611601992,
+            "binary_mean_iou": 0.9702158176809319,
+            "obstacle_recall": 0.9832904491765478,
+            "obstacle_precision": 0.9850390659359571,
+            "obstacle_miss_rate": 0.016709550823452157,
+            "water_as_obstacle_rate": 0.017712407913421956,
+            "confusion_matrix": [
+              [
+                257569,
+                3665,
+                712
+              ],
+              [
+                3455,
+                191606,
+                0
+              ],
+              [
+                457,
+                0,
+                34056
+              ]
+            ],
+            "loss": 0.04571576099842787
+          },
+          "last_three_validation_water_iou_std": 0.003455886711484946,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.0003,
+          "weight_decay": 0.0001,
+          "epochs": 10,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 9,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9833150227864583,
+          "mean_iou": 0.9668219914916767,
+          "class_iou": {
+            "obstacle": 0.9690438353785817,
+            "water": 0.9647991024472338,
+            "sky": 0.9666230366492147
+          },
+          "binary_water_iou": 0.9647991024472338,
+          "binary_non_water_iou": 0.9764866474402296,
+          "binary_mean_iou": 0.9706428749437317,
+          "obstacle_recall": 0.9800569583043833,
+          "obstacle_precision": 0.988536729059411,
+          "obstacle_miss_rate": 0.01994304169561667,
+          "water_as_obstacle_rate": 0.012483274462860336,
+          "confusion_matrix": [
+            [
+              256722,
+              4593,
+              631
+            ],
+            [
+              2435,
+              192626,
+              0
+            ],
+            [
+              542,
+              0,
+              33971
+            ]
+          ],
+          "loss": 0.04983375743031502
+        },
+        "last_three_validation_water_iou_std": 0.0006986040600981572,
+        "trainable_parameter_count": 67075
+      }
+    },
+    "3": {
+      "status": "complete",
+      "candidates": {
+        "decay_0": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_0/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_0/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.983319091796875,
+            "mean_iou": 0.9668355645852387,
+            "class_iou": {
+              "obstacle": 0.969051267920369,
+              "water": 0.9648039348269247,
+              "sky": 0.9666514910084225
+            },
+            "binary_water_iou": 0.9648039348269247,
+            "binary_non_water_iou": 0.9764899931079245,
+            "binary_mean_iou": 0.9706469639674247,
+            "obstacle_recall": 0.9800607758851061,
+            "obstacle_precision": 0.9885405796710808,
+            "obstacle_miss_rate": 0.019939224114893905,
+            "water_as_obstacle_rate": 0.012483274462860336,
+            "confusion_matrix": [
+              [
+                256723,
+                4592,
+                631
+              ],
+              [
+                2435,
+                192626,
+                0
+              ],
+              [
+                541,
+                0,
+                33972
+              ]
+            ],
+            "loss": 0.04983358979225159
+          },
+          "last_three_validation_water_iou_std": 0.0007024484706927242,
+          "trainable_parameter_count": 67075
+        },
+        "decay_1e-05": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 1e-05,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_1e-05/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_1e-05/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.983319091796875,
+            "mean_iou": 0.9668355645852387,
+            "class_iou": {
+              "obstacle": 0.969051267920369,
+              "water": 0.9648039348269247,
+              "sky": 0.9666514910084225
+            },
+            "binary_water_iou": 0.9648039348269247,
+            "binary_non_water_iou": 0.9764899931079245,
+            "binary_mean_iou": 0.9706469639674247,
+            "obstacle_recall": 0.9800607758851061,
+            "obstacle_precision": 0.9885405796710808,
+            "obstacle_miss_rate": 0.019939224114893905,
+            "water_as_obstacle_rate": 0.012483274462860336,
+            "confusion_matrix": [
+              [
+                256723,
+                4592,
+                631
+              ],
+              [
+                2435,
+                192626,
+                0
+              ],
+              [
+                541,
+                0,
+                33972
+              ]
+            ],
+            "loss": 0.04983358979225159
+          },
+          "last_three_validation_water_iou_std": 0.0007024484706927242,
+          "trainable_parameter_count": 67075
+        },
+        "decay_0.0001": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0.0001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9833150227864583,
+            "mean_iou": 0.9668219914916767,
+            "class_iou": {
+              "obstacle": 0.9690438353785817,
+              "water": 0.9647991024472338,
+              "sky": 0.9666230366492147
+            },
+            "binary_water_iou": 0.9647991024472338,
+            "binary_non_water_iou": 0.9764866474402296,
+            "binary_mean_iou": 0.9706428749437317,
+            "obstacle_recall": 0.9800569583043833,
+            "obstacle_precision": 0.988536729059411,
+            "obstacle_miss_rate": 0.01994304169561667,
+            "water_as_obstacle_rate": 0.012483274462860336,
+            "confusion_matrix": [
+              [
+                256722,
+                4593,
+                631
+              ],
+              [
+                2435,
+                192626,
+                0
+              ],
+              [
+                542,
+                0,
+                33971
+              ]
+            ],
+            "loss": 0.04983375743031502
+          },
+          "last_three_validation_water_iou_std": 0.0006986040600981572,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_02/lr_0.0003/best_head_only.npz"
+        },
+        "decay_0.001": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0.001,
+            "epochs": 10,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 9,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_0.001/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_0.001/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9833109537760417,
+            "mean_iou": 0.9668162336727221,
+            "class_iou": {
+              "obstacle": 0.9690364028929052,
+              "water": 0.9647892614760462,
+              "sky": 0.9666230366492147
+            },
+            "binary_water_iou": 0.9647892614760462,
+            "binary_non_water_iou": 0.9764800347948276,
+            "binary_mean_iou": 0.9706346481354369,
+            "obstacle_recall": 0.9800531407236606,
+            "obstacle_precision": 0.9885328784477414,
+            "obstacle_miss_rate": 0.019946859276339435,
+            "water_as_obstacle_rate": 0.012488401064282456,
+            "confusion_matrix": [
+              [
+                256721,
+                4594,
+                631
+              ],
+              [
+                2436,
+                192625,
+                0
+              ],
+              [
+                542,
+                0,
+                33971
+              ]
+            ],
+            "loss": 0.04983549565076828
+          },
+          "last_three_validation_water_iou_std": 0.0006908568928391946,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.0003,
+          "weight_decay": 0,
+          "epochs": 10,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 9,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_0/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_03/decay_0/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.983319091796875,
+          "mean_iou": 0.9668355645852387,
+          "class_iou": {
+            "obstacle": 0.969051267920369,
+            "water": 0.9648039348269247,
+            "sky": 0.9666514910084225
+          },
+          "binary_water_iou": 0.9648039348269247,
+          "binary_non_water_iou": 0.9764899931079245,
+          "binary_mean_iou": 0.9706469639674247,
+          "obstacle_recall": 0.9800607758851061,
+          "obstacle_precision": 0.9885405796710808,
+          "obstacle_miss_rate": 0.019939224114893905,
+          "water_as_obstacle_rate": 0.012483274462860336,
+          "confusion_matrix": [
+            [
+              256723,
+              4592,
+              631
+            ],
+            [
+              2435,
+              192626,
+              0
+            ],
+            [
+              541,
+              0,
+              33972
+            ]
+          ],
+          "loss": 0.04983358979225159
+        },
+        "last_three_validation_water_iou_std": 0.0007024484706927242,
+        "trainable_parameter_count": 67075
+      }
+    },
+    "4": {
+      "status": "complete",
+      "candidates": {
+        "epochs_20": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 20,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 15,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_20/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_20/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.984326171875,
+            "mean_iou": 0.9683260319170471,
+            "class_iou": {
+              "obstacle": 0.970956906593883,
+              "water": 0.96709804671383,
+              "sky": 0.9669231424434286
+            },
+            "binary_water_iou": 0.96709804671383,
+            "binary_non_water_iou": 0.9781535963543668,
+            "binary_mean_iou": 0.9726258215340984,
+            "obstacle_recall": 0.9832446382078749,
+            "obstacle_precision": 0.9872926186022264,
+            "obstacle_miss_rate": 0.016755361792125112,
+            "water_as_obstacle_rate": 0.014651826864416772,
+            "confusion_matrix": [
+              [
+                257557,
+                3681,
+                708
+              ],
+              [
+                2858,
+                192203,
+                0
+              ],
+              [
+                457,
+                0,
+                34056
+              ]
+            ],
+            "loss": 0.04447701573371887
+          },
+          "last_three_validation_water_iou_std": 0.0012240819608684117,
+          "trainable_parameter_count": 67075
+        },
+        "epochs_30": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9843587239583333,
+            "mean_iou": 0.9680878304067776,
+            "class_iou": {
+              "obstacle": 0.970955030922616,
+              "water": 0.9674607319326718,
+              "sky": 0.9658477283650448
+            },
+            "binary_water_iou": 0.9674607319326718,
+            "binary_non_water_iou": 0.9783173167010198,
+            "binary_mean_iou": 0.9728890243168458,
+            "obstacle_recall": 0.98113733364892,
+            "obstacle_precision": 0.9894245280113338,
+            "obstacle_miss_rate": 0.018862666351080026,
+            "water_as_obstacle_rate": 0.012288463608819805,
+            "confusion_matrix": [
+              [
+                257005,
+                4083,
+                858
+              ],
+              [
+                2397,
+                192664,
+                0
+              ],
+              [
+                350,
+                0,
+                34163
+              ]
+            ],
+            "loss": 0.04323291499167681
+          },
+          "last_three_validation_water_iou_std": 0.0008666073791552562,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.0003,
+          "weight_decay": 0,
+          "epochs": 30,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 30,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9843587239583333,
+          "mean_iou": 0.9680878304067776,
+          "class_iou": {
+            "obstacle": 0.970955030922616,
+            "water": 0.9674607319326718,
+            "sky": 0.9658477283650448
+          },
+          "binary_water_iou": 0.9674607319326718,
+          "binary_non_water_iou": 0.9783173167010198,
+          "binary_mean_iou": 0.9728890243168458,
+          "obstacle_recall": 0.98113733364892,
+          "obstacle_precision": 0.9894245280113338,
+          "obstacle_miss_rate": 0.018862666351080026,
+          "water_as_obstacle_rate": 0.012288463608819805,
+          "confusion_matrix": [
+            [
+              257005,
+              4083,
+              858
+            ],
+            [
+              2397,
+              192664,
+              0
+            ],
+            [
+              350,
+              0,
+              34163
+            ]
+          ],
+          "loss": 0.04323291499167681
+        },
+        "last_three_validation_water_iou_std": 0.0008666073791552562,
+        "trainable_parameter_count": 67075
+      },
+      "human_choice": "use30"
+    },
+    "5": {
+      "status": "complete",
+      "candidates": {
+        "batch_2": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9843587239583333,
+            "mean_iou": 0.9680878304067776,
+            "class_iou": {
+              "obstacle": 0.970955030922616,
+              "water": 0.9674607319326718,
+              "sky": 0.9658477283650448
+            },
+            "binary_water_iou": 0.9674607319326718,
+            "binary_non_water_iou": 0.9783173167010198,
+            "binary_mean_iou": 0.9728890243168458,
+            "obstacle_recall": 0.98113733364892,
+            "obstacle_precision": 0.9894245280113338,
+            "obstacle_miss_rate": 0.018862666351080026,
+            "water_as_obstacle_rate": 0.012288463608819805,
+            "confusion_matrix": [
+              [
+                257005,
+                4083,
+                858
+              ],
+              [
+                2397,
+                192664,
+                0
+              ],
+              [
+                350,
+                0,
+                34163
+              ]
+            ],
+            "loss": 0.04323291499167681
+          },
+          "last_three_validation_water_iou_std": 0.0008666073791552562,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz"
+        },
+        "batch_4": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 4,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_05/batch_4/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_05/batch_4/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.984320068359375,
+            "mean_iou": 0.9682844179897105,
+            "class_iou": {
+              "obstacle": 0.9709009492022019,
+              "water": 0.9671769681262494,
+              "sky": 0.9667753366406804
+            },
+            "binary_water_iou": 0.9671769681262494,
+            "binary_non_water_iou": 0.97814066905943,
+            "binary_mean_iou": 0.9726588185928398,
+            "obstacle_recall": 0.9816794301115497,
+            "obstacle_precision": 0.9888177500913269,
+            "obstacle_miss_rate": 0.018320569888450322,
+            "water_as_obstacle_rate": 0.012806250352453847,
+            "confusion_matrix": [
+              [
+                257147,
+                4037,
+                762
+              ],
+              [
+                2498,
+                192563,
+                0
+              ],
+              [
+                410,
+                0,
+                34103
+              ]
+            ],
+            "loss": 0.04446451552212238
+          },
+          "last_three_validation_water_iou_std": 0.00082069123891474,
+          "trainable_parameter_count": 67075
+        },
+        "batch_8": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 8,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_05/batch_8/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_05/batch_8/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9835611979166666,
+            "mean_iou": 0.9667910181494385,
+            "class_iou": {
+              "obstacle": 0.9694699176670181,
+              "water": 0.9656761345707889,
+              "sky": 0.9652270022105084
+            },
+            "binary_water_iou": 0.9656761345707889,
+            "binary_non_water_iou": 0.9770584769480041,
+            "binary_mean_iou": 0.9713673057593966,
+            "obstacle_recall": 0.9795034090995854,
+            "obstacle_precision": 0.9895444447872636,
+            "obstacle_miss_rate": 0.020496590900414557,
+            "water_as_obstacle_rate": 0.011570739409723113,
+            "confusion_matrix": [
+              [
+                256577,
+                4596,
+                773
+              ],
+              [
+                2257,
+                192804,
+                0
+              ],
+              [
+                454,
+                0,
+                34059
+              ]
+            ],
+            "loss": 0.04833108857274056
+          },
+          "last_three_validation_water_iou_std": 0.000575448574305509,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.0003,
+          "weight_decay": 0,
+          "epochs": 30,
+          "batch_size": 2,
+          "class_weights": [
+            1,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 30,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.9843587239583333,
+          "mean_iou": 0.9680878304067776,
+          "class_iou": {
+            "obstacle": 0.970955030922616,
+            "water": 0.9674607319326718,
+            "sky": 0.9658477283650448
+          },
+          "binary_water_iou": 0.9674607319326718,
+          "binary_non_water_iou": 0.9783173167010198,
+          "binary_mean_iou": 0.9728890243168458,
+          "obstacle_recall": 0.98113733364892,
+          "obstacle_precision": 0.9894245280113338,
+          "obstacle_miss_rate": 0.018862666351080026,
+          "water_as_obstacle_rate": 0.012288463608819805,
+          "confusion_matrix": [
+            [
+              257005,
+              4083,
+              858
+            ],
+            [
+              2397,
+              192664,
+              0
+            ],
+            [
+              350,
+              0,
+              34163
+            ]
+          ],
+          "loss": 0.04323291499167681
+        },
+        "last_three_validation_water_iou_std": 0.0008666073791552562,
+        "trainable_parameter_count": 67075,
+        "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz"
+      },
+      "human_choice": "2"
+    },
+    "6": {
+      "status": "complete",
+      "candidates": {
+        "weights_1_1_1": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9843587239583333,
+            "mean_iou": 0.9680878304067776,
+            "class_iou": {
+              "obstacle": 0.970955030922616,
+              "water": 0.9674607319326718,
+              "sky": 0.9658477283650448
+            },
+            "binary_water_iou": 0.9674607319326718,
+            "binary_non_water_iou": 0.9783173167010198,
+            "binary_mean_iou": 0.9728890243168458,
+            "obstacle_recall": 0.98113733364892,
+            "obstacle_precision": 0.9894245280113338,
+            "obstacle_miss_rate": 0.018862666351080026,
+            "water_as_obstacle_rate": 0.012288463608819805,
+            "confusion_matrix": [
+              [
+                257005,
+                4083,
+                858
+              ],
+              [
+                2397,
+                192664,
+                0
+              ],
+              [
+                350,
+                0,
+                34163
+              ]
+            ],
+            "loss": 0.04323291499167681
+          },
+          "last_three_validation_water_iou_std": 0.0008666073791552562,
+          "trainable_parameter_count": 67075,
+          "reused_from": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_04/epochs_30/best_head_only.npz"
+        },
+        "weights_2_1_1": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              2,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_2_1_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_2_1_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9852620442708333,
+            "mean_iou": 0.9697189332309151,
+            "class_iou": {
+              "obstacle": 0.9727047333398645,
+              "water": 0.9692753213730753,
+              "sky": 0.9671767449798054
+            },
+            "binary_water_iou": 0.9692753213730753,
+            "binary_non_water_iou": 0.9796591827600719,
+            "binary_mean_iou": 0.9744672520665736,
+            "obstacle_recall": 0.9855084635764624,
+            "obstacle_precision": 0.9868194710968738,
+            "obstacle_miss_rate": 0.014491536423537621,
+            "water_as_obstacle_rate": 0.01506708157960843,
+            "confusion_matrix": [
+              [
+                258150,
+                3151,
+                645
+              ],
+              [
+                2939,
+                192122,
+                0
+              ],
+              [
+                509,
+                0,
+                34004
+              ]
+            ],
+            "loss": 0.04149510050192475
+          },
+          "last_three_validation_water_iou_std": 0.0005070080924624104,
+          "trainable_parameter_count": 67075
+        },
+        "weights_3_1_1": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              3,
+              1,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_3_1_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_3_1_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.985455322265625,
+            "mean_iou": 0.9697382793586042,
+            "class_iou": {
+              "obstacle": 0.9731201191152086,
+              "water": 0.9698096408824407,
+              "sky": 0.9662850780781638
+            },
+            "binary_water_iou": 0.9698096408824407,
+            "binary_non_water_iou": 0.9800939931756552,
+            "binary_mean_iou": 0.9749518170290479,
+            "obstacle_recall": 0.9880357020149191,
+            "obstacle_precision": 0.9847237916956781,
+            "obstacle_miss_rate": 0.011964297985080918,
+            "water_as_obstacle_rate": 0.017174114764099437,
+            "confusion_matrix": [
+              [
+                258812,
+                2618,
+                516
+              ],
+              [
+                3350,
+                191711,
+                0
+              ],
+              [
+                665,
+                0,
+                33848
+              ]
+            ],
+            "loss": 0.04170909496024251
+          },
+          "last_three_validation_water_iou_std": 0.0004767011292239745,
+          "trainable_parameter_count": 67075
+        },
+        "weights_3_2_1": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              3,
+              2,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_3_2_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_3_2_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9848225911458334,
+            "mean_iou": 0.9687187556389193,
+            "class_iou": {
+              "obstacle": 0.9718795116232608,
+              "water": 0.9684799186578547,
+              "sky": 0.9657968366356421
+            },
+            "binary_water_iou": 0.9684799186578547,
+            "binary_non_water_iou": 0.9790649081456965,
+            "binary_mean_iou": 0.9737724134017756,
+            "obstacle_recall": 0.9842753850030159,
+            "obstacle_precision": 0.9872074679899528,
+            "obstacle_miss_rate": 0.015724614996984076,
+            "water_as_obstacle_rate": 0.013616253377148687,
+            "confusion_matrix": [
+              [
+                257827,
+                3606,
+                513
+              ],
+              [
+                2656,
+                192405,
+                0
+              ],
+              [
+                685,
+                0,
+                33828
+              ]
+            ],
+            "loss": 0.04241518136113882
+          },
+          "last_three_validation_water_iou_std": 0.0006647790358767543,
+          "trainable_parameter_count": 67075
+        },
+        "weights_1_2_1": {
+          "parameters": {
+            "learning_rate": 0.0003,
+            "weight_decay": 0,
+            "epochs": 30,
+            "batch_size": 2,
+            "class_weights": [
+              1,
+              2,
+              1
+            ]
+          },
+          "best_epoch": 30,
+          "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_1_2_1/best_head_only.npz",
+          "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_1_2_1/training_history.jsonl",
+          "best_validation": {
+            "pixel_accuracy": 0.9827901204427083,
+            "mean_iou": 0.9657154760081391,
+            "class_iou": {
+              "obstacle": 0.967992765358478,
+              "water": 0.9639104499962563,
+              "sky": 0.9652432126696833
+            },
+            "binary_water_iou": 0.9639104499962563,
+            "binary_non_water_iou": 0.9757719953755676,
+            "binary_mean_iou": 0.9698412226859119,
+            "obstacle_recall": 0.9766325883960816,
+            "obstacle_precision": 0.9909437061081565,
+            "obstacle_miss_rate": 0.02336741160391842,
+            "water_as_obstacle_rate": 0.010027632381665222,
+            "confusion_matrix": [
+              [
+                255825,
+                5274,
+                847
+              ],
+              [
+                1956,
+                193105,
+                0
+              ],
+              [
+                382,
+                0,
+                34131
+              ]
+            ],
+            "loss": 0.04712928459048271
+          },
+          "last_three_validation_water_iou_std": 0.0011125104871187181,
+          "trainable_parameter_count": 67075
+        }
+      },
+      "selected": {
+        "parameters": {
+          "learning_rate": 0.0003,
+          "weight_decay": 0,
+          "epochs": 30,
+          "batch_size": 2,
+          "class_weights": [
+            3,
+            1,
+            1
+          ]
+        },
+        "best_epoch": 30,
+        "checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_3_1_1/best_head_only.npz",
+        "history": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/tampere_dock_staged_v1/step_06/weights_3_1_1/training_history.jsonl",
+        "best_validation": {
+          "pixel_accuracy": 0.985455322265625,
+          "mean_iou": 0.9697382793586042,
+          "class_iou": {
+            "obstacle": 0.9731201191152086,
+            "water": 0.9698096408824407,
+            "sky": 0.9662850780781638
+          },
+          "binary_water_iou": 0.9698096408824407,
+          "binary_non_water_iou": 0.9800939931756552,
+          "binary_mean_iou": 0.9749518170290479,
+          "obstacle_recall": 0.9880357020149191,
+          "obstacle_precision": 0.9847237916956781,
+          "obstacle_miss_rate": 0.011964297985080918,
+          "water_as_obstacle_rate": 0.017174114764099437,
+          "confusion_matrix": [
+            [
+              258812,
+              2618,
+              516
+            ],
+            [
+              3350,
+              191711,
+              0
+            ],
+            [
+              665,
+              0,
+              33848
+            ]
+          ],
+          "loss": 0.04170909496024251
+        },
+        "last_three_validation_water_iou_std": 0.0004767011292239745,
+        "trainable_parameter_count": 67075
+      },
+      "human_choice": "3,1,1"
+    }
+  },
+  "pretrained_validation": {
+    "pixel_accuracy": 0.9409200032552083,
+    "mean_iou": 0.8932292406828156,
+    "class_iou": {
+      "obstacle": 0.8914912618311854,
+      "water": 0.8813721750295407,
+      "sky": 0.9068242851877205
+    },
+    "binary_water_iou": 0.8813721750295407,
+    "binary_non_water_iou": 0.9155802451152413,
+    "binary_mean_iou": 0.898476210072391,
+    "obstacle_recall": 0.9107984088323547,
+    "obstacle_precision": 0.9767740826110631,
+    "obstacle_miss_rate": 0.08920159116764526,
+    "water_as_obstacle_rate": 0.02872434776813407,
+    "confusion_matrix": [
+      [
+        238580,
+        19897,
+        3469
+      ],
+      [
+        5603,
+        189458,
+        0
+      ],
+      [
+        70,
+        0,
+        34443
+      ]
+    ],
+    "loss": 0.1658138655126095
+  }
+}

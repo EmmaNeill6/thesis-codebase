@@ -1,0 +1,133 @@
+{
+  "best_epoch": 11,
+  "selection_metric": "validation_binary_water_iou",
+  "best_validation": {
+    "pixel_accuracy": 0.9788327271910919,
+    "mean_iou": 0.9603038917048329,
+    "class_iou": {
+      "obstacle": 0.9495766685376831,
+      "water": 0.963996049441834,
+      "sky": 0.9673389571349816
+    },
+    "binary_water_iou": 0.963996049441834,
+    "binary_non_water_iou": 0.9692015442750203,
+    "binary_mean_iou": 0.9665987968584271,
+    "obstacle_recall": 0.9727409825228277,
+    "obstacle_precision": 0.9755355589011202,
+    "obstacle_miss_rate": 0.027259017477172298,
+    "water_as_obstacle_rate": 0.019265599839275768,
+    "confusion_matrix": [
+      [
+        282519,
+        5617,
+        2300
+      ],
+      [
+        6329,
+        322100,
+        84
+      ],
+      [
+        756,
+        0,
+        92999
+      ]
+    ],
+    "loss": 0.054923054280466045,
+    "water_predicted_as_obstacle_count": 6329,
+    "water_predicted_as_obstacle_rate": 0.019265599839275768,
+    "obstacle_missed_as_water_count": 5617,
+    "obstacle_missed_as_water_rate": 0.019339888994477267
+  },
+  "test": {
+    "pairs": 44,
+    "metrics": {
+      "pixel_accuracy": 0.9836074366714015,
+      "mean_iou": 0.9694507774076291,
+      "class_iou": {
+        "obstacle": 0.9541217895608948,
+        "water": 0.9724153698185201,
+        "sky": 0.9818151728434723
+      },
+      "binary_water_iou": 0.9724153698185201,
+      "binary_non_water_iou": 0.9761954976222711,
+      "binary_mean_iou": 0.9743054337203956,
+      "obstacle_recall": 0.9683318793815625,
+      "obstacle_precision": 0.984852534020332,
+      "obstacle_miss_rate": 0.03166812061843749,
+      "water_as_obstacle_rate": 0.009499718943226532,
+      "confusion_matrix": [
+        [
+          184260,
+          4629,
+          1397
+        ],
+        [
+          2366,
+          246694,
+          0
+        ],
+        [
+          468,
+          3,
+          100855
+        ]
+      ],
+      "loss": 0.04384943106296388,
+      "water_predicted_as_obstacle_count": 2366,
+      "water_predicted_as_obstacle_rate": 0.009499718943226532,
+      "obstacle_missed_as_water_count": 4629,
+      "obstacle_missed_as_water_rate": 0.024326540050240163
+    }
+  },
+  "unseen": "reserved; pixels not read or evaluated",
+  "best_checkpoint": "TestingPart3/eWaSR_Head_Fine_Tuning/outputs/lars_channel_head_sim4_v1/best_head_sim4.npz",
+  "training_elapsed_seconds": 560.7482541250065,
+  "total_elapsed_seconds": 579.8360555004328,
+  "trainable_parameter_names": [
+    "decoder.sim4.conv_lc.weight",
+    "decoder.sim4.conv_lc.bias",
+    "decoder.sim4.bn_lc.weight",
+    "decoder.sim4.bn_lc.bias",
+    "decoder.sim4.conv_gc.weight",
+    "decoder.sim4.conv_gc.bias",
+    "decoder.sim4.bn_gc.weight",
+    "decoder.sim4.bn_gc.bias",
+    "decoder.sim4.conv_gc1.weight",
+    "decoder.sim4.conv_gc1.bias",
+    "decoder.sim4.bn_gc1.weight",
+    "decoder.sim4.bn_gc1.bias",
+    "decoder.seg_head.conv.weight",
+    "decoder.seg_head.conv.bias",
+    "decoder.seg_head.bn.weight",
+    "decoder.seg_head.bn.bias",
+    "decoder.seg_head.conv1.weight",
+    "decoder.seg_head.conv1.bias"
+  ],
+  "frozen_state_audit": {
+    "changed_tensor_names": [
+      "decoder.sim4.conv_lc.weight",
+      "decoder.sim4.conv_lc.bias",
+      "decoder.sim4.bn_lc.weight",
+      "decoder.sim4.bn_lc.bias",
+      "decoder.sim4.conv_gc.weight",
+      "decoder.sim4.conv_gc.bias",
+      "decoder.sim4.bn_gc.weight",
+      "decoder.sim4.bn_gc.bias",
+      "decoder.sim4.conv_gc1.weight",
+      "decoder.sim4.conv_gc1.bias",
+      "decoder.sim4.bn_gc1.weight",
+      "decoder.sim4.bn_gc1.bias",
+      "decoder.seg_head.conv.weight",
+      "decoder.seg_head.conv.bias",
+      "decoder.seg_head.bn.weight",
+      "decoder.seg_head.bn.bias",
+      "decoder.seg_head.bn.running_mean",
+      "decoder.seg_head.bn.running_var",
+      "decoder.seg_head.conv1.weight",
+      "decoder.seg_head.conv1.bias"
+    ],
+    "frozen_tensors_unchanged": true,
+    "sim4_running_statistics_unchanged": true
+  }
+}

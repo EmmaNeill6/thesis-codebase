@@ -276,7 +276,7 @@ def predict_ewasr(checkpoint_path, image_records, output_dir, input_width, input
     import numpy as np
     from PIL import Image
     from ewasr_mlx.model import _resize, create_head_finetuning_model
-    from evaluate_native_resolution import prepare_input, resize_class_scores
+    from inference_preprocessing import prepare_input, resize_class_scores
     from visualize_test_predictions import colour_overlay
 
     model = create_head_finetuning_model(checkpoint_path)

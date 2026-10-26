@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-09-08T15:47:16+02:00",
+  "number_of_images": 1325,
+  "configuration": {
+    "dataset": "mastr1325",
+    "model_name": "ewasr",
+    "run_name": "main",
+    "prediction_dir": "TestingPart1/output_eWaSR/binary_water/mastr1325/predicted_masks",
+    "selection_file": null,
+    "prediction_water_rule": "pixel >= 128",
+    "ground_truth_ignore_value": 4,
+    "boundary_metric": "full symmetric water-boundary distance divided by image diagonal"
+  },
+  "pairing": {
+    "expected": 1325,
+    "evaluated": 1325,
+    "predictions_without_ground_truth": 0,
+    "missing_predictions": 0
+  },
+  "macro_metrics": {
+    "water_iou": 0.9982550407355415,
+    "dice": 0.9991241700628454,
+    "precision": 0.9989221173787927,
+    "recall": 0.9993304685180608,
+    "specificity": 0.9993274975923274,
+    "balanced_accuracy": 0.9993289830551946,
+    "pixel_accuracy": 0.9993305504320077,
+    "area_error_percent": 0.04111628121102573,
+    "mean_symmetric_boundary_distance_px": 1.7702800364892797,
+    "normalized_boundary_error_percent": 0.2766062557014497
+  },
+  "global_metrics": {
+    "true_positive": 102972793,
+    "false_positive": 104206,
+    "false_negative": 66428,
+    "true_negative": 152053134,
+    "water_iou": 0.9983456628797102,
+    "dice": 0.9991721466656045,
+    "precision": 0.9989890470132915,
+    "recall": 0.9993553134490409,
+    "specificity": 0.9993151431275021,
+    "balanced_accuracy": 0.9993352282882715,
+    "pixel_accuracy": 0.9993313624629918,
+    "area_error_percent": 0.036663708860920054
+  }
+}

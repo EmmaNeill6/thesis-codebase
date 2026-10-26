@@ -1,3 +1,4 @@
+import os
 import hashlib
 import json
 import sys
@@ -100,6 +101,8 @@ class HeadSim4Tests(unittest.TestCase):
             definition_path = root / "definition.yaml"
             definition_path.write_text(yaml.safe_dump(definition))
             manifest = {role: [samples[key]] for role, key in roles.items()}
+            manifest["train"] = [{key: os.path.relpath(value, experiment.HERE.parents[1])
+                                  for key, value in manifest["train"][0].items()}]
             manifest_path = root / "v3.json"
             manifest_path.write_text(json.dumps(manifest))
             config = {"split_source": {"expected_counts": {role: 1 for role in roles}}}
